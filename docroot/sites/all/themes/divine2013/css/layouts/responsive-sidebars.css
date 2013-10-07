@@ -1,0 +1,289 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+@font-face {
+  font-family: 'OPTISport-Script';
+  src: url("fonts/optispos.eot");
+  src: url("fonts/optispos.eot?#iefix") format("embedded-opentype"), url("fonts/optispos.woff") format("woff"), url("fonts/optispos.ttf") format("truetype"), url("fonts/optispos.svg#optisport-scriptscript") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Custom Mixins*/
+/* line 40, ../../sass/layouts/responsive-sidebars.scss */
+body {
+  background-color: #000000;
+}
+@media (min-width: 60em) {
+  /* line 40, ../../sass/layouts/responsive-sidebars.scss */
+  body {
+    background-image: url("../../images/wrapper/wallpaper-top-gold.png");
+    background-repeat: repeat-x;
+    background-position: center top;
+  }
+}
+
+/* line 49, ../../sass/layouts/responsive-sidebars.scss */
+body.section-about-us {
+  background-image: url("../../images/wrapper/wallpaper-top-yellow.png");
+}
+/* line 51, ../../sass/layouts/responsive-sidebars.scss */
+body.section-about-us #page {
+  background-image: url("../../images/wrapper/wallpaper-bottom-yellow.png");
+}
+
+/* line 53, ../../sass/layouts/responsive-sidebars.scss */
+body.section-shop, body.section-checkout {
+  background-image: url("../../images/wrapper/wallpaper-top-green.png");
+}
+/* line 55, ../../sass/layouts/responsive-sidebars.scss */
+body.section-shop #page, body.section-checkout #page {
+  background-image: url("../../images/wrapper/wallpaper-bottom-green.png");
+}
+
+/* line 57, ../../sass/layouts/responsive-sidebars.scss */
+body.section-recipes {
+  background-image: url("../../images/wrapper/wallpaper-top-pink.png");
+}
+/* line 59, ../../sass/layouts/responsive-sidebars.scss */
+body.section-recipes #page {
+  background-image: url("../../images/wrapper/wallpaper-bottom-pink.png");
+}
+
+/* line 61, ../../sass/layouts/responsive-sidebars.scss */
+body.section-good-stuff {
+  background-image: url("../../images/wrapper/wallpaper-top-blue.png");
+}
+/* line 63, ../../sass/layouts/responsive-sidebars.scss */
+body.section-good-stuff #page {
+  background-image: url("../../images/wrapper/wallpaper-bottom-blue.png");
+}
+
+/*
+ * Center the page.
+ */
+/* line 71, ../../sass/layouts/responsive-sidebars.scss */
+#page {
+  /* For screen sizes larger than 1024px, prevent excessively long lines of text
+     by setting a max-width. */
+}
+@media (min-width: 60em) {
+  /* line 71, ../../sass/layouts/responsive-sidebars.scss */
+  #page {
+    min-height: 89em;
+    background-image: url("../../images/wrapper/wallpaper-bottom-gold.png");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+  }
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+/*
+ * Containers for grid items and flow items.
+ */
+/* line 98, ../../sass/layouts/responsive-sidebars.scss */
+#header,
+#main,
+#footer {
+  max-width: 34em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 15em;
+}
+/* line 38, ../../../../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#header:after,
+#main:after,
+#footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 32em) {
+  /* line 98, ../../sass/layouts/responsive-sidebars.scss */
+  #header,
+  #main,
+  #footer {
+    max-width: 69em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #header:after,
+  #main:after,
+  #footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 49em) {
+  /* line 98, ../../sass/layouts/responsive-sidebars.scss */
+  #header,
+  #main,
+  #footer {
+    max-width: 55em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* line 38, ../../../../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #header:after,
+  #main:after,
+  #footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media (min-width: 60em) {
+  /* line 98, ../../sass/layouts/responsive-sidebars.scss */
+  #header,
+  #main,
+  #footer {
+    max-width: 62em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em 2.5em;
+  }
+  /* line 38, ../../../../../../../../../lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #header:after,
+  #main:after,
+  #footer:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* line 114, ../../sass/layouts/responsive-sidebars.scss */
+#main {
+  padding-top: 1.25em;
+  padding-bottom: 4em;
+}
+
+/* line 119, ../../sass/layouts/responsive-sidebars.scss */
+#content {
+  padding-top: 0em;
+}
+
+/*
+ * No media query fixes
+ */
+/* line 131, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header,
+.lt-ie9 #main,
+.lt-ie9 #footer {
+  max-width: 100%;
+  width: 800px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0em 2.5em;
+}
+/* line 141, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 .sidebar-first #content {
+  width: 69.56522%;
+  float: left;
+  margin-right: 1.44928%;
+}
+/* line 144, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 .sidebar-first #content #block-views-frontpage-shop-window-block img {
+  border-bottom: 1px dashed #b39f69;
+}
+/* line 147, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 .sidebar-first .sidebars {
+  width: 28.98551%;
+  float: right;
+  margin-right: 0;
+}
+/* line 154, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header #block-search-form, .lt-ie9 #header #block-block-9, .lt-ie9 #header #block-block-4, .lt-ie9 #header #block-block-9, .lt-ie9 #header .region-nav {
+  display: block;
+}
+/* line 157, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header #logo h1 {
+  height: 200px;
+  width: 380px;
+}
+/* line 161, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header .region-nav #block-system-main-menu {
+  float: right;
+  margin-right: 0;
+  padding-bottom: 1em;
+  font-size: 0.8em;
+  line-height: 1.5625em;
+}
+/* line 167, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header .region-nav #block-system-main-menu ul {
+  text-align: right;
+}
+/* line 169, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header .region-nav #block-system-main-menu ul li {
+  background: #b39f69;
+  padding: 0.5em;
+}
+/* line 172, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header .region-nav #block-system-main-menu ul li:hover a {
+  color: black;
+}
+/* line 176, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #header #swoosh {
+  display: none;
+}
+/* line 180, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #main {
+  padding-top: 1em;
+}
+/* line 182, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #main .top-content-list .views-row {
+  max-width: 160px;
+  margin-right: 15px;
+  float: left;
+}
+/* line 189, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #footer #block-menu-menu-footer {
+  padding-top: 4em;
+}
+/* line 191, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #footer #block-menu-menu-footer ul > li.expanded {
+  width: 24%;
+  float: left;
+  margin-right: 1%;
+}
+/* line 195, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #footer #block-menu-menu-footer ul > li.expanded a {
+  color: #a39161;
+  background: none;
+}
+/* line 199, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #footer #block-menu-menu-social-badges-menu ul.menu li {
+  margin: 0;
+  padding: 0 0.5em 0 0;
+  width: auto;
+}
+/* line 201, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #footer #block-menu-menu-social-badges-menu ul.menu li a {
+  background-image: none;
+  padding: 0;
+}
+/* line 206, ../../sass/layouts/responsive-sidebars.scss */
+.lt-ie9 #footer #block-block-32 h2 {
+  height: 16em;
+}

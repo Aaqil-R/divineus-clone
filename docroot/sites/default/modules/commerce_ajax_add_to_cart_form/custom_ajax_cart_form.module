@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function custom_ajax_cart_form_form_commerce_cart_add_to_cart_form_alter(&$form, &$form_state, $form_id) {
+  _custom_ajax_cart_form_alter_cart_form_ajax_submit($form, $form_state);
+  //Only process if there is more than 1 product - as commerce_cart will only group them if there is more than 1 product
+  if (isset($form['attributes'])) {
+    //Customize the ajax throbber
+    foreach($form['attributes'] as &$attribute) {
+      if (!is_array($attribute)) continue;
+      if (isset($attribute['#ajax']))
+        $attribute['#ajax']['progress'] = array('type' => 'none');
+    }
+  }
+}
+
+function _custom_ajax_cart_form_alter_cart_form_ajax_submit(&$form, &$form_state) {
+  //Attach ajax behavior to the add to cart submit button
+  $form['submit'] += array(
+    '#ajax' => array(
+      //'callback' => 'commerce_cart_add_to_cart_form_submit',
+      'callback' => '_custom_ajax_cart_form_add_to_cart_ajax_callback',
+      'progress' => array(),
+      'effect' => 'fade',
+      ),
+    );
+
+  //Add a validate handler to always reset the line_item_id to act as a new line for the submit function
+  $form['#validate'][] = '_custom_ajax_cart_form_add_to_cart_form_validate';
+}
+
+function _custom_ajax_cart_form_add_to_cart_form_validate($form, &$form_state) {
+  $form_state['line_item']->line_item_id = '';
+}
+
+function _custom_ajax_cart_form_add_to_cart_ajax_callback($form, $form_state) {
+  commerce_cart_add_to_cart_form_submit($form, $form_state); //Call the add to cart form to actually add the product
+  $res = _custom_ajax_cart_form_ajax_cart_reload(); //Retrieve the new cart view
+
+  $commands = array();
+  $commands[] = ajax_command_replace("#block-commerce-cart-cart .cart-empty-block", "<div class='cart-contents'></div>");
+  $commands[] = ajax_command_html('#block-commerce-cart-cart .cart-contents', $res);
+  return array('#type' => 'ajax', '#commands' => $commands);
+}
+
+function _custom_ajax_cart_form_ajax_cart_reload() {
+  global $user;
+  $view_name = 'commerce_cart_block'; // The name of the view we are going to load
+  $args = array(commerce_cart_order_id($user->uid));  // Array of arguments we set for the view. Only one argument in our example. your actual view may require additional arguments which you may need to set
+
+  $displayId = 'default'; // The display id of for the view.
+
+  // Call the views_embed_view function to returned themed view output
+  $res = views_embed_view($view_name, $displayId, $args);
+
+  return $res;
+}

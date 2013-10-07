@@ -1,0 +1,47 @@
+/**
+ * @file
+ * RTL companion for the forms.css file.
+ */
+@font-face {
+  font-family: 'OPTISport-Script';
+  src: url("fonts/optispos.eot");
+  src: url("fonts/optispos.eot?#iefix") format("embedded-opentype"), url("fonts/optispos.woff") format("woff"), url("fonts/optispos.ttf") format("truetype"), url("fonts/optispos.svg#optisport-scriptscript") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Custom Mixins*/
+/*
+ * Drupal's default login form block
+ */
+/* line 13, ../sass/forms-rtl.scss */
+#user-login-form {
+  text-align: right;
+  /*
+   * OpenID
+   *
+   * The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+}
+/* line 24, ../sass/forms-rtl.scss */
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link {
+  /* The "Log in using OpenID" link. */
+  margin-left: 0;
+  margin-right: -20px;
+  /* Un-do some of the padding on the ul list. */
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in html-elements.css, but restore them for the admin
+ * section of the site.
+ */
+/* line 38, ../sass/forms-rtl.scss */
+form th {
+  text-align: right;
+  padding-left: 1em;
+  padding-right: 0;
+}

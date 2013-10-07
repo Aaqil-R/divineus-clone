@@ -1,0 +1,210 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@import "base";
+
+
+// We are going to create a 980px wide, 5 column grid with 20px gutters between
+// columns (applied as 10px of left/right padding on each column).
+$total-columns: 5;
+$column-width:  6em;
+$gutter-width:  1em;
+$grid-padding:  $gutter-width;
+
+
+// IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 3 ways:
+// - Drop support for IE 6/7. :-) In the _base.scss, set $legacy-support-for-ie6
+//   and $legacy-support-for-ie7 to false.
+// - (Preferred) Install the box-sizing polyfill and set the variable below to
+//   the absolute path URL to the boxsizing.htc file.
+//   @see https://github.com/Schepp/box-sizing-polyfill
+//   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
+// - Use the same CSS unit for grid width and gutter width (use px for both or
+//   use % for both, etc.) and set the box-sizing variable to content-box.
+//   $zen-box-sizing: content-box;
+
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+//$zen-auto-include-item-base: false;
+// $zen-auto-include-flow-item-base: false;
+
+body {
+  background-color: #000000;
+  @include breakpoint(desktop-wide) {  
+    background-image: url('../../images/wrapper/wallpaper-top-gold.png');
+    background-repeat: repeat-x;
+    background-position: center top;
+  } 
+}
+
+body.section-about-us {
+  background-image: url('../../images/wrapper/wallpaper-top-yellow.png');
+  #page {background-image: url('../../images/wrapper/wallpaper-bottom-yellow.png');}
+}
+body.section-shop, body.section-checkout {
+  background-image: url('../../images/wrapper/wallpaper-top-green.png');
+  #page {background-image: url('../../images/wrapper/wallpaper-bottom-green.png');}
+}
+body.section-recipes {
+  background-image: url('../../images/wrapper/wallpaper-top-pink.png');
+  #page {background-image: url('../../images/wrapper/wallpaper-bottom-pink.png');}
+}
+body.section-good-stuff {
+  background-image: url('../../images/wrapper/wallpaper-top-blue.png');
+  #page {background-image: url('../../images/wrapper/wallpaper-bottom-blue.png');}
+}
+
+
+/*
+ * Center the page.
+ */
+
+#page {
+  /* For screen sizes larger than 1024px, prevent excessively long lines of text
+     by setting a max-width. */
+  //background: #ffffff;
+  //min-width: 15em;
+  //max-width: 65em;
+  //margin: auto;
+  @include breakpoint(desktop-wide) {  
+    min-height: 89em;
+    background-image: url('../../images/wrapper/wallpaper-bottom-gold.png');
+    background-repeat: repeat-x;
+    background-position: center bottom;
+  }
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+// See the note about $zen-auto-include-item-base above.
+
+
+/*
+ * Containers for grid items and flow items.
+ */
+
+#header,
+#main,
+#footer {
+  @include container;
+  min-width: 15em;
+  
+  @include at-breakpoint($tablet 10) {
+    @include container;
+  }
+  
+  @include at-breakpoint($desktop) {
+      @include container;
+  }
+  @include at-breakpoint($desktop-wide) {
+      @include container;
+      padding: 0em 2.5em;
+  }
+}
+#main {
+  padding-top: 1.25em;
+  padding-bottom: 4em;
+}
+
+#content {
+  padding-top: 0em;
+}
+
+
+/*
+ * No media query fixes
+ */
+
+.lt-ie9 {
+  #header,
+  #main,
+  #footer {
+    max-width: 100%;
+    width: 800px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0em 2.5em;
+  }
+  .sidebar-first {
+    #content {
+      @include span-columns(7, 10);
+      #block-views-frontpage-shop-window-block {
+        img {border-bottom: 1px dashed $gold-on-black;}
+      }
+    }
+    .sidebars {
+      @include span-columns(3 omega, 10);
+    }
+  }
+  
+  #header {
+    
+    #block-search-form, #block-block-9, #block-block-4, #block-block-9, .region-nav {
+    display: block;
+    }
+    #logo h1 {
+      height: 200px;
+      width: 380px;
+    }
+    .region-nav #block-system-main-menu {
+      float: right;
+      margin-right: 0;
+      padding-bottom: 1em;
+      font-size: 0.8em;
+      line-height: 1.5625em;
+      ul {
+        text-align: right;
+        li {
+          background: #b39f69;
+          padding: 0.5em;
+          &:hover a {color: $black;}
+        }
+      }
+    }
+    #swoosh {
+      display: none;
+    }
+  }
+  #main {
+    padding-top: 1em;
+    .top-content-list .views-row {
+      max-width: 160px;
+      margin-right: 15px;
+      float: left;
+    }
+  }
+  #footer {
+    #block-menu-menu-footer {
+      padding-top: 4em;
+      ul > li.expanded {
+        width: 24%;
+        float: left;
+        margin-right: 1%;
+        a {color: $gold;background: none;}
+        li {}
+      }
+    }
+    #block-menu-menu-social-badges-menu ul.menu li {
+      margin: 0; padding: 0 0.5em 0 0; width: auto;
+      a {
+        background-image: none;
+        padding: 0;
+      }
+    }
+    #block-block-32 h2 {
+      height: 16em;
+    }
+  }
+}

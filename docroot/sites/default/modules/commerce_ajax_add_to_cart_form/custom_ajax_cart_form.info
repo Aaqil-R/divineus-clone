@@ -1,0 +1,6 @@
+name = Custom AJAX cart form
+description = Provide an AJAX behavior to the add to cart form, and automatically refresh the cart view block
+package = Custom
+core = 7.x
+  
+dependencies[] = commerce_cart

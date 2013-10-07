@@ -1,0 +1,345 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+@import "base";
+//@import "breakpoint";
+
+/*
+ * Body
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+} 
+
+#page {
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+
+#skip-link {
+  margin: 0;
+
+  a,
+  a:visited {
+    display: block;
+    width: 100%;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+  }
+}
+
+/*
+ * Header
+ */
+#swoosh {
+    background: url('../images/wrapper/swoosh-top.png') no-repeat;
+    background-position: -102px;
+    height: 35px; width: 100%;
+    position: relative;
+    margin: 0 -1em;
+    padding: 0 1em;
+    clear: both;
+    @include breakpoint(mobile-landscape) {
+      background-position: right;
+    }
+    @include breakpoint(tablet) {
+      background-position: center;
+      clear: none;
+      margin-bottom: -13px;
+    }
+    
+    @include breakpoint(desktop-wide) {  
+      margin: -2px -2.5em 0 -2.5em;
+      padding: 0 2.5em;
+    }
+}
+
+.no-menu #swoosh {
+  @include breakpoint(tablet) {
+    clear: both;
+    margin-bottom: 0;
+  }
+}
+#header {
+  background: #000000;
+  color: #fff;
+  margin-bottom: -1px;
+}
+
+//front page banner
+.front {
+  @include breakpoint(tablet) {
+   &.sidebar-first {
+      #content {
+        @include span-columns(6, 10);
+        #block-views-frontpage-shop-window-block {
+          img {border-bottom: 1px dashed $gold-on-black;}
+        }
+      }
+      .sidebars {
+        @include span-columns(4 omega, 10);
+      }
+    }   
+  }
+  @include breakpoint(desktop) {
+    #header {
+      background-image: url('../images/homepage-banner/C1_ChocWeek2013Web_UK.jpg');
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 100%;
+      min-height: 439px;
+      #swoosh, .region-nav {
+        position: relative;
+        top: 278px;
+      }
+    }
+  }
+  
+  @include breakpoint(desktop-wide) {
+    #header {background-size: auto;}
+  }
+}
+
+
+.region-header { /* Wrapper for any blocks placed in the header region */
+  @include span-columns(3 omega,5);
+  margin-top: 0.5em; 
+  .block {
+    background: $black;
+    height: 1.6em;
+    margin: 0.5em 0 0 0.5em;
+    clear: both;
+    width: 100%;
+    font-family: $avenir-bold;
+    padding: 0.4em 0;
+    @include adjust-font-size-to( .6 * $base-font-size );
+  }
+  
+  @include breakpoint(tablet) {
+    @include span-columns(6 omega,10);
+    margin-top: 1em;
+    .block { 
+      clear: none;
+      width: 8em;
+      float: right;
+      margin-top: 1em; margin-left: 1em;
+      @include adjust-font-size-to( .8 * $base-font-size );line-height: 1.5em;
+    }
+  }
+  
+  @include breakpoint(desktop) {
+  }
+  
+}
+
+/*
+ * Main (container for everything else)
+ */
+
+#main {  
+  background: $white;
+}
+
+/*
+ * Content
+ */
+
+
+.region-highlighted {
+}
+
+.breadcrumb { /* The path to the current page in the form of a list of links */
+  ol {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.view-recipes {
+  a:hover img {
+    @include single-box-shadow;
+  }
+}
+.view-sidebar-blocks {
+  @extend .view-recipes;
+}
+
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title { /* Comment title */
+  margin: 0;
+}
+
+tr.even { /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 0; /* Drupal core uses "6px 0" margin */
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+div.status { /* Normal priority messages */
+}
+
+div.warning,
+tr.warning { /* Medium priority messages */
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error { /* High priority messages. See also the .error declaration below. */
+}
+
+.error { /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning { /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+.tabs { /* See also the tabs.css file. */
+}
+
+.region-help { /* Help text on a page */
+}
+
+.more-help-link { /* Link to more help */
+}
+
+#content { /* Wrapper for the actual page content */
+  
+}
+
+ul.inline { /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 1em 0 0; /* LTR */
+  }
+}
+span.field-label { /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager { /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+
+  li { /* Each page number in the pager list */
+    padding: 0 0.5em;
+  }
+}
+
+.feed-icon { /* The link to the RSS or Atom feed for the current list of content */
+}
+
+.more-link { /* Aggregator, blog, and forum more link */
+}
+
+/*
+ * Sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.sidebars {@include span-columns(5 omega,5);}
+
+@include breakpoint(tablet) {
+  .sidebar-first {
+    #content {
+      @include span-columns(7,10);
+    }
+  }
+  
+  .sidebars {
+    @include span-columns(3 omega,10);
+  }
+}
+
+@include breakpoint(desktop) {
+  .sidebar-first {
+    #content {
+      @include span-columns(8,10);
+    }
+  }
+  
+  .sidebars {
+    @include span-columns(2 omega,10);
+  }
+  .adinkra-sidebar {
+    .sidebars {
+      background: url('../images/symbols/adinkra-large.png') no-repeat;
+      padding-bottom: 220px;   
+      background-position: left bottom;
+    }
+    &.good-stuff .sidebars {
+      background-position: -200px bottom;
+    }
+  }
+  
+}
+
+/*
+ * Footer
+ */
+
+#footer {
+  background: url('../images/wrapper/swoosh-bottom.png') #000000 no-repeat top right;
+  padding-top: 6em;
+  
+  @include breakpoint(tablet) {
+      background-position-x: center;
+  }
+}
+
+/*
+ * Page bottom
+ */
+
+.region-content-bottom { /* Wrapper for any blocks placed in the content bottom region */
+  clear: both;
+  padding: 2em 0;
+  @include breakpoint(tablet) {
+    @include span-columns(8,10);
+  }
+}
+
+
+/*
+ * Page bottom
+ */

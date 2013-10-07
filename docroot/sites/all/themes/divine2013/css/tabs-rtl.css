@@ -1,0 +1,23 @@
+/**
+ * @file
+ * RTL companion for the tabs.css file.
+ */
+@font-face {
+  font-family: 'OPTISport-Script';
+  src: url("fonts/optispos.eot");
+  src: url("fonts/optispos.eot?#iefix") format("embedded-opentype"), url("fonts/optispos.woff") format("woff"), url("fonts/optispos.ttf") format("truetype"), url("fonts/optispos.svg#optisport-scriptscript") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Custom Mixins*/
+/* line 11, ../sass/tabs-rtl.scss */
+ul.primary li,
+ul.secondary li {
+  float: right;
+}
+
+/* line 17, ../sass/tabs-rtl.scss */
+ul.primary li {
+  margin: 0.5em 3px 0 0;
+}
