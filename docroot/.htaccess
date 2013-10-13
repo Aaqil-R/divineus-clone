@@ -84,7 +84,6 @@ DirectoryIndex index.php index.html index.htm
   # uncomment the following:
    RewriteCond %{HTTP_HOST} .
    RewriteCond %{HTTP_HOST} !^www\. [NC]
-   RewriteCond %{HTTP_HOST} ^divinechocolate\.com$ [NC]
    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
@@ -104,6 +103,9 @@ DirectoryIndex index.php index.html index.htm
   # uncomment the following line:
   # RewriteBase /
   #RewriteRule ^http://www.divinechocolateusa.com(.*)$ http://www.divinechocolate.com/us$1 [L,R=301]
+  
+  #RewriteBase /us/
+  #RewriteRule ^(.*)$          http://divineus1test.devcloud.acquia-sites.com/$1 [P]
 
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
