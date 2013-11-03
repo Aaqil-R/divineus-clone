@@ -81,6 +81,10 @@ body {
 
 //front page banner
 .front {
+  
+  #block-block-14 {
+    display: none;
+  }
   @include breakpoint(tablet) {
    &.sidebar-first {
       #content {
@@ -96,11 +100,28 @@ body {
   }
   @include breakpoint(desktop) {
     #header {
-      background-image: url('../images/homepage-banner/C1_ChocWeek2013Web_UK.jpg');
+      background-image: url('../images/homepage-banner/love-chocolate.jpg');
       background-repeat: no-repeat;
-      background-position: right top;
+      background-position: center 131px;
       background-size: 100%;
       min-height: 439px;
+      #block-block-14 {
+        display: block;
+        width:515px;
+        height: 115px;
+        position: absolute;
+        top: 175px;
+        margin-left: -348px;
+        background: transparent;
+        p {display: block; height: 100%;}
+        a {
+          text-indent: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          display: block;
+          height: 100%;
+        }
+      }
       #swoosh, .region-nav {
         position: relative;
         top: 278px;

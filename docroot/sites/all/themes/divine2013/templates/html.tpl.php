@@ -77,6 +77,7 @@
 
 <head profile="<?php print $grddl_profile; ?>">
 	
+  <BASE href="http://www.divinechocolate.com/us/">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
