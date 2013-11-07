@@ -105,7 +105,7 @@ DirectoryIndex index.php index.html index.htm
   # RewriteBase /
   #RewriteRule ^http://www.divinechocolateusa.com(.*)$ http://www.divinechocolate.com/us$1 [L,R=301]
   
-  RewriteBase /us
+  RewriteBase proxy.thesmallaxe.com/us
   #RewriteRule ^(.*)$          http://divineus1.devcloud.acquia-sites.com/$1 [P]
 
   # Pass all requests not referring directly to files in the filesystem to
