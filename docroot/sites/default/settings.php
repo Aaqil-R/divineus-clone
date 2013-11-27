@@ -401,6 +401,11 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'pro
  */
 # $conf['reverse_proxy_addresses'] = array('a.b.c.d', ...);
 
+if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'prod') {
+ $conf['reverse_proxy'] = TRUE;
+ $conf['reverse_proxy_addresses'] = array('107.20.181.236');
+}
+
 /**
  * Set this value if your proxy server sends the client IP in a header
  * other than X-Forwarded-For.
