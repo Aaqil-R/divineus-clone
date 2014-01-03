@@ -60,6 +60,9 @@ DirectoryIndex index.php index.html index.htm
   #RewriteCond %{REQUEST_URI} ^/us/shop$
   #RewriteRule .* http://%{HTTP_HOST}/us/shop/ [R=301,L]
   
+  ProxyPass /us/shop http://shop.divinechocolateshop.com
+  ProxyPassReverse /us/shop http://shop.divinechocolateshop.com
+  
   # Block access to "hidden" directories whose names begin with a period. This
   # includes directories used by version control systems such as Subversion or
   # Git to store control files. Files whose names begin with a period, as well
@@ -99,7 +102,7 @@ DirectoryIndex index.php index.html index.htm
   # For example if your site is at http://example.com/drupal uncomment and
   # modify the following line:
   #RewriteCond %{HTTP_HOST} ^thesmallaxe\.com$ [NC]
-  RewriteBase /us
+  #RewriteBase /us
   #
   # If your site is running in a VirtualDocumentRoot at http://example.com/,
   # uncomment the following line:
