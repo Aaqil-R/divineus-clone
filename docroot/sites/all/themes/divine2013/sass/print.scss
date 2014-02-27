@@ -10,6 +10,19 @@
 
 @media print {
 
+#header {
+	#logo {
+	width:400px;
+	
+		h1 {
+		 color:$brown;
+		 font-size:30px;
+		 height:10px;
+		 text-indent:0;
+			}
+	}
+}
+
   a:link,
   a:visited { /* underline all links */
     text-decoration: underline !important;
@@ -21,7 +34,7 @@
 
   #content {
     a[href]:after { /* Add visible URL after links. */
-      content: " (" attr(href) ")";
+      content:none !important;
       font-weight: normal;
       font-size: $base-font-size;
     }
@@ -51,7 +64,7 @@
     background-color: transparent !important;
     background-image: none !important;
   }
-
+  #swoosh,
   #skip-link,
   #toolbar,
   #navigation,
@@ -65,7 +78,13 @@
   .book-navigation,
   .forum-topic-navigation,
   .pager,
-  .feed-icons { /* Hide sidebars and nav elements */
+  .feed-icons,
+  .region.region-header,
+  .region.region-nav,
+  .view-shop-items-on-recipe, 
+  #block-block-31,
+  .region.region-content-bottom
+  { /* Hide sidebars and nav elements */
     visibility: hidden;
     display: none;
   }

@@ -15,38 +15,50 @@
 /*Custom Mixins*/
 @media print {
   /* line 14, ../sass/print.scss */
+  #header #logo {
+    width: 400px;
+  }
+  /* line 17, ../sass/print.scss */
+  #header #logo h1 {
+    color: #793f0d;
+    font-size: 30px;
+    height: 10px;
+    text-indent: 0;
+  }
+
+  /* line 27, ../sass/print.scss */
   a:link,
   a:visited {
     /* underline all links */
     text-decoration: underline !important;
   }
-  /* line 17, ../sass/print.scss */
+  /* line 30, ../sass/print.scss */
   #site-name a:link, #site-name
   a:visited {
     /* Don't underline header */
     text-decoration: none !important;
   }
 
-  /* line 23, ../sass/print.scss */
+  /* line 36, ../sass/print.scss */
   #content a[href]:after {
     /* Add visible URL after links. */
-    content: " (" attr(href) ")";
+    content: none !important;
     font-weight: normal;
     font-size: 16px;
   }
-  /* line 30, ../sass/print.scss */
+  /* line 43, ../sass/print.scss */
   #content a[href^="javascript:"]:after,
   #content a[href^="#"]:after {
     /* Only display useful links. */
     content: "";
   }
-  /* line 34, ../sass/print.scss */
+  /* line 47, ../sass/print.scss */
   #content abbr[title]:after {
     /* Add visible title after abbreviations. */
     content: " (" attr(title) ")";
   }
 
-  /* line 39, ../sass/print.scss */
+  /* line 52, ../sass/print.scss */
   #content {
     /* Un-float the content */
     float: none !important;
@@ -55,7 +67,7 @@
     padding: 0 !important;
   }
 
-  /* line 49, ../sass/print.scss */
+  /* line 62, ../sass/print.scss */
   body,
   #page,
   #main,
@@ -66,7 +78,8 @@
     background-image: none !important;
   }
 
-  /* line 68, ../sass/print.scss */
+  /* line 87, ../sass/print.scss */
+  #swoosh,
   #skip-link,
   #toolbar,
   #navigation,
@@ -80,7 +93,12 @@
   .book-navigation,
   .forum-topic-navigation,
   .pager,
-  .feed-icons {
+  .feed-icons,
+  .region.region-header,
+  .region.region-nav,
+  .view-shop-items-on-recipe,
+  #block-block-31,
+  .region.region-content-bottom {
     /* Hide sidebars and nav elements */
     visibility: hidden;
     display: none;

@@ -1551,7 +1551,7 @@
   position: relative;
   z-index: 999998;
   font-family: arial;
-  color: #333!important;
+  color: #333333 !important;
   background: #f4f4f4 url("../images/icon-calendar-t1.png") no-repeat 9px 50%;
   text-decoration: none;
   border: 1px solid #d9d9d9;
@@ -1627,12 +1627,12 @@
 
 /* line 1008, ../sass/blocks.scss */
 .addthisevent span {
-  display: none!important;
+  display: none !important;
 }
 
 /* line 1009, ../sass/blocks.scss */
 .addthisevent-drop ._url, .addthisevent-drop ._start, .addthisevent-drop ._end, .addthisevent-drop ._summary, .addthisevent-drop ._description, .addthisevent-drop ._location, .addthisevent-drop ._organizer, .addthisevent-drop ._organizer_email, .addthisevent-drop ._facebook_event, .addthisevent-drop ._all_day_event {
-  display: none!important;
+  display: none !important;
 }
 
 /* line 1010, ../sass/blocks.scss */
