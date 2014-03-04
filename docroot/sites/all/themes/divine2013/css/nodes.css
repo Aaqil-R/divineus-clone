@@ -30,15 +30,15 @@
   margin: 0;
 }
 /* line 21, ../sass/nodes.scss */
-.node .field-name-body p:first-of-type, .node .field-name-body h2:first-of-type {
+.node .field-name-body p:first-of-type, .node .field-name-body h2:first-of-type, .node .field-name-field-standfirst p:first-of-type, .node .field-name-field-standfirst h2:first-of-type {
   margin-top: 0;
 }
 /* line 25, ../sass/nodes.scss */
-.node .field-name-body .highlight-caption a, .node .field-name-body .highlight a {
+.node .field-name-body .highlight-caption a, .node .field-name-body .highlight a, .node .field-name-field-standfirst .highlight-caption a, .node .field-name-field-standfirst .highlight a {
   color: white;
 }
 /* line 27, ../sass/nodes.scss */
-.node .field-name-body a.button {
+.node .field-name-body a.button, .node .field-name-field-standfirst a.button {
   color: white;
   background: #00aeef;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -52,7 +52,7 @@
   display: inline-block;
 }
 /* line 35, ../sass/nodes.scss */
-.node .field-name-body a.button:hover {
+.node .field-name-body a.button:hover, .node .field-name-field-standfirst a.button:hover {
   text-decoration: none;
   background: #0089bc;
 }
@@ -348,38 +348,38 @@
   margin-bottom: 1em;
 }
 /* line 201, ../sass/nodes.scss */
-.section-about-us #content .field-name-body p:first-of-type, .standard-page #content .field-name-body p:first-of-type {
+.section-about-us #content .field-name-body p:first-of-type, .standard-page #content .field-name-body p:first-of-type, .section-about-us #content .field-name-field-standfirst p:first-of-type, .standard-page #content .field-name-field-standfirst p:first-of-type {
   margin-top: 0;
 }
 /* line 202, ../sass/nodes.scss */
-.section-about-us #content .field-name-body a, .standard-page #content .field-name-body a {
+.section-about-us #content .field-name-body a, .standard-page #content .field-name-body a, .section-about-us #content .field-name-field-standfirst a, .standard-page #content .field-name-field-standfirst a {
   color: #f1ab00;
 }
 /* line 204, ../sass/nodes.scss */
-.section-about-us #content .field-name-body a.button, .standard-page #content .field-name-body a.button {
+.section-about-us #content .field-name-body a.button, .standard-page #content .field-name-body a.button, .section-about-us #content .field-name-field-standfirst a.button, .standard-page #content .field-name-field-standfirst a.button {
   color: white;
   background: #f1ab00;
 }
 /* line 207, ../sass/nodes.scss */
-.section-about-us #content .field-name-body a.button:hover, .standard-page #content .field-name-body a.button:hover {
+.section-about-us #content .field-name-body a.button:hover, .standard-page #content .field-name-body a.button:hover, .section-about-us #content .field-name-field-standfirst a.button:hover, .standard-page #content .field-name-field-standfirst a.button:hover {
   background: #be8700;
 }
 /* line 212, ../sass/nodes.scss */
-.section-about-us #content .field-name-body .board-members, .standard-page #content .field-name-body .board-members {
+.section-about-us #content .field-name-body .board-members, .standard-page #content .field-name-body .board-members, .section-about-us #content .field-name-field-standfirst .board-members, .standard-page #content .field-name-field-standfirst .board-members {
   list-style-type: none;
   margin: 0;
   padding: 0;
   clear: both;
 }
 /* line 216, ../sass/nodes.scss */
-.section-about-us #content .field-name-body .board-members li, .standard-page #content .field-name-body .board-members li {
+.section-about-us #content .field-name-body .board-members li, .standard-page #content .field-name-body .board-members li, .section-about-us #content .field-name-field-standfirst .board-members li, .standard-page #content .field-name-field-standfirst .board-members li {
   height: 195px;
   width: 31.03448%;
   float: left;
   margin-right: 3.44828%;
 }
 /* line 219, ../sass/nodes.scss */
-.section-about-us #content .field-name-body .board-members li:nth-of-type(3n), .standard-page #content .field-name-body .board-members li:nth-of-type(3n) {
+.section-about-us #content .field-name-body .board-members li:nth-of-type(3n), .standard-page #content .field-name-body .board-members li:nth-of-type(3n), .section-about-us #content .field-name-field-standfirst .board-members li:nth-of-type(3n), .standard-page #content .field-name-field-standfirst .board-members li:nth-of-type(3n) {
   float: right;
   margin-right: 0;
 }

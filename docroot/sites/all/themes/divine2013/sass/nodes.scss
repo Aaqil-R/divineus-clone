@@ -17,7 +17,7 @@
      }
      .media-element {margin: 0;}
   }
-  .field-name-body {
+  .field-name-body, .field-name-field-standfirst {
     p:first-of-type, h2:first-of-type {
        margin-top: 0;
     }
@@ -197,7 +197,7 @@
       margin-bottom: 1em;
     }
     
-    .field-name-body {
+    .field-name-body, .field-name-field-standfirst {
       p:first-of-type {margin-top: 0;}
       a {
         color: $yellow;
