@@ -37,11 +37,30 @@
 .node .field-name-body .highlight-caption a, .node .field-name-body .highlight a {
   color: white;
 }
-/* line 30, ../sass/nodes.scss */
+/* line 27, ../sass/nodes.scss */
+.node .field-name-body a.button {
+  color: white;
+  background: #00aeef;
+  font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  padding: 15px;
+  text-transform: uppercase;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  display: inline-block;
+}
+/* line 35, ../sass/nodes.scss */
+.node .field-name-body a.button:hover {
+  text-decoration: none;
+  background: #0089bc;
+}
+/* line 43, ../sass/nodes.scss */
 .node p {
   margin: 1em 0;
 }
-/* line 31, ../sass/nodes.scss */
+/* line 44, ../sass/nodes.scss */
 .node h2 {
   text-transform: uppercase;
   font-size: 1.1em;
@@ -49,12 +68,12 @@
   margin: 1em 0 0 0;
   letter-spacing: 1px;
 }
-/* line 35, ../sass/nodes.scss */
+/* line 48, ../sass/nodes.scss */
 .node .medium-grid img {
   width: 100%;
 }
 @media (min-width: 32em) {
-  /* line 34, ../sass/nodes.scss */
+  /* line 47, ../sass/nodes.scss */
   .node .medium-grid {
     clear: both;
     width: 134.48276%;
@@ -62,20 +81,20 @@
     margin-right: 0;
     margin-right: -34.48276%;
   }
-  /* line 40, ../sass/nodes.scss */
+  /* line 53, ../sass/nodes.scss */
   .node .medium-grid > div {
     width: 48.71795%;
     float: left;
     margin-right: 2.5641%;
     margin-bottom: 1.5em;
   }
-  /* line 44, ../sass/nodes.scss */
+  /* line 57, ../sass/nodes.scss */
   .node .medium-grid > div:nth-of-type(even) {
     float: right;
     margin-right: 0;
   }
 }
-/* line 48, ../sass/nodes.scss */
+/* line 61, ../sass/nodes.scss */
 .node .highlight-caption, .node .highlight {
   font-family: "Georgia W01 Italic", Georgia, "Times New Roman", "DejaVu Serif", serif;
   line-height: 1.25em;
@@ -92,19 +111,19 @@
   position: relative;
   top: -1.75em;
 }
-/* line 51, ../sass/nodes.scss */
+/* line 64, ../sass/nodes.scss */
 .node .highlight-caption em, .node .highlight em {
   font-style: normal;
 }
-/* line 57, ../sass/nodes.scss */
+/* line 70, ../sass/nodes.scss */
 .node .highlight-caption h2, .node .highlight h2 {
   color: white;
 }
-/* line 58, ../sass/nodes.scss */
+/* line 71, ../sass/nodes.scss */
 .node .highlight-caption a, .node .highlight a {
   color: white;
 }
-/* line 61, ../sass/nodes.scss */
+/* line 74, ../sass/nodes.scss */
 .node .highlight-caption a.highlight-link, .node .highlight a.highlight-link {
   text-transform: uppercase;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -125,7 +144,7 @@
   margin-left: 0.4em;
   bottom: 0.35em;
 }
-/* line 68, ../sass/nodes.scss */
+/* line 81, ../sass/nodes.scss */
 .node .highlight {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -133,16 +152,16 @@
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 71, ../sass/nodes.scss */
+/* line 84, ../sass/nodes.scss */
 .node blockquote {
   font-family: "Georgia W01 Italic", Georgia, "Times New Roman", "DejaVu Serif", serif;
 }
-/* line 73, ../sass/nodes.scss */
+/* line 86, ../sass/nodes.scss */
 .node .left p, .node .right p, .node .highlight-caption p {
   margin: 0.5em 0;
 }
 @media (min-width: 32em) {
-  /* line 79, ../sass/nodes.scss */
+  /* line 92, ../sass/nodes.scss */
   .node .left,
   .node .right {
     width: 65.51724%;
@@ -151,12 +170,12 @@
     margin-left: 1em;
     margin-right: -34.48276%;
   }
-  /* line 81, ../sass/nodes.scss */
+  /* line 94, ../sass/nodes.scss */
   .node .left img,
   .node .right img {
     width: 100%;
   }
-  /* line 83, ../sass/nodes.scss */
+  /* line 96, ../sass/nodes.scss */
   .node .right-small {
     width: 31.03448%;
     float: right;
@@ -164,86 +183,86 @@
     margin-left: 1em;
     margin-right: -68.96552%;
   }
-  /* line 84, ../sass/nodes.scss */
+  /* line 97, ../sass/nodes.scss */
   .node .center {
     text-align: center;
   }
-  /* line 84, ../sass/nodes.scss */
+  /* line 97, ../sass/nodes.scss */
   .node .center > div {
     display: inline-block;
   }
 }
-/* line 87, ../sass/nodes.scss */
+/* line 100, ../sass/nodes.scss */
 .node .clear {
   clear: both;
 }
-/* line 89, ../sass/nodes.scss */
+/* line 102, ../sass/nodes.scss */
 .node .no-margin {
   margin: 0;
 }
-/* line 89, ../sass/nodes.scss */
+/* line 102, ../sass/nodes.scss */
 .node .no-margin div, .node .no-margin img, .node .no-margin p {
   margin: 0;
 }
-/* line 90, ../sass/nodes.scss */
+/* line 103, ../sass/nodes.scss */
 .node .no-margin-top {
   margin-top: 0;
 }
-/* line 90, ../sass/nodes.scss */
+/* line 103, ../sass/nodes.scss */
 .node .no-margin-top div, .node .no-margin-top img, .node .no-margin-top p {
   margin-top: 0;
 }
-/* line 91, ../sass/nodes.scss */
+/* line 104, ../sass/nodes.scss */
 .node .highlight {
   margin-top: 3.5em;
   padding: 0.75em 1.5em 1.5em 1.5em;
 }
-/* line 94, ../sass/nodes.scss */
+/* line 107, ../sass/nodes.scss */
 .node .highlight h2 {
   color: white;
   margin: 0;
   padding-bottom: 0;
 }
-/* line 97, ../sass/nodes.scss */
+/* line 110, ../sass/nodes.scss */
 .node .highlight p, .node .highlight h2, .node .highlight div, .node .highlight ul, .node .highlight ol {
   margin: 0 1em;
 }
-/* line 99, ../sass/nodes.scss */
+/* line 112, ../sass/nodes.scss */
 .node .highlight p:first-child, .node .highlight h2:first-child, .node .highlight div:first-child, .node .highlight ul:first-child, .node .highlight ol:first-child {
   padding-top: 1em;
 }
-/* line 100, ../sass/nodes.scss */
+/* line 113, ../sass/nodes.scss */
 .node .highlight p:last-child, .node .highlight h2:last-child, .node .highlight div:last-child, .node .highlight ul:last-child, .node .highlight ol:last-child {
   padding-bottom: 1em;
 }
-/* line 104, ../sass/nodes.scss */
+/* line 117, ../sass/nodes.scss */
 .preview .node {
   /* Preview of the content before submitting new or updated content */
   /* background-color: #ffffea; */
   /* Drupal core uses a #ffffea background */
 }
-/* line 108, ../sass/nodes.scss */
+/* line 121, ../sass/nodes.scss */
 .node .node-title {
   /* Node title */
 }
-/* line 112, ../sass/nodes.scss */
+/* line 125, ../sass/nodes.scss */
 .node .user-picture {
   /* The picture of the node author */
 }
-/* line 115, ../sass/nodes.scss */
+/* line 128, ../sass/nodes.scss */
 .node .submitted {
   /* The "posted by" information */
 }
-/* line 118, ../sass/nodes.scss */
+/* line 131, ../sass/nodes.scss */
 .node .content {
   /* Node's content wrapper */
 }
-/* line 121, ../sass/nodes.scss */
+/* line 134, ../sass/nodes.scss */
 .node ul.links {
   /* Node links. See also the ul.links declaration in the pages.css. */
 }
 
-/* line 128, ../sass/nodes.scss */
+/* line 141, ../sass/nodes.scss */
 .rounded-standfirst .field-name-field-standfirst img {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -252,33 +271,33 @@
   border-radius: 6px;
 }
 
-/* line 134, ../sass/nodes.scss */
+/* line 147, ../sass/nodes.scss */
 .section-good-stuff
 .node .highlight-caption {
   background: #00aeef;
 }
-/* line 137, ../sass/nodes.scss */
+/* line 150, ../sass/nodes.scss */
 .section-good-stuff
 .node h2 {
   color: #00aeef;
 }
 
-/* line 140, ../sass/nodes.scss */
+/* line 153, ../sass/nodes.scss */
 .node-promoted {
   /* A node that has been promoted to the front page */
 }
 
-/* line 143, ../sass/nodes.scss */
+/* line 156, ../sass/nodes.scss */
 .node-sticky {
   /* A sticky node (displayed before others in a list) */
 }
 
-/* line 146, ../sass/nodes.scss */
+/* line 159, ../sass/nodes.scss */
 .node-by-viewer {
   /* A node created by the current user */
 }
 
-/* line 149, ../sass/nodes.scss */
+/* line 162, ../sass/nodes.scss */
 .node-teaser {
   /* A node displayed as teaser */
 }
@@ -288,23 +307,23 @@
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-/* line 158, ../sass/nodes.scss */
+/* line 171, ../sass/nodes.scss */
 .node-page {
   /* Page content node */
 }
 
-/* line 162, ../sass/nodes.scss */
+/* line 175, ../sass/nodes.scss */
 .node-article {
   /* Article content node */
 }
 
-/* line 166, ../sass/nodes.scss */
+/* line 179, ../sass/nodes.scss */
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 169, ../sass/nodes.scss */
+/* line 182, ../sass/nodes.scss */
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -322,41 +341,50 @@
 /*
  * About us styles 
  */
-/* line 182, ../sass/nodes.scss */
+/* line 195, ../sass/nodes.scss */
 .section-about-us #content .field-name-field-summary, .standard-page #content .field-name-field-summary {
   font-size: 1.05em;
   line-height: 1.42857em;
   margin-bottom: 1em;
 }
-/* line 188, ../sass/nodes.scss */
+/* line 201, ../sass/nodes.scss */
 .section-about-us #content .field-name-body p:first-of-type, .standard-page #content .field-name-body p:first-of-type {
   margin-top: 0;
 }
-/* line 189, ../sass/nodes.scss */
+/* line 202, ../sass/nodes.scss */
 .section-about-us #content .field-name-body a, .standard-page #content .field-name-body a {
   color: #f1ab00;
 }
-/* line 190, ../sass/nodes.scss */
+/* line 204, ../sass/nodes.scss */
+.section-about-us #content .field-name-body a.button, .standard-page #content .field-name-body a.button {
+  color: white;
+  background: #f1ab00;
+}
+/* line 207, ../sass/nodes.scss */
+.section-about-us #content .field-name-body a.button:hover, .standard-page #content .field-name-body a.button:hover {
+  background: #be8700;
+}
+/* line 212, ../sass/nodes.scss */
 .section-about-us #content .field-name-body .board-members, .standard-page #content .field-name-body .board-members {
   list-style-type: none;
   margin: 0;
   padding: 0;
   clear: both;
 }
-/* line 194, ../sass/nodes.scss */
+/* line 216, ../sass/nodes.scss */
 .section-about-us #content .field-name-body .board-members li, .standard-page #content .field-name-body .board-members li {
   height: 195px;
   width: 31.03448%;
   float: left;
   margin-right: 3.44828%;
 }
-/* line 197, ../sass/nodes.scss */
+/* line 219, ../sass/nodes.scss */
 .section-about-us #content .field-name-body .board-members li:nth-of-type(3n), .standard-page #content .field-name-body .board-members li:nth-of-type(3n) {
   float: right;
   margin-right: 0;
 }
 @media (min-width: 32em) {
-  /* line 202, ../sass/nodes.scss */
+  /* line 224, ../sass/nodes.scss */
   .section-about-us #content .field-name-body, .standard-page #content .field-name-body {
     width: 74.35897%;
     float: left;
@@ -365,14 +393,14 @@
     line-height: 1.38889em;
     line-height: 1.2em;
   }
-  /* line 206, ../sass/nodes.scss */
+  /* line 228, ../sass/nodes.scss */
   .section-about-us #content #block-block-34, .standard-page #content #block-block-34, .section-about-us #content #block-block-29, .standard-page #content #block-block-29 {
     padding-top: 0.5em;
     width: 48.71795%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 210, ../sass/nodes.scss */
+  /* line 232, ../sass/nodes.scss */
   .section-about-us #content #block-block-34 .flash .flash-container, .standard-page #content #block-block-34 .flash .flash-container, .section-about-us #content #block-block-29 .flash .flash-container, .standard-page #content #block-block-29 .flash .flash-container {
     border: 1px #a39161 solid;
     -moz-border-radius-topleft: 6px;
@@ -383,7 +411,7 @@
     border-top-right-radius: 6px;
     padding: 1em 0 0 1em;
   }
-  /* line 215, ../sass/nodes.scss */
+  /* line 237, ../sass/nodes.scss */
   .section-about-us #content #block-block-34 .highlight-caption, .standard-page #content #block-block-34 .highlight-caption, .section-about-us #content #block-block-29 .highlight-caption, .standard-page #content #block-block-29 .highlight-caption {
     background: #f1ab00;
     font-size: 0.9em;
@@ -399,42 +427,42 @@
     border-bottom-right-radius: 6px;
     margin-top: -0.1em;
   }
-  /* line 224, ../sass/nodes.scss */
+  /* line 246, ../sass/nodes.scss */
   .section-about-us #content #block-block-34, .standard-page #content #block-block-34 {
     float: right;
     margin-right: 0;
   }
-  /* line 226, ../sass/nodes.scss */
+  /* line 248, ../sass/nodes.scss */
   .section-about-us #content #block-block-34 p, .standard-page #content #block-block-34 p {
     margin: 0;
   }
-  /* line 227, ../sass/nodes.scss */
+  /* line 249, ../sass/nodes.scss */
   .section-about-us #content #block-block-34 .video-wrap, .standard-page #content #block-block-34 .video-wrap {
     padding-top: 0 !important;
     height: 247px;
   }
 }
-/* line 233, ../sass/nodes.scss */
+/* line 255, ../sass/nodes.scss */
 .section-about-us #content .highlight, .standard-page #content .highlight {
   background: #f1ab00;
 }
-/* line 235, ../sass/nodes.scss */
+/* line 257, ../sass/nodes.scss */
 .section-about-us #content .highlight h2, .standard-page #content .highlight h2 {
   color: white;
 }
-/* line 236, ../sass/nodes.scss */
+/* line 258, ../sass/nodes.scss */
 .section-about-us #content .highlight a, .standard-page #content .highlight a {
   color: white;
 }
-/* line 236, ../sass/nodes.scss */
+/* line 258, ../sass/nodes.scss */
 .section-about-us #content .highlight a:hover, .standard-page #content .highlight a:hover {
   color: white;
 }
-/* line 238, ../sass/nodes.scss */
+/* line 260, ../sass/nodes.scss */
 .section-about-us #content h2, .standard-page #content h2 {
   color: #f1ab00;
 }
-/* line 242, ../sass/nodes.scss */
+/* line 264, ../sass/nodes.scss */
 .section-about-us #block-block-30, .standard-page #block-block-30 {
   clear: both;
   padding-top: 1em;
@@ -444,7 +472,7 @@
  * Styles for homepages and taxonomy list pages
  */
 @media (min-width: 32em) {
-  /* line 263, ../sass/nodes.scss */
+  /* line 285, ../sass/nodes.scss */
   .home-pages h1#page-title,
   .page-taxonomy-term h1#page-title,
   .page-views h1#page-title,
@@ -464,12 +492,12 @@
  * - Taxonomy pages
  * - node pages
  */
-/* line 283, ../sass/nodes.scss */
+/* line 305, ../sass/nodes.scss */
 .section-recipes #page-title,
 .section-recipes .sidebars .block-title {
   color: #db0c41;
 }
-/* line 287, ../sass/nodes.scss */
+/* line 309, ../sass/nodes.scss */
 .section-recipes .block-block a {
   color: #db0c41;
 }
@@ -477,11 +505,11 @@
 /*
  * Recipe homepage styles
  */
-/* line 296, ../sass/nodes.scss */
+/* line 318, ../sass/nodes.scss */
 .page-node-354 #block-views-nodequeue-3-block .views-row {
   margin-bottom: 1em;
 }
-/* line 297, ../sass/nodes.scss */
+/* line 319, ../sass/nodes.scss */
 .page-node-354 #block-views-nodequeue-3-block .views-row img {
   width: 100%;
   -webkit-border-radius: 8px;
@@ -490,11 +518,11 @@
   -o-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 304, ../sass/nodes.scss */
+/* line 326, ../sass/nodes.scss */
 .page-node-354 #content .block-block {
   clear: both;
 }
-/* line 306, ../sass/nodes.scss */
+/* line 328, ../sass/nodes.scss */
 .page-node-354 #content .block-block h2 {
   text-transform: uppercase;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -504,7 +532,7 @@
   line-height: 1em;
   color: #db0c41;
 }
-/* line 314, ../sass/nodes.scss */
+/* line 336, ../sass/nodes.scss */
 .page-node-354 #content .block-block a.highlight-link {
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: #db0c41;
@@ -526,24 +554,24 @@
   margin-left: 0.35em;
   bottom: 0.35em;
 }
-/* line 320, ../sass/nodes.scss */
+/* line 342, ../sass/nodes.scss */
 .page-node-354 #content .block-block img {
   float: right;
   margin: -1.5em 0 0 1.5em;
 }
 @media (min-width: 32em) {
-  /* line 326, ../sass/nodes.scss */
+  /* line 348, ../sass/nodes.scss */
   .page-node-354 #block-views-nodequeue-3-block .views-row {
     width: 48.71795%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 328, ../sass/nodes.scss */
+  /* line 350, ../sass/nodes.scss */
   .page-node-354 #block-views-nodequeue-3-block .views-row.views-row-even {
     float: right;
     margin-right: 0;
   }
-  /* line 330, ../sass/nodes.scss */
+  /* line 352, ../sass/nodes.scss */
   .page-node-354 #content .block-block {
     clear: none;
     -webkit-box-sizing: border-box;
@@ -554,13 +582,13 @@
     padding-top: 1em;
     margin-bottom: 0;
   }
-  /* line 337, ../sass/nodes.scss */
+  /* line 359, ../sass/nodes.scss */
   .page-node-354 #content .block-block.even {
     float: left;
     padding-right: 1.69492%;
     margin-right: 0;
   }
-  /* line 343, ../sass/nodes.scss */
+  /* line 365, ../sass/nodes.scss */
   .page-node-354 #content .block-block.odd {
     float: right;
     margin-right: 0;
@@ -568,7 +596,7 @@
     padding-left: 1.69492%;
   }
 }
-/* line 352, ../sass/nodes.scss */
+/* line 374, ../sass/nodes.scss */
 .page-node-354 #block-views-recipes-block-1 {
   clear: both;
 }
@@ -576,15 +604,15 @@
 /*
  * Recipe taxonomy list styles
  */
-/* line 360, ../sass/nodes.scss */
+/* line 382, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-field-recipe-image, .page-node-348 .views-field-field-recipe-image, .section-good-stuff.page-views .views-field-field-recipe-image, .section-people .views-field-field-recipe-image {
   line-height: 0;
 }
-/* line 362, ../sass/nodes.scss */
+/* line 384, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-field-recipe-image a, .page-node-348 .views-field-field-recipe-image a, .section-good-stuff.page-views .views-field-field-recipe-image a, .section-people .views-field-field-recipe-image a {
   display: block;
 }
-/* line 364, ../sass/nodes.scss */
+/* line 386, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .view-content img, .page-node-348 .view-content img, .section-good-stuff.page-views .view-content img, .section-people .view-content img {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -592,7 +620,7 @@
   -o-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 367, ../sass/nodes.scss */
+/* line 389, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-title, .page-node-348 .views-field-title, .section-good-stuff.page-views .views-field-title, .section-people .views-field-title {
   text-transform: uppercase;
   margin: 0.25em 0 0 0;
@@ -601,15 +629,15 @@
   line-height: 1.47059em;
   line-height: 1em;
 }
-/* line 373, ../sass/nodes.scss */
+/* line 395, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-title a, .page-node-348 .views-field-title a, .section-good-stuff.page-views .views-field-title a, .section-people .views-field-title a, .page-taxonomy-term.section-recipes .views-field-view-node a, .page-node-348 .views-field-view-node a, .section-good-stuff.page-views .views-field-view-node a, .section-people .views-field-view-node a {
   color: #db0c41;
 }
-/* line 374, ../sass/nodes.scss */
+/* line 396, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-row, .page-node-348 .views-row, .section-good-stuff.page-views .views-row, .section-people .views-row {
   margin-bottom: 0.75em;
 }
-/* line 376, ../sass/nodes.scss */
+/* line 398, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-field-recipe-teaser, .page-node-348 .views-field-field-recipe-teaser, .section-good-stuff.page-views .views-field-field-recipe-teaser, .section-people .views-field-field-recipe-teaser, .page-node-348 .views-field-field-teaser, .section-good-stuff.page-views .views-field-field-teaser, .section-people .views-field-field-teaser {
   font-size: 0.75em;
   line-height: 1.33333em;
@@ -617,13 +645,13 @@
   color: #793f0d;
   letter-spacing: 0em;
 }
-/* line 382, ../sass/nodes.scss */
+/* line 404, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-view-node, .page-node-348 .views-field-view-node, .section-good-stuff.page-views .views-field-view-node, .section-people .views-field-view-node {
   font-size: 1.4em;
   line-height: 1.25em;
   line-height: 1em;
 }
-/* line 385, ../sass/nodes.scss */
+/* line 407, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-view-node a, .page-node-348 .views-field-view-node a, .section-good-stuff.page-views .views-field-view-node a, .section-people .views-field-view-node a {
   position: relative;
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -643,32 +671,32 @@
   margin-left: 0.25em;
   bottom: 0.4em;
 }
-/* line 391, ../sass/nodes.scss */
+/* line 413, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .attachment-before, .page-node-348 .attachment-before, .section-good-stuff.page-views .attachment-before, .section-people .attachment-before, .page-node-348 .view-display-id-block_1, .section-good-stuff.page-views .view-display-id-block_1, .section-people .view-display-id-block_1, .page-taxonomy-term.section-recipes .view-display-id-featured_block, .page-node-348 .view-display-id-featured_block, .section-good-stuff.page-views .view-display-id-featured_block, .section-people .view-display-id-featured_block {
   margin-bottom: 0.5em;
   font-size: 1.35em;
   line-height: 1.2963em;
   line-height: 1em;
 }
-/* line 395, ../sass/nodes.scss */
+/* line 417, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .attachment-before .views-field-field-recipe-teaser, .page-node-348 .attachment-before .views-field-field-recipe-teaser, .section-good-stuff.page-views .attachment-before .views-field-field-recipe-teaser, .section-people .attachment-before .views-field-field-recipe-teaser, .page-node-348 .view-display-id-block_1 .views-field-field-recipe-teaser, .section-good-stuff.page-views .view-display-id-block_1 .views-field-field-recipe-teaser, .section-people .view-display-id-block_1 .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .attachment-before .page-node-348 .views-field-field-teaser, .page-node-348 .attachment-before .views-field-field-teaser, .page-node-348 .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .attachment-before .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .attachment-before .views-field-field-teaser, .section-good-stuff.page-views .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .attachment-before .section-people .views-field-field-teaser, .section-people .attachment-before .views-field-field-teaser, .section-people .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-field-recipe-teaser, .page-node-348 .view-display-id-featured_block .views-field-field-recipe-teaser, .section-good-stuff.page-views .view-display-id-featured_block .views-field-field-recipe-teaser, .section-people .view-display-id-featured_block .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .page-node-348 .views-field-field-teaser, .page-node-348 .view-display-id-featured_block .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .view-display-id-featured_block .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .section-people .views-field-field-teaser, .section-people .view-display-id-featured_block .views-field-field-teaser {
   font-size: 0.65em;
   line-height: 1.53846em;
   line-height: 1em;
 }
-/* line 399, ../sass/nodes.scss */
+/* line 421, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .attachment-before .views-field-view-node, .page-node-348 .attachment-before .views-field-view-node, .section-good-stuff.page-views .attachment-before .views-field-view-node, .section-people .attachment-before .views-field-view-node, .page-node-348 .view-display-id-block_1 .views-field-view-node, .section-good-stuff.page-views .view-display-id-block_1 .views-field-view-node, .section-people .view-display-id-block_1 .views-field-view-node, .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-view-node, .page-node-348 .view-display-id-featured_block .views-field-view-node, .section-good-stuff.page-views .view-display-id-featured_block .views-field-view-node, .section-people .view-display-id-featured_block .views-field-view-node {
   font-size: 1em;
   line-height: 1.25em;
   line-height: 1em;
 }
 @media (min-width: 32em) {
-  /* line 405, ../sass/nodes.scss */
+  /* line 427, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes .list-view > .view-content .views-row, .page-node-348 .list-view > .view-content .views-row, .section-good-stuff.page-views .list-view > .view-content .views-row, .section-people .list-view > .view-content .views-row {
     margin-bottom: 0;
     padding-bottom: 0.75em;
   }
-  /* line 408, ../sass/nodes.scss */
+  /* line 430, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes .list-view > .view-content .views-row.views-row-odd, .page-node-348 .list-view > .view-content .views-row.views-row-odd, .section-good-stuff.page-views .list-view > .view-content .views-row.views-row-odd, .section-people .list-view > .view-content .views-row.views-row-odd {
     clear: both;
     -webkit-box-sizing: border-box;
@@ -680,7 +708,7 @@
     margin-right: 0;
     border-right: 1px #a39161 dotted;
   }
-  /* line 417, ../sass/nodes.scss */
+  /* line 439, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes .list-view > .view-content .views-row.views-row-even, .page-node-348 .list-view > .view-content .views-row.views-row-even, .section-good-stuff.page-views .list-view > .view-content .views-row.views-row-even, .section-people .list-view > .view-content .views-row.views-row-even {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -691,18 +719,18 @@
     margin-right: 0;
     padding-left: 1.69492%;
   }
-  /* line 424, ../sass/nodes.scss */
+  /* line 446, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes .list-view > .view-content .views-row.views-row-even .wrapper .views-field-title, .page-node-348 .list-view > .view-content .views-row.views-row-even .wrapper .views-field-title, .section-good-stuff.page-views .list-view > .view-content .views-row.views-row-even .wrapper .views-field-title, .section-people .list-view > .view-content .views-row.views-row-even .wrapper .views-field-title {
     font-size: 1em;
     line-height: 1.25em;
     line-height: 1em;
   }
-  /* line 431, ../sass/nodes.scss */
+  /* line 453, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes #views_infinite_scroll-ajax-loader, .page-node-348 #views_infinite_scroll-ajax-loader, .section-good-stuff.page-views #views_infinite_scroll-ajax-loader, .section-people #views_infinite_scroll-ajax-loader {
     clear: both;
     margin: 0 1em;
   }
-  /* line 435, ../sass/nodes.scss */
+  /* line 457, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes .pager, .page-node-348 .pager, .section-good-stuff.page-views .pager, .section-people .pager {
     padding-top: 1.5em;
   }
@@ -711,7 +739,7 @@
 /*
  * Recipe node styles
  */
-/* line 446, ../sass/nodes.scss */
+/* line 468, ../sass/nodes.scss */
 .node-type-recipe h1#page-title {
   text-transform: uppercase;
   font-size: 1.45em;
@@ -719,7 +747,7 @@
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: #793f0d;
 }
-/* line 454, ../sass/nodes.scss */
+/* line 476, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-recipe-image img {
   width: 100%;
   -webkit-border-radius: 6px;
@@ -728,25 +756,25 @@
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 458, ../sass/nodes.scss */
+/* line 480, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-standfirst-recipe {
   font-size: 0.95em;
   line-height: 1.31579em;
   color: #793f0d;
   margin: 0.75em 0 1em 0;
 }
-/* line 464, ../sass/nodes.scss */
+/* line 486, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container {
   padding: 0;
   margin-bottom: 2em;
   font-size: 0.95em;
   line-height: 1.31579em;
 }
-/* line 467, ../sass/nodes.scss */
+/* line 489, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container > div, .node-type-recipe .field-collection-container > h2 {
   padding: 0 1em;
 }
-/* line 472, ../sass/nodes.scss */
+/* line 494, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-label {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -754,47 +782,47 @@
   font-weight: normal;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-/* line 479, ../sass/nodes.scss */
+/* line 501, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-collection-view {
   margin: 0;
   padding: 0;
 }
-/* line 481, ../sass/nodes.scss */
+/* line 503, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-collection-view .field-name-field-group-ingredients {
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   margin-top: 0.5em;
 }
-/* line 485, ../sass/nodes.scss */
+/* line 507, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-collection-view ul {
   list-style-type: none;
   padding: 0;
   margin: 0 0 1em 0;
 }
-/* line 486, ../sass/nodes.scss */
+/* line 508, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-collection-view ul li {
   margin-bottom: .5em;
 }
-/* line 488, ../sass/nodes.scss */
+/* line 510, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-collection-view ul li a {
   color: white;
   text-decoration: none;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-/* line 496, ../sass/nodes.scss */
+/* line 518, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe {
   color: #793f0d;
 }
-/* line 498, ../sass/nodes.scss */
+/* line 520, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items {
   padding-left: 1em;
 }
-/* line 500, ../sass/nodes.scss */
+/* line 522, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items .field-item {
   font-size: 0.8em;
   line-height: 1.5625em;
   line-height: 1.25em;
 }
-/* line 503, ../sass/nodes.scss */
+/* line 525, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items .field-item h3 {
   color: #db0c41;
   font-size: 1.2em;
@@ -805,23 +833,23 @@
   text-indent: 1em;
   padding-top: 0.75em;
 }
-/* line 512, ../sass/nodes.scss */
+/* line 534, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items .field-item ol {
   padding: 0;
   margin-left: 0.5em;
 }
-/* line 513, ../sass/nodes.scss */
+/* line 535, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items .field-item p, .node-type-recipe .field-name-field-body-recipe .field-items .field-item div, .node-type-recipe .field-name-field-body-recipe .field-items .field-item li {
   padding-bottom: 0.75em;
 }
 @media (min-width: 32em) {
-  /* line 519, ../sass/nodes.scss */
+  /* line 541, ../sass/nodes.scss */
   .node-type-recipe .field-collection-container {
     width: 41.17647%;
     float: left;
     margin-right: 2.94118%;
   }
-  /* line 523, ../sass/nodes.scss */
+  /* line 545, ../sass/nodes.scss */
   .node-type-recipe .field-name-field-body-recipe {
     width: 55.88235%;
     float: right;
@@ -829,13 +857,13 @@
   }
 }
 @media (min-width: 49em) {
-  /* line 529, ../sass/nodes.scss */
+  /* line 551, ../sass/nodes.scss */
   .node-type-recipe .field-collection-container {
     width: 48.71795%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 533, ../sass/nodes.scss */
+  /* line 555, ../sass/nodes.scss */
   .node-type-recipe .field-name-field-body-recipe {
     width: 48.71795%;
     float: right;
@@ -843,12 +871,12 @@
   }
 }
 
-/* line 540, ../sass/nodes.scss */
+/* line 562, ../sass/nodes.scss */
 .js .field-name-field-body-recipe ol {
   color: #db0c41;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-/* line 543, ../sass/nodes.scss */
+/* line 565, ../sass/nodes.scss */
 .js .field-name-field-body-recipe ol span {
   color: #793f0d;
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -866,15 +894,15 @@
 /*
  * Blog homepage styles
  */
-/* line 568, ../sass/nodes.scss */
+/* line 590, ../sass/nodes.scss */
 .page-node-348 .views-field-title a, .section-good-stuff.page-views .views-field-title a, .section-people .views-field-title a {
   color: #00aeef;
 }
-/* line 570, ../sass/nodes.scss */
+/* line 592, ../sass/nodes.scss */
 .page-node-348 .views-field-title a div, .section-good-stuff.page-views .views-field-title a div, .section-people .views-field-title a div {
   display: inline;
 }
-/* line 572, ../sass/nodes.scss */
+/* line 594, ../sass/nodes.scss */
 .page-node-348 .views-field-view-node a, .section-good-stuff.page-views .views-field-view-node a, .section-people .views-field-view-node a {
   color: #00aeef;
   position: relative;
@@ -893,13 +921,13 @@
   margin-left: 0.25em;
   bottom: 0.4em;
 }
-/* line 580, ../sass/nodes.scss */
+/* line 602, ../sass/nodes.scss */
 .page-node-348 .view-display-id-block_1 .views-field-disqus-comment-count, .section-good-stuff.page-views .view-display-id-block_1 .views-field-disqus-comment-count, .section-people .view-display-id-block_1 .views-field-disqus-comment-count {
   font-size: 0.8em;
   line-height: 1.5625em;
   line-height: 1em;
 }
-/* line 585, ../sass/nodes.scss */
+/* line 607, ../sass/nodes.scss */
 .page-node-348 #block-views-blog-roll-view-block-2 .block-title, .section-good-stuff.page-views #block-views-blog-roll-view-block-2 .block-title, .section-people #block-views-blog-roll-view-block-2 .block-title {
   background: #00aeef;
   color: white;
@@ -911,7 +939,7 @@
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 594, ../sass/nodes.scss */
+/* line 616, ../sass/nodes.scss */
 .page-node-348 .views-field-field-blog-featured-image img, .section-good-stuff.page-views .views-field-field-blog-featured-image img, .section-people .views-field-field-blog-featured-image img {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -920,7 +948,7 @@
   border-radius: 6px;
   border: 1px #dbd4c2 solid;
 }
-/* line 599, ../sass/nodes.scss */
+/* line 621, ../sass/nodes.scss */
 .page-node-348 .views-field-disqus-comment-count a, .section-good-stuff.page-views .views-field-disqus-comment-count a, .section-people .views-field-disqus-comment-count a {
   background: url("../images/symbols/comment.png") no-repeat left;
   padding-left: 1.4em;
@@ -934,7 +962,7 @@
 /*
  * Blog nodes
  */
-/* line 630, ../sass/nodes.scss */
+/* line 652, ../sass/nodes.scss */
 .node-type-blog-general h1#page-title, .node-type-blog-competition h1#page-title, .node-type-blog-event h1#page-title {
   text-transform: uppercase;
   font-size: 1.45em;
@@ -942,7 +970,7 @@
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: #793f0d;
 }
-/* line 636, ../sass/nodes.scss */
+/* line 658, ../sass/nodes.scss */
 .node-type-blog-general .field-name-field-blog-featured-image img, .node-type-blog-competition .field-name-field-blog-featured-image img, .node-type-blog-event .field-name-field-blog-featured-image img {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -950,22 +978,22 @@
   -o-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 638, ../sass/nodes.scss */
+/* line 660, ../sass/nodes.scss */
 .node-type-blog-general .field-name-field-summary, .node-type-blog-competition .field-name-field-summary, .node-type-blog-event .field-name-field-summary {
   font-size: 1.05em;
   line-height: 1.42857em;
   margin-bottom: 1em;
 }
-/* line 644, ../sass/nodes.scss */
+/* line 666, ../sass/nodes.scss */
 .node-type-blog-general .field-name-body p:first-of-type, .node-type-blog-competition .field-name-body p:first-of-type, .node-type-blog-event .field-name-body p:first-of-type {
   margin-top: 0;
 }
-/* line 645, ../sass/nodes.scss */
+/* line 667, ../sass/nodes.scss */
 .node-type-blog-general .field-name-body a, .node-type-blog-competition .field-name-body a, .node-type-blog-event .field-name-body a {
   color: #00aeef;
 }
 @media (min-width: 32em) {
-  /* line 648, ../sass/nodes.scss */
+  /* line 670, ../sass/nodes.scss */
   .node-type-blog-general .field-name-body, .node-type-blog-competition .field-name-body, .node-type-blog-event .field-name-body {
     width: 74.35897%;
     float: left;
@@ -976,12 +1004,12 @@
   }
 }
 
-/* line 656, ../sass/nodes.scss */
+/* line 678, ../sass/nodes.scss */
 .node-type-blog-competition #content form {
   margin-top: 2em;
 }
 
-/* line 661, ../sass/nodes.scss */
+/* line 683, ../sass/nodes.scss */
 .node-type-blog-event .event-highlight {
   padding: 1em;
   background: #00aeef;
@@ -992,17 +1020,17 @@
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 666, ../sass/nodes.scss */
+/* line 688, ../sass/nodes.scss */
 .node-type-blog-event .event-highlight .field-name-field-summary {
   margin-bottom: 0;
 }
-/* line 669, ../sass/nodes.scss */
+/* line 691, ../sass/nodes.scss */
 .node-type-blog-event .event-highlight .event-details-group {
   width: 48.71795%;
   float: left;
   margin-right: 2.5641%;
 }
-/* line 672, ../sass/nodes.scss */
+/* line 694, ../sass/nodes.scss */
 .node-type-blog-event .event-highlight .event-details-group .fn, .node-type-blog-event .event-highlight .event-details-group .field-name-field-event-date {
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
@@ -1010,18 +1038,18 @@
   line-height: 1.25em;
   letter-spacing: 1px;
 }
-/* line 676, ../sass/nodes.scss */
+/* line 698, ../sass/nodes.scss */
 .node-type-blog-event .event-highlight .event-details-group .fn {
   font-size: 1.6em;
   line-height: 1.25em;
 }
-/* line 681, ../sass/nodes.scss */
+/* line 703, ../sass/nodes.scss */
 .node-type-blog-event .field-name-field-summary {
   width: 48.71795%;
   float: right;
   margin-right: 0;
 }
-/* line 684, ../sass/nodes.scss */
+/* line 706, ../sass/nodes.scss */
 .node-type-blog-event .field-name-body {
   clear: both;
 }
@@ -1030,7 +1058,7 @@
  * Author page
  * 
  */
-/* line 697, ../sass/nodes.scss */
+/* line 719, ../sass/nodes.scss */
 .section-people h2.block-title {
   color: white !important;
   text-indent: 0.5em;
@@ -1044,11 +1072,11 @@
   margin: 0.5em 0;
   padding: 0.2em;
 }
-/* line 707, ../sass/nodes.scss */
+/* line 729, ../sass/nodes.scss */
 .section-people .Recipe a {
   color: #db0c41;
 }
-/* line 708, ../sass/nodes.scss */
+/* line 730, ../sass/nodes.scss */
 .section-people .Recipe.views-field-view-node a {
   position: relative;
 }
@@ -1066,19 +1094,19 @@
   margin-left: 0.25em;
   bottom: 0.4em;
 }
-/* line 712, ../sass/nodes.scss */
+/* line 734, ../sass/nodes.scss */
 .section-people .view-quote-sidebar {
   font-size: 1em;
   line-height: 1.25em;
 }
 @media (min-width: 32em) {
-  /* line 716, ../sass/nodes.scss */
+  /* line 738, ../sass/nodes.scss */
   .section-people .field-name-field-author-image {
     width: 23.07692%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 717, ../sass/nodes.scss */
+  /* line 739, ../sass/nodes.scss */
   .section-people .field-name-field-author-image img {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -1095,19 +1123,19 @@
  * - front page carosel
  * - homepage
  */
-/* line 731, ../sass/nodes.scss */
+/* line 753, ../sass/nodes.scss */
 .product-list .views-row, .view-product-catalog .views-row, .node-type-product-display .views-row, .view-shop-items-on-recipe .views-row {
   border-bottom: 1px dotted #a39161;
 }
-/* line 733, ../sass/nodes.scss */
+/* line 755, ../sass/nodes.scss */
 .product-list .views-row.views-row-last, .view-product-catalog .views-row.views-row-last, .node-type-product-display .views-row.views-row-last, .view-shop-items-on-recipe .views-row.views-row-last {
   border-bottom: none;
 }
-/* line 735, ../sass/nodes.scss */
+/* line 757, ../sass/nodes.scss */
 .product-list .views-field-field-image-1, .view-product-catalog .views-field-field-image-1, .node-type-product-display .views-field-field-image-1, .view-shop-items-on-recipe .views-field-field-image-1 {
   text-align: center;
 }
-/* line 738, ../sass/nodes.scss */
+/* line 760, ../sass/nodes.scss */
 .product-list .views-field-title, .product-list .views-field-line-item-title, .view-product-catalog .views-field-title, .view-product-catalog .views-field-line-item-title, .node-type-product-display .views-field-title, .node-type-product-display .views-field-line-item-title, .view-shop-items-on-recipe .views-field-title, .view-shop-items-on-recipe .views-field-line-item-title {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1116,24 +1144,24 @@
   line-height: 1.5625em;
   line-height: 1em;
 }
-/* line 744, ../sass/nodes.scss */
+/* line 766, ../sass/nodes.scss */
 .product-list .field-name-field-description, .view-product-catalog .field-name-field-description, .node-type-product-display .field-name-field-description, .view-shop-items-on-recipe .field-name-field-description {
   line-height: 1em;
 }
-/* line 747, ../sass/nodes.scss */
+/* line 769, ../sass/nodes.scss */
 .product-list .views-field-commerce-unit-price, .view-product-catalog .views-field-commerce-unit-price, .node-type-product-display .views-field-commerce-unit-price, .view-shop-items-on-recipe .views-field-commerce-unit-price {
   color: #793f0d;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   line-height: 1.25em;
 }
-/* line 750, ../sass/nodes.scss */
+/* line 772, ../sass/nodes.scss */
 .product-list .views-field-quantity, .view-product-catalog .views-field-quantity, .node-type-product-display .views-field-quantity, .view-shop-items-on-recipe .views-field-quantity {
   font-size: 1em;
   line-height: 1.25em;
   color: #a39161;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-/* line 755, ../sass/nodes.scss */
+/* line 777, ../sass/nodes.scss */
 .product-list .views-field-commerce-total, .view-product-catalog .views-field-commerce-total, .node-type-product-display .views-field-commerce-total, .view-shop-items-on-recipe .views-field-commerce-total {
   font-size: 0.8em;
   line-height: 1.5625em;
@@ -1141,34 +1169,34 @@
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   margin-bottom: 0.5em;
 }
-/* line 760, ../sass/nodes.scss */
+/* line 782, ../sass/nodes.scss */
 .product-list .views-field-commerce-total .field-content, .view-product-catalog .views-field-commerce-total .field-content, .node-type-product-display .views-field-commerce-total .field-content, .view-shop-items-on-recipe .views-field-commerce-total .field-content {
   display: inline;
 }
-/* line 762, ../sass/nodes.scss */
+/* line 784, ../sass/nodes.scss */
 .product-list .field-type-commerce-price, .product-list .views-field-commerce-price, .view-product-catalog .field-type-commerce-price, .view-product-catalog .views-field-commerce-price, .node-type-product-display .field-type-commerce-price, .node-type-product-display .views-field-commerce-price, .view-shop-items-on-recipe .field-type-commerce-price, .view-shop-items-on-recipe .views-field-commerce-price {
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: #262626;
   font-size: 1em;
   line-height: 1.25em;
 }
-/* line 763, ../sass/nodes.scss */
+/* line 785, ../sass/nodes.scss */
 .product-list .field-type-commerce-price td, .product-list .views-field-commerce-price td, .view-product-catalog .field-type-commerce-price td, .view-product-catalog .views-field-commerce-price td, .node-type-product-display .field-type-commerce-price td, .node-type-product-display .views-field-commerce-price td, .view-shop-items-on-recipe .field-type-commerce-price td, .view-shop-items-on-recipe .views-field-commerce-price td {
   display: inline-block;
 }
-/* line 764, ../sass/nodes.scss */
+/* line 786, ../sass/nodes.scss */
 .product-list .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .product-list .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-product-catalog .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-product-catalog .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount, .node-type-product-display .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .node-type-product-display .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-shop-items-on-recipe .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-shop-items-on-recipe .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount {
   color: #793f0d;
 }
-/* line 769, ../sass/nodes.scss */
+/* line 791, ../sass/nodes.scss */
 .product-list .field-type-commerce-price .commerce-price-savings-formatter-list, .product-list .views-field-commerce-price .commerce-price-savings-formatter-list, .view-product-catalog .field-type-commerce-price .commerce-price-savings-formatter-list, .view-product-catalog .views-field-commerce-price .commerce-price-savings-formatter-list, .node-type-product-display .field-type-commerce-price .commerce-price-savings-formatter-list, .node-type-product-display .views-field-commerce-price .commerce-price-savings-formatter-list, .view-shop-items-on-recipe .field-type-commerce-price .commerce-price-savings-formatter-list, .view-shop-items-on-recipe .views-field-commerce-price .commerce-price-savings-formatter-list {
   color: #58595b;
 }
-/* line 774, ../sass/nodes.scss */
+/* line 796, ../sass/nodes.scss */
 .product-list .views-field-view-node, .view-product-catalog .views-field-view-node, .node-type-product-display .views-field-view-node, .view-shop-items-on-recipe .views-field-view-node {
   display: inline;
 }
-/* line 776, ../sass/nodes.scss */
+/* line 798, ../sass/nodes.scss */
 .product-list .views-field-view-node a, .view-product-catalog .views-field-view-node a, .node-type-product-display .views-field-view-node a, .view-shop-items-on-recipe .views-field-view-node a {
   position: relative;
   font-size: 1.4em;
@@ -1191,32 +1219,32 @@
   margin-left: 0.25em;
   bottom: 0.4em;
 }
-/* line 784, ../sass/nodes.scss */
+/* line 806, ../sass/nodes.scss */
 .product-list .field-name-field-nutritional-information, .view-product-catalog .field-name-field-nutritional-information, .node-type-product-display .field-name-field-nutritional-information, .view-shop-items-on-recipe .field-name-field-nutritional-information {
   clear: both;
   margin: 0 0 0.75em 0;
 }
-/* line 787, ../sass/nodes.scss */
+/* line 809, ../sass/nodes.scss */
 .product-list .field-name-field-nutritional-information .field-item, .view-product-catalog .field-name-field-nutritional-information .field-item, .node-type-product-display .field-name-field-nutritional-information .field-item, .view-shop-items-on-recipe .field-name-field-nutritional-information .field-item {
   text-indent: -200%;
   overflow: hidden;
   background-repeat: no-repeat;
   height: 2.6em;
 }
-/* line 792, ../sass/nodes.scss */
+/* line 814, ../sass/nodes.scss */
 .product-list .field-name-field-nutritional-information .field-item.even, .view-product-catalog .field-name-field-nutritional-information .field-item.even, .node-type-product-display .field-name-field-nutritional-information .field-item.even, .view-shop-items-on-recipe .field-name-field-nutritional-information .field-item.even {
   background-image: url("../images/symbols/shop/vegitarian.png");
 }
-/* line 795, ../sass/nodes.scss */
+/* line 817, ../sass/nodes.scss */
 .product-list .field-name-field-nutritional-information .field-item.odd, .view-product-catalog .field-name-field-nutritional-information .field-item.odd, .node-type-product-display .field-name-field-nutritional-information .field-item.odd, .view-shop-items-on-recipe .field-name-field-nutritional-information .field-item.odd {
   background-image: url("../images/symbols/shop/free-from.png");
 }
-/* line 800, ../sass/nodes.scss */
+/* line 822, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information, .product-list .field-collection-container, .product-list .field-name-field-ingredients, .view-product-catalog .field-name-field-additional-information, .view-product-catalog .field-collection-container, .view-product-catalog .field-name-field-ingredients, .node-type-product-display .field-name-field-additional-information, .node-type-product-display .field-collection-container, .node-type-product-display .field-name-field-ingredients, .view-shop-items-on-recipe .field-name-field-additional-information, .view-shop-items-on-recipe .field-collection-container, .view-shop-items-on-recipe .field-name-field-ingredients {
   border-bottom: none;
   margin: 0;
 }
-/* line 803, ../sass/nodes.scss */
+/* line 825, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information .field-label, .product-list .field-collection-container .field-label, .product-list .field-name-field-ingredients .field-label, .view-product-catalog .field-name-field-additional-information .field-label, .view-product-catalog .field-collection-container .field-label, .view-product-catalog .field-name-field-ingredients .field-label, .node-type-product-display .field-name-field-additional-information .field-label, .node-type-product-display .field-collection-container .field-label, .node-type-product-display .field-name-field-ingredients .field-label, .view-shop-items-on-recipe .field-name-field-additional-information .field-label, .view-shop-items-on-recipe .field-collection-container .field-label, .view-shop-items-on-recipe .field-name-field-ingredients .field-label {
   width: 100%;
   font-weight: normal;
@@ -1224,25 +1252,25 @@
   text-transform: uppercase;
   color: #a39161;
 }
-/* line 810, ../sass/nodes.scss */
+/* line 832, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information .field-item, .product-list .field-collection-container .field-item, .product-list .field-name-field-ingredients .field-item, .view-product-catalog .field-name-field-additional-information .field-item, .view-product-catalog .field-collection-container .field-item, .view-product-catalog .field-name-field-ingredients .field-item, .node-type-product-display .field-name-field-additional-information .field-item, .node-type-product-display .field-collection-container .field-item, .node-type-product-display .field-name-field-ingredients .field-item, .view-shop-items-on-recipe .field-name-field-additional-information .field-item, .view-shop-items-on-recipe .field-collection-container .field-item, .view-shop-items-on-recipe .field-name-field-ingredients .field-item {
   margin: 0;
 }
-/* line 812, ../sass/nodes.scss */
+/* line 834, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information .field-item p, .product-list .field-collection-container .field-item p, .product-list .field-name-field-ingredients .field-item p, .view-product-catalog .field-name-field-additional-information .field-item p, .view-product-catalog .field-collection-container .field-item p, .view-product-catalog .field-name-field-ingredients .field-item p, .node-type-product-display .field-name-field-additional-information .field-item p, .node-type-product-display .field-collection-container .field-item p, .node-type-product-display .field-name-field-ingredients .field-item p, .view-shop-items-on-recipe .field-name-field-additional-information .field-item p, .view-shop-items-on-recipe .field-collection-container .field-item p, .view-shop-items-on-recipe .field-name-field-ingredients .field-item p {
   font-size: 0.9em;
   line-height: 1.38889em;
 }
-/* line 813, ../sass/nodes.scss */
+/* line 835, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information .field-item p:first-of-type, .product-list .field-collection-container .field-item p:first-of-type, .product-list .field-name-field-ingredients .field-item p:first-of-type, .view-product-catalog .field-name-field-additional-information .field-item p:first-of-type, .view-product-catalog .field-collection-container .field-item p:first-of-type, .view-product-catalog .field-name-field-ingredients .field-item p:first-of-type, .node-type-product-display .field-name-field-additional-information .field-item p:first-of-type, .node-type-product-display .field-collection-container .field-item p:first-of-type, .node-type-product-display .field-name-field-ingredients .field-item p:first-of-type, .view-shop-items-on-recipe .field-name-field-additional-information .field-item p:first-of-type, .view-shop-items-on-recipe .field-collection-container .field-item p:first-of-type, .view-shop-items-on-recipe .field-name-field-ingredients .field-item p:first-of-type {
   margin-top: 0;
 }
-/* line 817, ../sass/nodes.scss */
+/* line 839, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information .field-collection-view, .product-list .field-collection-container .field-collection-view, .product-list .field-name-field-ingredients .field-collection-view, .view-product-catalog .field-name-field-additional-information .field-collection-view, .view-product-catalog .field-collection-container .field-collection-view, .view-product-catalog .field-name-field-ingredients .field-collection-view, .node-type-product-display .field-name-field-additional-information .field-collection-view, .node-type-product-display .field-collection-container .field-collection-view, .node-type-product-display .field-name-field-ingredients .field-collection-view, .view-shop-items-on-recipe .field-name-field-additional-information .field-collection-view, .view-shop-items-on-recipe .field-collection-container .field-collection-view, .view-shop-items-on-recipe .field-name-field-ingredients .field-collection-view {
   margin: 0;
   padding: 0;
 }
-/* line 822, ../sass/nodes.scss */
+/* line 844, ../sass/nodes.scss */
 .product-list .field-collection-container .field-label, .product-list .field-name-field-ingredients .field-label, .view-product-catalog .field-collection-container .field-label, .view-product-catalog .field-name-field-ingredients .field-label, .node-type-product-display .field-collection-container .field-label, .node-type-product-display .field-name-field-ingredients .field-label, .view-shop-items-on-recipe .field-collection-container .field-label, .view-shop-items-on-recipe .field-name-field-ingredients .field-label {
   position: relative;
   cursor: pointer;
@@ -1266,7 +1294,7 @@
 /*
  * Product lists
  */
-/* line 835, ../sass/nodes.scss */
+/* line 857, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers, .section-checkout .field-offers, .section-checkout .views-field-field-shipping-offer, .section-checkout .views-field-field-out-of-stock, .section-checkout .field-out-of-stock, .section-checkout .views-field-field-new-addition,
 .section-cart .views-field-field-offers,
 .section-cart .field-offers,
@@ -1288,7 +1316,7 @@
   overflow: hidden;
   margin-right: -0.8em;
 }
-/* line 844, ../sass/nodes.scss */
+/* line 866, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers div, .section-checkout .views-field-field-offers a, .section-checkout .field-offers div, .section-checkout .field-offers a, .section-checkout .views-field-field-shipping-offer div, .section-checkout .views-field-field-shipping-offer a, .section-checkout .views-field-field-out-of-stock div, .section-checkout .views-field-field-out-of-stock a, .section-checkout .field-out-of-stock div, .section-checkout .field-out-of-stock a, .section-checkout .views-field-field-new-addition div, .section-checkout .views-field-field-new-addition a,
 .section-cart .views-field-field-offers div,
 .section-cart .views-field-field-offers a,
@@ -1320,7 +1348,7 @@
   background-repeat: no-repeat;
   background-position: top left;
 }
-/* line 851, ../sass/nodes.scss */
+/* line 873, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers .product-offer-13, .section-checkout .field-offers .product-offer-13, .section-checkout .views-field-field-shipping-offer .product-offer-13, .section-checkout .views-field-field-out-of-stock .product-offer-13, .section-checkout .field-out-of-stock .product-offer-13, .section-checkout .views-field-field-new-addition .product-offer-13,
 .section-cart .views-field-field-offers .product-offer-13,
 .section-cart .field-offers .product-offer-13,
@@ -1336,7 +1364,7 @@
 .section-shop .views-field-field-new-addition .product-offer-13 {
   background-image: url("../images/symbols/shop/10-per-cent-off.png");
 }
-/* line 854, ../sass/nodes.scss */
+/* line 876, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers .product-offer-15, .section-checkout .field-offers .product-offer-15, .section-checkout .views-field-field-shipping-offer .product-offer-15, .section-checkout .views-field-field-out-of-stock .product-offer-15, .section-checkout .field-out-of-stock .product-offer-15, .section-checkout .views-field-field-new-addition .product-offer-15,
 .section-cart .views-field-field-offers .product-offer-15,
 .section-cart .field-offers .product-offer-15,
@@ -1352,7 +1380,7 @@
 .section-shop .views-field-field-new-addition .product-offer-15 {
   background-image: url("../images/symbols/shop/new.png");
 }
-/* line 857, ../sass/nodes.scss */
+/* line 879, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers .product-offer-17, .section-checkout .field-offers .product-offer-17, .section-checkout .views-field-field-shipping-offer .product-offer-17, .section-checkout .views-field-field-out-of-stock .product-offer-17, .section-checkout .field-out-of-stock .product-offer-17, .section-checkout .views-field-field-new-addition .product-offer-17,
 .section-cart .views-field-field-offers .product-offer-17,
 .section-cart .field-offers .product-offer-17,
@@ -1368,7 +1396,7 @@
 .section-shop .views-field-field-new-addition .product-offer-17 {
   background-image: url("../images/symbols/shop/bogof.png");
 }
-/* line 863, ../sass/nodes.scss */
+/* line 885, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers .product-offer-18, .section-checkout .field-offers .product-offer-18, .section-checkout .views-field-field-shipping-offer .product-offer-18, .section-checkout .views-field-field-out-of-stock .product-offer-18, .section-checkout .field-out-of-stock .product-offer-18, .section-checkout .views-field-field-new-addition .product-offer-18,
 .section-cart .views-field-field-offers .product-offer-18,
 .section-cart .field-offers .product-offer-18,
@@ -1384,7 +1412,7 @@
 .section-shop .views-field-field-new-addition .product-offer-18 {
   background-image: url("../images/symbols/shop/divine-loves.png");
 }
-/* line 867, ../sass/nodes.scss */
+/* line 889, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers .product-offer-19, .section-checkout .field-offers .product-offer-19, .section-checkout .views-field-field-shipping-offer .product-offer-19, .section-checkout .views-field-field-out-of-stock .product-offer-19, .section-checkout .field-out-of-stock .product-offer-19, .section-checkout .views-field-field-new-addition .product-offer-19,
 .section-cart .views-field-field-offers .product-offer-19,
 .section-cart .field-offers .product-offer-19,
@@ -1400,7 +1428,7 @@
 .section-shop .views-field-field-new-addition .product-offer-19 {
   background-image: url("../images/symbols/shop/bestseller.png");
 }
-/* line 870, ../sass/nodes.scss */
+/* line 892, ../sass/nodes.scss */
 .section-checkout .views-field-field-offers .product-offer-20, .section-checkout .field-offers .product-offer-20, .section-checkout .views-field-field-shipping-offer .product-offer-20, .section-checkout .views-field-field-out-of-stock .product-offer-20, .section-checkout .field-out-of-stock .product-offer-20, .section-checkout .views-field-field-new-addition .product-offer-20,
 .section-cart .views-field-field-offers .product-offer-20,
 .section-cart .field-offers .product-offer-20,
@@ -1416,7 +1444,7 @@
 .section-shop .views-field-field-new-addition .product-offer-20 {
   background-image: url("../images/symbols/shop/sold-out.png");
 }
-/* line 878, ../sass/nodes.scss */
+/* line 900, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid, .section-checkout .product-list table.views-view-grid,
 .section-cart .view-product-catalog table.views-view-grid,
 .section-cart .product-list table.views-view-grid,
@@ -1424,7 +1452,7 @@
 .section-shop .product-list table.views-view-grid {
   width: 100%;
 }
-/* line 880, ../sass/nodes.scss */
+/* line 902, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr, .section-checkout .product-list table.views-view-grid > tbody > tr,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr,
 .section-cart .product-list table.views-view-grid > tbody > tr,
@@ -1432,7 +1460,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr {
   display: block;
 }
-/* line 882, ../sass/nodes.scss */
+/* line 904, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td, .section-checkout .product-list table.views-view-grid > tbody > tr > td,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td,
 .section-cart .product-list table.views-view-grid > tbody > tr > td,
@@ -1446,7 +1474,7 @@
   float: left;
   margin-right: 3.44828%;
 }
-/* line 888, ../sass/nodes.scss */
+/* line 910, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-title, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-title,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-title,
 .section-cart .product-list table.views-view-grid > tbody > tr > td .views-field-title,
@@ -1454,7 +1482,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr > td .views-field-title {
   margin-bottom: 0.3em;
 }
-/* line 893, ../sass/nodes.scss */
+/* line 915, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-field-image.No, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-field-image.No,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-field-image.No,
 .section-cart .product-list table.views-view-grid > tbody > tr > td .views-field-field-image.No,
@@ -1462,7 +1490,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr > td .views-field-field-image.No {
   opacity: 0.5;
 }
-/* line 897, ../sass/nodes.scss */
+/* line 919, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table,
 .section-cart .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table,
@@ -1470,7 +1498,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table {
   display: block;
 }
-/* line 899, ../sass/nodes.scss */
+/* line 921, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tbody, .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table tbody, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tbody,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr,
@@ -1482,7 +1510,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr {
   display: block;
 }
-/* line 901, ../sass/nodes.scss */
+/* line 923, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tbody td, .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr td, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table tbody td, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr td,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tbody td,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr td,
@@ -1494,7 +1522,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr > td .views-field-commerce-price table tr td {
   display: inline-block;
 }
-/* line 910, ../sass/nodes.scss */
+/* line 932, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-stock, .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-season, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-stock, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-season,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-stock,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-season,
@@ -1506,7 +1534,7 @@
 .section-shop .product-list table.views-view-grid > tbody > tr > td .views-field-add-to-cart-form.Out-of-season {
   padding-top: 3.2em;
 }
-/* line 912, ../sass/nodes.scss */
+/* line 934, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .form-item-quantity, .section-checkout .product-list table.views-view-grid > tbody > tr > td .form-item-quantity,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .form-item-quantity,
 .section-cart .product-list table.views-view-grid > tbody > tr > td .form-item-quantity,
@@ -1515,7 +1543,7 @@
   font-size: 1em;
   line-height: 1.25em;
 }
-/* line 916, ../sass/nodes.scss */
+/* line 938, ../sass/nodes.scss */
 .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td.views-row-even, .section-checkout .product-list table.views-view-grid > tbody > tr > td.views-row-even,
 .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td.views-row-even,
 .section-cart .product-list table.views-view-grid > tbody > tr > td.views-row-even,
@@ -1525,7 +1553,7 @@
   margin-right: 0;
 }
 @media (min-width: 32em) {
-  /* line 923, ../sass/nodes.scss */
+  /* line 945, ../sass/nodes.scss */
   .section-checkout .view-product-catalog table.views-view-grid > tbody > tr, .section-checkout .product-list table.views-view-grid > tbody > tr,
   .section-cart .view-product-catalog table.views-view-grid > tbody > tr,
   .section-cart .product-list table.views-view-grid > tbody > tr,
@@ -1534,7 +1562,7 @@
     clear: both;
     border-bottom: 1px dashed #a39161;
   }
-  /* line 926, ../sass/nodes.scss */
+  /* line 948, ../sass/nodes.scss */
   .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td, .section-checkout .product-list table.views-view-grid > tbody > tr > td,
   .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td,
   .section-cart .product-list table.views-view-grid > tbody > tr > td,
@@ -1549,7 +1577,7 @@
     margin: 1.5em 0;
     padding: 0 1.69492%;
   }
-  /* line 927, ../sass/nodes.scss */
+  /* line 949, ../sass/nodes.scss */
   .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td.views-row-even, .section-checkout .product-list table.views-view-grid > tbody > tr > td.views-row-even,
   .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td.views-row-even,
   .section-cart .product-list table.views-view-grid > tbody > tr > td.views-row-even,
@@ -1557,7 +1585,7 @@
   .section-shop .product-list table.views-view-grid > tbody > tr > td.views-row-even {
     float: left;
   }
-  /* line 934, ../sass/nodes.scss */
+  /* line 956, ../sass/nodes.scss */
   .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-title, .section-checkout .product-list table.views-view-grid > tbody > tr > td .views-field-title,
   .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td .views-field-title,
   .section-cart .product-list table.views-view-grid > tbody > tr > td .views-field-title,
@@ -1567,7 +1595,7 @@
     overflow: hidden;
     line-height: 1em;
   }
-  /* line 940, ../sass/nodes.scss */
+  /* line 962, ../sass/nodes.scss */
   .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td.views-row-first, .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td:first-child, .section-checkout .product-list table.views-view-grid > tbody > tr > td.views-row-first, .section-checkout .product-list table.views-view-grid > tbody > tr > td:first-child,
   .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td.views-row-first,
   .section-cart .view-product-catalog table.views-view-grid > tbody > tr > td:first-child,
@@ -1585,15 +1613,15 @@
 /*
  * Product display
  */
-/* line 956, ../sass/nodes.scss */
+/* line 978, ../sass/nodes.scss */
 .node-type-product-display #main {
   padding-top: 0.75em;
 }
-/* line 959, ../sass/nodes.scss */
+/* line 981, ../sass/nodes.scss */
 .node-type-product-display .sidebars {
   padding-top: 25px;
 }
-/* line 962, ../sass/nodes.scss */
+/* line 984, ../sass/nodes.scss */
 .node-type-product-display h1#page-title {
   text-transform: uppercase;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -1602,32 +1630,32 @@
   line-height: 1.2069em;
   line-height: 1em;
 }
-/* line 968, ../sass/nodes.scss */
+/* line 990, ../sass/nodes.scss */
 .node-type-product-display .field-name-field-description p {
   margin: 0;
 }
-/* line 969, ../sass/nodes.scss */
+/* line 991, ../sass/nodes.scss */
 .node-type-product-display .views-field-field-offers, .node-type-product-display .field-out-of-stock, .node-type-product-display .field-offers, .node-type-product-display .views-field-field-shipping-offer, .node-type-product-display .views-field-field-new-addition {
   margin-right: 2em;
   margin-bottom: -11em;
   height: 11em;
   top: 0;
 }
-/* line 974, ../sass/nodes.scss */
+/* line 996, ../sass/nodes.scss */
 .node-type-product-display .views-field-field-offers > div, .node-type-product-display .field-out-of-stock > div, .node-type-product-display .field-offers > div, .node-type-product-display .views-field-field-shipping-offer > div, .node-type-product-display .views-field-field-new-addition > div {
   background-size: 38%;
 }
-/* line 976, ../sass/nodes.scss */
+/* line 998, ../sass/nodes.scss */
 .node-type-product-display .field-name-commerce-price {
   font-size: 1.35em;
   line-height: 1.2963em;
 }
-/* line 979, ../sass/nodes.scss */
+/* line 1001, ../sass/nodes.scss */
 .node-type-product-display .field-name-commerce-price td {
   display: block;
   float: right;
 }
-/* line 981, ../sass/nodes.scss */
+/* line 1003, ../sass/nodes.scss */
 .node-type-product-display .field-name-field-product-quote {
   background: #a39161;
   padding: 1em;
@@ -1639,45 +1667,45 @@
   -o-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 987, ../sass/nodes.scss */
+/* line 1009, ../sass/nodes.scss */
 .node-type-product-display .field-name-field-product-quote .node-title {
   display: none;
 }
-/* line 988, ../sass/nodes.scss */
+/* line 1010, ../sass/nodes.scss */
 .node-type-product-display .field-name-field-product-quote .field-name-field-quote-text {
   font-family: "Georgia W01 Italic", Georgia, "Times New Roman", "DejaVu Serif", serif;
 }
 @media (min-width: 49em) {
-  /* line 996, ../sass/nodes.scss */
+  /* line 1018, ../sass/nodes.scss */
   .node-type-product-display .product-display-image {
     width: 48.71795%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1000, ../sass/nodes.scss */
+  /* line 1022, ../sass/nodes.scss */
   .node-type-product-display .wrapper {
     width: 48.71795%;
     float: right;
     margin-right: 0;
     padding-top: 25px;
   }
-  /* line 1004, ../sass/nodes.scss */
+  /* line 1026, ../sass/nodes.scss */
   .node-type-product-display .wrapper .field-name-commerce-price, .node-type-product-display .wrapper .form-item-quantity {
     clear: both;
   }
-  /* line 1007, ../sass/nodes.scss */
+  /* line 1029, ../sass/nodes.scss */
   .node-type-product-display .wrapper .form-item-quantity {
     clear: left;
     margin: 0.5em 0;
   }
-  /* line 1011, ../sass/nodes.scss */
+  /* line 1033, ../sass/nodes.scss */
   .node-type-product-display .wrapper .buy-now {
     clear: both;
     position: relative;
     margin: 0.5em 0;
     max-width: 8em;
   }
-  /* line 1017, ../sass/nodes.scss */
+  /* line 1039, ../sass/nodes.scss */
   .node-type-product-display .wrapper.disabled .buy-now {
     top: 0;
     margin-top: 0.5em;
@@ -1687,12 +1715,12 @@
 /*
  * Front page product carousel
  */
-/* line 1030, ../sass/nodes.scss */
+/* line 1052, ../sass/nodes.scss */
 .front .view-product-catalog {
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-align: center;
 }
-/* line 1036, ../sass/nodes.scss */
+/* line 1058, ../sass/nodes.scss */
 .front .view-product-catalog .views-field-title a {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1702,13 +1730,13 @@
   line-height: 1.25em;
   line-height: 1.1em;
 }
-/* line 1045, ../sass/nodes.scss */
+/* line 1067, ../sass/nodes.scss */
 .front .view-product-catalog .views-field-field-price,
 .front .view-product-catalog .views-field-commerce-price {
   font-size: 0.8em;
   line-height: 1.5625em;
 }
-/* line 1050, ../sass/nodes.scss */
+/* line 1072, ../sass/nodes.scss */
 .front .view-product-catalog .views-field-field-product-link-1 a,
 .front .view-product-catalog .views-field-view-node a {
   position: relative;
@@ -1733,7 +1761,7 @@
   margin-left: 0.25em;
   bottom: 0.4em;
 }
-/* line 1063, ../sass/nodes.scss */
+/* line 1085, ../sass/nodes.scss */
 .front .view-product-catalog .views-field-field-product-link-1,
 .front .view-product-catalog .views-field-field-price,
 .front .view-product-catalog .views-field-commerce-price,
@@ -1741,33 +1769,33 @@
   display: inline-block;
 }
 @media (min-width: 32em) {
-  /* line 1067, ../sass/nodes.scss */
+  /* line 1089, ../sass/nodes.scss */
   .front .view-product-catalog .views-row {
     width: 48.27586%;
     float: left;
     margin-right: 3.44828%;
     border-bottom: none;
   }
-  /* line 1069, ../sass/nodes.scss */
+  /* line 1091, ../sass/nodes.scss */
   .front .view-product-catalog .views-row .views-row-even {
     float: right;
     margin-right: 0;
   }
 }
 @media (min-width: 49em) {
-  /* line 1074, ../sass/nodes.scss */
+  /* line 1096, ../sass/nodes.scss */
   .front .view-product-catalog .view-content {
     font-size: 0.6em;
     line-height: 1.66667em;
   }
-  /* line 1076, ../sass/nodes.scss */
+  /* line 1098, ../sass/nodes.scss */
   .front .view-product-catalog .views-row {
     width: 16.66667%;
     float: left;
     margin-right: 4.16667%;
     @inlclude remove-omega;
   }
-  /* line 1077, ../sass/nodes.scss */
+  /* line 1099, ../sass/nodes.scss */
   .front .view-product-catalog .views-row-last {
     float: right;
     margin-right: 0;
@@ -1775,61 +1803,61 @@
 }
 
 @media (min-width: 49em) {
-  /* line 1083, ../sass/nodes.scss */
+  /* line 1105, ../sass/nodes.scss */
   .js .front #block-views-94f03c568041a24aa980b8a94d416d69 {
     border-bottom: 1px #a39161 dashed;
   }
 
-  /* line 1086, ../sass/nodes.scss */
+  /* line 1108, ../sass/nodes.scss */
   .js .front .view-product-catalog {
     padding-top: 0.8em;
     min-height: 13em;
   }
-  /* line 1089, ../sass/nodes.scss */
+  /* line 1111, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content {
     font-size: 1em;
     line-height: 1.25em;
     line-height: 1em;
   }
-  /* line 1096, ../sass/nodes.scss */
+  /* line 1118, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .views-field-field-product-image img,
   .js .front .view-product-catalog .view-content .views-field-field-image img {
     width: 85%;
     position: relative;
   }
-  /* line 1101, ../sass/nodes.scss */
+  /* line 1123, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .wrapper {
     position: inherit;
     top: 0;
     left: 0;
     width: 100%;
   }
-  /* line 1106, ../sass/nodes.scss */
+  /* line 1128, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .highlight .wrapper {
     position: relative;
     top: -1.5em;
     left: -2.25em;
     width: 10em;
   }
-  /* line 1112, ../sass/nodes.scss */
+  /* line 1134, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-title {
     display: block;
     max-height: 2em;
     overflow: hidden;
   }
-  /* line 1119, ../sass/nodes.scss */
+  /* line 1141, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-field-product-image img,
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-field-image img {
     margin-left: 12px;
   }
-  /* line 1124, ../sass/nodes.scss */
+  /* line 1146, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-field-price,
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-field-product-link-1,
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-commerce-price,
   .js .front .view-product-catalog .view-content .highlight .wrapper .views-field-view-node {
     display: inline-block;
   }
-  /* line 1133, ../sass/nodes.scss */
+  /* line 1155, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content .views-field-title,
   .js .front .view-product-catalog .view-content .views-field-commerce-price,
   .js .front .view-product-catalog .view-content .views-field-field-price,
@@ -1841,18 +1869,18 @@
 /*
  * Shop Homepage
  */
-/* line 1144, ../sass/nodes.scss */
+/* line 1166, ../sass/nodes.scss */
 .page-node-423 .field-name-field-standfirst img {
   border-bottom: 1px dashed #a39161;
 }
 @media (min-width: 32em) {
-  /* line 1149, ../sass/nodes.scss */
+  /* line 1171, ../sass/nodes.scss */
   .page-node-423 #block-views-sidebar-blocks-block-4 .views-row {
     width: 23.07692%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1152, ../sass/nodes.scss */
+  /* line 1174, ../sass/nodes.scss */
   .page-node-423 #block-views-sidebar-blocks-block-4 .views-row-last {
     float: right;
     margin-right: 0;
@@ -1862,39 +1890,39 @@
 /*
  * cart
  */
-/* line 1163, ../sass/nodes.scss */
+/* line 1185, ../sass/nodes.scss */
 .cart-summary {
   clear: both;
   padding-top: 1em;
 }
-/* line 1165, ../sass/nodes.scss */
+/* line 1187, ../sass/nodes.scss */
 .cart-summary .views-view-grid {
   width: 100%;
 }
 @media (min-width: 32em) {
-  /* line 1167, ../sass/nodes.scss */
+  /* line 1189, ../sass/nodes.scss */
   .cart-summary .views-row {
     clear: both;
     border-top: 1px dashed #a39161;
     padding-top: 1em;
   }
-  /* line 1171, ../sass/nodes.scss */
+  /* line 1193, ../sass/nodes.scss */
   .cart-summary .views-row.views-row-first {
     border-top: none;
   }
-  /* line 1172, ../sass/nodes.scss */
+  /* line 1194, ../sass/nodes.scss */
   .cart-summary .views-row .views-field-field-image {
     width: 10.25641%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1175, ../sass/nodes.scss */
+  /* line 1197, ../sass/nodes.scss */
   .cart-summary .views-row .line-item-detail {
     width: 61.53846%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1177, ../sass/nodes.scss */
+  /* line 1199, ../sass/nodes.scss */
   .cart-summary .views-row .line-item-detail .delete-line-item {
     background: transparent;
     color: #793f0d;
@@ -1904,49 +1932,49 @@
     padding: 0;
     font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   }
-  /* line 1186, ../sass/nodes.scss */
+  /* line 1208, ../sass/nodes.scss */
   .cart-summary .views-row .views-field-edit-quantity, .cart-summary .views-row .views-field-quantity {
     width: 10.25641%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1189, ../sass/nodes.scss */
+  /* line 1211, ../sass/nodes.scss */
   .cart-summary .views-row .views-field-commerce-unit-price {
     width: 10.25641%;
     float: right;
     margin-right: 0;
     text-align: right;
   }
-  /* line 1194, ../sass/nodes.scss */
+  /* line 1216, ../sass/nodes.scss */
   .cart-summary .line-item-summary, .cart-summary .view-footer {
     clear: both;
   }
-  /* line 1196, ../sass/nodes.scss */
+  /* line 1218, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components, .cart-summary .view-footer .commerce-price-formatted-components {
     width: 23.07692%;
     float: right;
     margin-right: 0;
   }
-  /* line 1198, ../sass/nodes.scss */
+  /* line 1220, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tbody, .cart-summary .view-footer .commerce-price-formatted-components tbody {
     border: none;
   }
-  /* line 1199, ../sass/nodes.scss */
+  /* line 1221, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr, .cart-summary .view-footer .commerce-price-formatted-components tr {
     border: none;
     color: #a39161;
   }
-  /* line 1202, ../sass/nodes.scss */
+  /* line 1224, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr .component-title, .cart-summary .view-footer .commerce-price-formatted-components tr .component-title {
     font-weight: normal;
     text-transform: uppercase;
     font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   }
-  /* line 1207, ../sass/nodes.scss */
+  /* line 1229, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr .component-total, .cart-summary .view-footer .commerce-price-formatted-components tr .component-total {
     font-weight: normal;
   }
-  /* line 1210, ../sass/nodes.scss */
+  /* line 1232, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr.component-type-commerce-price-formatted-amount, .cart-summary .view-footer .commerce-price-formatted-components tr.component-type-commerce-price-formatted-amount {
     color: #793f0d;
   }
@@ -1955,61 +1983,61 @@
 /*
  * Checkout
  */
-/* line 1226, ../sass/nodes.scss */
+/* line 1248, ../sass/nodes.scss */
 .section-checkout #page-title, .section-cart #page-title {
   display: none;
 }
 
-/* line 1229, ../sass/nodes.scss */
+/* line 1251, ../sass/nodes.scss */
 .section-checkout #content form {
   clear: both;
   padding-top: 1em;
 }
-/* line 1233, ../sass/nodes.scss */
+/* line 1255, ../sass/nodes.scss */
 .section-checkout fieldset {
   border: none;
   margin: 0;
   clear: both;
 }
-/* line 1238, ../sass/nodes.scss */
+/* line 1260, ../sass/nodes.scss */
 .section-checkout legend {
   text-transform: uppercase;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   padding: 1em 0 0 0;
 }
-/* line 1239, ../sass/nodes.scss */
+/* line 1261, ../sass/nodes.scss */
 .section-checkout .form-item {
   margin: 0.5em 0;
 }
-/* line 1241, ../sass/nodes.scss */
+/* line 1263, ../sass/nodes.scss */
 .section-checkout .form-item label {
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: none;
 }
-/* line 1243, ../sass/nodes.scss */
+/* line 1265, ../sass/nodes.scss */
 .section-checkout .checkout-continue {
   background: #12ad2b;
   display: block;
 }
-/* line 1247, ../sass/nodes.scss */
+/* line 1269, ../sass/nodes.scss */
 .section-checkout .cart_contents {
   border-bottom: 1px dashed #a39161;
 }
-/* line 1250, ../sass/nodes.scss */
+/* line 1272, ../sass/nodes.scss */
 .section-checkout .checkout-cancel {
   color: #793f0d;
 }
-/* line 1252, ../sass/nodes.scss */
+/* line 1274, ../sass/nodes.scss */
 .section-checkout .customer_profile_billing label, .section-checkout .commerce_mailchimp label {
   font-size: 0.75em;
   line-height: 1.33333em;
 }
-/* line 1255, ../sass/nodes.scss */
+/* line 1277, ../sass/nodes.scss */
 .section-checkout .commerce_mailchimp legend {
   display: none;
 }
 @media (min-width: 32em) {
-  /* line 1259, ../sass/nodes.scss */
+  /* line 1281, ../sass/nodes.scss */
   .section-checkout .commerce_shipping, .section-checkout .commerce_payment {
     clear: none;
     padding: 0;
@@ -2018,7 +2046,7 @@
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1263, ../sass/nodes.scss */
+  /* line 1285, ../sass/nodes.scss */
   .section-checkout .commerce_shipping {
     float: right;
     margin-right: 0;
@@ -2030,7 +2058,7 @@
  * About section styles
  * - section wide styles
  */
-/* line 1275, ../sass/nodes.scss */
+/* line 1297, ../sass/nodes.scss */
 .section-about-us img, .standard-page img, .section-trade img {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -2042,75 +2070,75 @@
 /*
  * Sitesearch
  */
-/* line 1283, ../sass/nodes.scss */
+/* line 1305, ../sass/nodes.scss */
 .searchhead {
   margin-top: 0.75em;
   font-size: 0.8em;
   line-height: 1.5625em;
   border-bottom: 1px dashed #a39161;
 }
-/* line 1287, ../sass/nodes.scss */
+/* line 1309, ../sass/nodes.scss */
 .searchhead ul, .searchhead li {
   list-style: none;
   display: inline;
   margin: 0;
   padding: 0;
 }
-/* line 1288, ../sass/nodes.scss */
+/* line 1310, ../sass/nodes.scss */
 .searchhead ul a, .searchhead li a {
   padding: 0 0.25em;
   color: #a39161;
 }
 
 @media (min-width: 32em) {
-  /* line 1291, ../sass/nodes.scss */
+  /* line 1313, ../sass/nodes.scss */
   .google-search-results {
     width: 74.35897%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 1294, ../sass/nodes.scss */
+  /* line 1316, ../sass/nodes.scss */
   .google-search-results .gss-result {
     clear: both;
   }
-  /* line 1296, ../sass/nodes.scss */
+  /* line 1318, ../sass/nodes.scss */
   .google-search-results .gss-result img {
     float: right;
   }
 }
-/* line 1301, ../sass/nodes.scss */
+/* line 1323, ../sass/nodes.scss */
 .google-search-results .gss-result {
   border-bottom: 1px dashed #a39161;
 }
-/* line 1304, ../sass/nodes.scss */
+/* line 1326, ../sass/nodes.scss */
 .google-search-results h3 {
   font-size: 1.3em;
   line-height: 1.34615em;
   font-weight: normal;
 }
-/* line 1307, ../sass/nodes.scss */
+/* line 1329, ../sass/nodes.scss */
 .google-search-results h3 a {
   color: #793f0d;
 }
-/* line 1309, ../sass/nodes.scss */
+/* line 1331, ../sass/nodes.scss */
 .google-search-results h3 a b {
   color: #f1ab00;
   font-weight: normal;
 }
-/* line 1312, ../sass/nodes.scss */
+/* line 1334, ../sass/nodes.scss */
 .google-search-results .gss-search-snippet {
   font-size: 0.8em;
   line-height: 1.5625em;
 }
-/* line 1315, ../sass/nodes.scss */
+/* line 1337, ../sass/nodes.scss */
 .google-search-results .gss-search-snippet b {
   color: #f1ab00;
 }
-/* line 1318, ../sass/nodes.scss */
+/* line 1340, ../sass/nodes.scss */
 .google-search-results .gss-search-url {
   clear: both;
 }
-/* line 1320, ../sass/nodes.scss */
+/* line 1342, ../sass/nodes.scss */
 .google-search-results .gss-search-url a {
   font-size: 0.75em;
   line-height: 1.33333em;
@@ -2120,7 +2148,7 @@
   font-weight: normal;
 }
 
-/* line 1325, ../sass/nodes.scss */
+/* line 1347, ../sass/nodes.scss */
 .google-search-pager {
   clear: both;
   padding-top: 1em;
@@ -2130,7 +2158,7 @@
  * Press Page styles
  */
 @media (min-width: 49em) {
-  /* line 1335, ../sass/nodes.scss */
+  /* line 1357, ../sass/nodes.scss */
   .page-node-318 #content .field-name-body {
     width: 38.77551%;
     float: left;
@@ -2138,34 +2166,34 @@
     font-size: 1.1em;
     line-height: 1.36364em;
   }
-  /* line 1339, ../sass/nodes.scss */
+  /* line 1361, ../sass/nodes.scss */
   .page-node-318 form {
     width: 38.77551%;
     float: right;
     margin-right: 0;
   }
-  /* line 1343, ../sass/nodes.scss */
+  /* line 1365, ../sass/nodes.scss */
   .page-node-318 .region-content-bottom .block-views, .page-node-318 .region-content-bottom .block-block {
     width: 48.97959%;
     float: left;
     margin-right: 2.04082%;
   }
-  /* line 1345, ../sass/nodes.scss */
+  /* line 1367, ../sass/nodes.scss */
   .page-node-318 .region-content-bottom .block-views h2.block-title, .page-node-318 .region-content-bottom .block-block h2.block-title {
     margin-bottom: 1em;
   }
-  /* line 1346, ../sass/nodes.scss */
+  /* line 1368, ../sass/nodes.scss */
   .page-node-318 .region-content-bottom .block-views .views-row, .page-node-318 .region-content-bottom .block-block .views-row {
     margin-bottom: 0.5em;
   }
-  /* line 1348, ../sass/nodes.scss */
+  /* line 1370, ../sass/nodes.scss */
   .page-node-318 .region-content-bottom #block-views-media-block-1, .page-node-318 .region-content-bottom .last {
     float: right;
     margin-right: 0;
   }
 }
 
-/* line 1354, ../sass/nodes.scss */
+/* line 1376, ../sass/nodes.scss */
 .view-media .views-row {
   margin-bottom: 1em;
 }
@@ -2173,33 +2201,33 @@
 /*
  * Wholesaler styles
  */
-/* line 1362, ../sass/nodes.scss */
+/* line 1384, ../sass/nodes.scss */
 .view-wholesalers .views-exposed-widgets {
   margin-bottom: 1em;
   padding-bottom: 1em;
   border-bottom: 1px #793f0d dotted;
 }
-/* line 1366, ../sass/nodes.scss */
+/* line 1388, ../sass/nodes.scss */
 .view-wholesalers .views-exposed-widgets label, .view-wholesalers .views-exposed-widgets .views-widget {
   display: inline-block;
 }
-/* line 1367, ../sass/nodes.scss */
+/* line 1389, ../sass/nodes.scss */
 .view-wholesalers .views-exposed-widgets label {
   font-weight: normal;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
 }
-/* line 1369, ../sass/nodes.scss */
+/* line 1391, ../sass/nodes.scss */
 .view-wholesalers .views-row {
   margin: 0 1em;
   border-bottom: 1px #793f0d dotted;
 }
-/* line 1372, ../sass/nodes.scss */
+/* line 1394, ../sass/nodes.scss */
 .view-wholesalers .views-row .views-field-title {
   font-size: 1.2em;
   line-height: 1.25em;
 }
-/* line 1374, ../sass/nodes.scss */
+/* line 1396, ../sass/nodes.scss */
 .view-wholesalers .views-row .views-field-title h3 {
   margin: 0;
 }

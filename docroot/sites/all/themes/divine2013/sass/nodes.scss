@@ -24,6 +24,19 @@
     .highlight-caption, .highlight {
       a {color: $white;}
     }
+    a.button {
+      color: $white;
+      background: $blue;
+      font-family: $avenir-bold;
+      padding: 15px;
+      text-transform: uppercase;
+      @include border-radius(15px);
+      display: inline-block; 
+      &:hover {
+        text-decoration: none;
+        background: darken($blue, 10%);
+      }
+    }
   }
   
   /* Node Styles */
@@ -186,7 +199,16 @@
     
     .field-name-body {
       p:first-of-type {margin-top: 0;}
-      a {color: $yellow;}
+      a {
+        color: $yellow;
+        &.button {
+          color: $white;
+          background: $yellow;
+          &:hover {
+            background: darken($yellow, 10%);
+          }
+        }
+      }
       .board-members {
         list-style-type: none;
         margin: 0; padding: 0;

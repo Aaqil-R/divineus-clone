@@ -4,3 +4,5 @@ docroot/sites/*/files
 docroot/sites/*/private
 
 .project
+docroot/sites/divineus1.dev.local/
+docroot/sites/all/themes/divine2013/.sass-cache/
