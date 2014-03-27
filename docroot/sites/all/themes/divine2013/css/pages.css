@@ -126,6 +126,11 @@ body {
     min-height: 498px;
   }
   /* line 108, ../sass/pages.scss */
+  .front #header #logo h1 {
+    height: 118px;
+    background: transparent;
+  }
+  /* line 109, ../sass/pages.scss */
   .front #header #block-block-14 {
     display: block;
     width: 515px;
@@ -135,12 +140,12 @@ body {
     margin-left: -348px;
     background: transparent;
   }
-  /* line 116, ../sass/pages.scss */
+  /* line 117, ../sass/pages.scss */
   .front #header #block-block-14 p {
     display: block;
     height: 100%;
   }
-  /* line 117, ../sass/pages.scss */
+  /* line 118, ../sass/pages.scss */
   .front #header #block-block-14 a {
     text-indent: 100%;
     overflow: hidden;
@@ -148,20 +153,20 @@ body {
     display: block;
     height: 100%;
   }
-  /* line 125, ../sass/pages.scss */
+  /* line 126, ../sass/pages.scss */
   .front #header #swoosh, .front #header .region-nav {
     position: relative;
     top: 316px;
   }
 }
 @media (min-width: 60em) {
-  /* line 133, ../sass/pages.scss */
+  /* line 134, ../sass/pages.scss */
   .front #header {
     background-size: auto;
   }
 }
 
-/* line 138, ../sass/pages.scss */
+/* line 139, ../sass/pages.scss */
 .region-header {
   /* Wrapper for any blocks placed in the header region */
   width: 58.33333%;
@@ -169,7 +174,7 @@ body {
   margin-right: 0;
   margin-top: 0.5em;
 }
-/* line 141, ../sass/pages.scss */
+/* line 142, ../sass/pages.scss */
 .region-header .block {
   background: black;
   height: 1.6em;
@@ -182,14 +187,14 @@ body {
   line-height: 1.66667em;
 }
 @media (min-width: 32em) {
-  /* line 138, ../sass/pages.scss */
+  /* line 139, ../sass/pages.scss */
   .region-header {
     width: 59.18367%;
     float: right;
     margin-right: 0;
     margin-top: 1em;
   }
-  /* line 155, ../sass/pages.scss */
+  /* line 156, ../sass/pages.scss */
   .region-header .block {
     clear: none;
     width: 8em;
@@ -205,7 +210,7 @@ body {
 /*
  * Main (container for everything else)
  */
-/* line 173, ../sass/pages.scss */
+/* line 174, ../sass/pages.scss */
 #main {
   background: white;
 }
@@ -213,16 +218,16 @@ body {
 /*
  * Content
  */
-/* line 185, ../sass/pages.scss */
+/* line 186, ../sass/pages.scss */
 .breadcrumb {
   /* The path to the current page in the form of a list of links */
 }
-/* line 186, ../sass/pages.scss */
+/* line 187, ../sass/pages.scss */
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 190, ../sass/pages.scss */
+/* line 191, ../sass/pages.scss */
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -230,14 +235,14 @@ body {
   padding: 0;
 }
 
-/* line 199, ../sass/pages.scss */
+/* line 200, ../sass/pages.scss */
 .view-recipes a:hover img, .view-sidebar-blocks a:hover img {
   -webkit-box-shadow: 0px 0px 5px #58595b;
   -moz-box-shadow: 0px 0px 5px #58595b;
   box-shadow: 0px 0px 5px #58595b;
 }
 
-/* line 213, ../sass/pages.scss */
+/* line 214, ../sass/pages.scss */
 h1.title,
 h2.node-title,
 h2.block-title,
@@ -248,37 +253,37 @@ h3.title {
   margin: 0;
 }
 
-/* line 217, ../sass/pages.scss */
+/* line 218, ../sass/pages.scss */
 tr.even {
   /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 221, ../sass/pages.scss */
+/* line 222, ../sass/pages.scss */
 tr.odd {
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 225, ../sass/pages.scss */
+/* line 226, ../sass/pages.scss */
 div.messages {
   /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 0;
   /* Drupal core uses "6px 0" margin */
 }
-/* line 228, ../sass/pages.scss */
+/* line 229, ../sass/pages.scss */
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 234, ../sass/pages.scss */
+/* line 235, ../sass/pages.scss */
 div.status {
   /* Normal priority messages */
 }
 
-/* line 238, ../sass/pages.scss */
+/* line 239, ../sass/pages.scss */
 div.warning,
 tr.warning {
   /* Medium priority messages */
@@ -286,53 +291,53 @@ tr.warning {
   /* Drupal core uses: 1px solid #f0c020 */
 }
 
-/* line 243, ../sass/pages.scss */
+/* line 244, ../sass/pages.scss */
 div.error,
 tr.error {
   /* High priority messages. See also the .error declaration below. */
 }
 
-/* line 246, ../sass/pages.scss */
+/* line 247, ../sass/pages.scss */
 .error {
   /* Errors that are separate from div.messages status messages. */
   /* color: #e55; */
   /* Drupal core uses a #e55 background */
 }
 
-/* line 250, ../sass/pages.scss */
+/* line 251, ../sass/pages.scss */
 .warning {
   /* Warnings that are separate from div.messages status messages. */
   /* color: #e09010; */
   /* Drupal core uses a #e09010 background */
 }
 
-/* line 254, ../sass/pages.scss */
+/* line 255, ../sass/pages.scss */
 .tabs {
   /* See also the tabs.css file. */
 }
 
-/* line 257, ../sass/pages.scss */
+/* line 258, ../sass/pages.scss */
 .region-help {
   /* Help text on a page */
 }
 
-/* line 260, ../sass/pages.scss */
+/* line 261, ../sass/pages.scss */
 .more-help-link {
   /* Link to more help */
 }
 
-/* line 263, ../sass/pages.scss */
+/* line 264, ../sass/pages.scss */
 #content {
   /* Wrapper for the actual page content */
 }
 
-/* line 267, ../sass/pages.scss */
+/* line 268, ../sass/pages.scss */
 ul.inline {
   /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
 }
-/* line 271, ../sass/pages.scss */
+/* line 272, ../sass/pages.scss */
 ul.inline li {
   display: inline;
   list-style-type: none;
@@ -340,30 +345,30 @@ ul.inline li {
   /* LTR */
 }
 
-/* line 277, ../sass/pages.scss */
+/* line 278, ../sass/pages.scss */
 span.field-label {
   /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
   /* LTR */
 }
 
-/* line 281, ../sass/pages.scss */
+/* line 282, ../sass/pages.scss */
 .item-list .pager {
   /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
-/* line 284, ../sass/pages.scss */
+/* line 285, ../sass/pages.scss */
 .item-list .pager li {
   /* Each page number in the pager list */
   padding: 0 0.5em;
 }
 
-/* line 289, ../sass/pages.scss */
+/* line 290, ../sass/pages.scss */
 .feed-icon {
   /* The link to the RSS or Atom feed for the current list of content */
 }
 
-/* line 292, ../sass/pages.scss */
+/* line 293, ../sass/pages.scss */
 .more-link {
   /* Aggregator, blog, and forum more link */
 }
@@ -374,7 +379,7 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-first
  * (see the layout.css file.)
  */
-/* line 301, ../sass/pages.scss */
+/* line 302, ../sass/pages.scss */
 .sidebars {
   width: 100%;
   float: right;
@@ -382,14 +387,14 @@ span.field-label {
 }
 
 @media (min-width: 32em) {
-  /* line 305, ../sass/pages.scss */
+  /* line 306, ../sass/pages.scss */
   .sidebar-first #content {
     width: 69.38776%;
     float: left;
     margin-right: 2.04082%;
   }
 
-  /* line 310, ../sass/pages.scss */
+  /* line 311, ../sass/pages.scss */
   .sidebars {
     width: 28.57143%;
     float: right;
@@ -397,27 +402,27 @@ span.field-label {
   }
 }
 @media (min-width: 49em) {
-  /* line 317, ../sass/pages.scss */
+  /* line 318, ../sass/pages.scss */
   .sidebar-first #content {
     width: 79.59184%;
     float: left;
     margin-right: 2.04082%;
   }
 
-  /* line 322, ../sass/pages.scss */
+  /* line 323, ../sass/pages.scss */
   .sidebars {
     width: 18.36735%;
     float: right;
     margin-right: 0;
   }
 
-  /* line 326, ../sass/pages.scss */
+  /* line 327, ../sass/pages.scss */
   .adinkra-sidebar .sidebars {
     background: url("../images/symbols/adinkra-large.png") no-repeat;
     padding-bottom: 220px;
     background-position: left bottom;
   }
-  /* line 331, ../sass/pages.scss */
+  /* line 332, ../sass/pages.scss */
   .adinkra-sidebar.good-stuff .sidebars {
     background-position: -200px bottom;
   }
@@ -425,13 +430,13 @@ span.field-label {
 /*
  * Footer
  */
-/* line 342, ../sass/pages.scss */
+/* line 343, ../sass/pages.scss */
 #footer {
   background: url("../images/wrapper/swoosh-bottom.png") black no-repeat top right;
   padding-top: 6em;
 }
 @media (min-width: 32em) {
-  /* line 342, ../sass/pages.scss */
+  /* line 343, ../sass/pages.scss */
   #footer {
     background-position-x: center;
   }
@@ -440,14 +445,14 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 355, ../sass/pages.scss */
+/* line 356, ../sass/pages.scss */
 .region-content-bottom {
   /* Wrapper for any blocks placed in the content bottom region */
   clear: both;
   padding: 2em 0;
 }
 @media (min-width: 32em) {
-  /* line 355, ../sass/pages.scss */
+  /* line 356, ../sass/pages.scss */
   .region-content-bottom {
     width: 79.59184%;
     float: left;
