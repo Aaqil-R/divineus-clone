@@ -102,7 +102,7 @@ body {
     #header {
       background-image: image-url('homepage-banner/spring-web-banner.jpg');
       background-repeat: no-repeat;
-      background-position: center 131px;
+      background-position: center;
       background-size: 100%;
       min-height: 498px;
       #logo h1 {height: 118px; background: transparent;}
@@ -131,7 +131,7 @@ body {
   }
   
   @include breakpoint(desktop-wide) {
-    #header {background-size: auto;}
+    #header {}
   }
 }
 

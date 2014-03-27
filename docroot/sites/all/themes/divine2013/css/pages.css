@@ -121,7 +121,7 @@ body {
   .front #header {
     background-image: url('../images/homepage-banner/spring-web-banner.jpg?1395069032');
     background-repeat: no-repeat;
-    background-position: center 131px;
+    background-position: center;
     background-size: 100%;
     min-height: 498px;
   }
@@ -157,12 +157,6 @@ body {
   .front #header #swoosh, .front #header .region-nav {
     position: relative;
     top: 316px;
-  }
-}
-@media (min-width: 60em) {
-  /* line 134, ../sass/pages.scss */
-  .front #header {
-    background-size: auto;
   }
 }
 
