@@ -45,7 +45,7 @@ body {
  * Header
  */
 #swoosh {
-    background: url('../images/wrapper/swoosh-top.png') no-repeat;
+    background: image-url('wrapper/swoosh-top.png') no-repeat;
     background-position: -102px;
     height: 35px; width: 100%;
     position: relative;
@@ -100,11 +100,11 @@ body {
   }
   @include breakpoint(desktop) {
     #header {
-      background-image: url('../images/homepage-banner/love-chocolate.jpg');
+      background-image: image-url('homepage-banner/spring-web-banner.jpg');
       background-repeat: no-repeat;
       background-position: center 131px;
       background-size: 100%;
-      min-height: 439px;
+      min-height: 498px;
       #block-block-14 {
         display: block;
         width:515px;
@@ -124,7 +124,7 @@ body {
       }
       #swoosh, .region-nav {
         position: relative;
-        top: 278px;
+        top: 316px;
       }
     }
   }

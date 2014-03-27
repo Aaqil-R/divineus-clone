@@ -48,7 +48,7 @@ body {
  */
 /* line 47, ../sass/pages.scss */
 #swoosh {
-  background: url("../images/wrapper/swoosh-top.png") no-repeat;
+  background: url('../images/wrapper/swoosh-top.png?1393921580') no-repeat;
   background-position: -102px;
   height: 35px;
   width: 100%;
@@ -119,11 +119,11 @@ body {
 @media (min-width: 49em) {
   /* line 102, ../sass/pages.scss */
   .front #header {
-    background-image: url("../images/homepage-banner/love-chocolate.jpg");
+    background-image: url('../images/homepage-banner/spring-web-banner.jpg?1395069032');
     background-repeat: no-repeat;
     background-position: center 131px;
     background-size: 100%;
-    min-height: 439px;
+    min-height: 498px;
   }
   /* line 108, ../sass/pages.scss */
   .front #header #block-block-14 {
@@ -151,7 +151,7 @@ body {
   /* line 125, ../sass/pages.scss */
   .front #header #swoosh, .front #header .region-nav {
     position: relative;
-    top: 278px;
+    top: 316px;
   }
 }
 @media (min-width: 60em) {
