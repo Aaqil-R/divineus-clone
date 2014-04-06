@@ -40,7 +40,7 @@
 /* line 27, ../sass/nodes.scss */
 .node .field-name-body a.button, .node .field-name-field-standfirst a.button {
   color: white;
-  background: #00aeef;
+  background-color: #00aeef;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   padding: 15px;
   text-transform: uppercase;
@@ -54,7 +54,7 @@
 /* line 35, ../sass/nodes.scss */
 .node .field-name-body a.button:hover, .node .field-name-field-standfirst a.button:hover {
   text-decoration: none;
-  background: #0089bc;
+  background-color: #0089bc;
 }
 /* line 43, ../sass/nodes.scss */
 .node p {
@@ -358,11 +358,11 @@
 /* line 204, ../sass/nodes.scss */
 .section-about-us #content .field-name-body a.button, .standard-page #content .field-name-body a.button, .section-about-us #content .field-name-field-standfirst a.button, .standard-page #content .field-name-field-standfirst a.button {
   color: white;
-  background: #f1ab00;
+  background-color: #f1ab00;
 }
 /* line 207, ../sass/nodes.scss */
 .section-about-us #content .field-name-body a.button:hover, .standard-page #content .field-name-body a.button:hover, .section-about-us #content .field-name-field-standfirst a.button:hover, .standard-page #content .field-name-field-standfirst a.button:hover {
-  background: #be8700;
+  background-color: #be8700;
 }
 /* line 212, ../sass/nodes.scss */
 .section-about-us #content .field-name-body .board-members, .standard-page #content .field-name-body .board-members, .section-about-us #content .field-name-field-standfirst .board-members, .standard-page #content .field-name-field-standfirst .board-members {

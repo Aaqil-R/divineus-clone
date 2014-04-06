@@ -26,7 +26,7 @@
     }
     a.button {
       color: $white;
-      background: $blue;
+      background-color: $blue;
       font-family: $avenir-bold;
       padding: 15px;
       text-transform: uppercase;
@@ -34,7 +34,7 @@
       display: inline-block; 
       &:hover {
         text-decoration: none;
-        background: darken($blue, 10%);
+        background-color: darken($blue, 10%);
       }
     }
   }
@@ -203,9 +203,9 @@
         color: $yellow;
         &.button {
           color: $white;
-          background: $yellow;
+          background-color: $yellow;
           &:hover {
-            background: darken($yellow, 10%);
+            background-color: darken($yellow, 10%);
           }
         }
       }
