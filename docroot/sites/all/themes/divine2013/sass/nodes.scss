@@ -24,7 +24,7 @@
     .highlight-caption, .highlight {
       a {color: $white;}
     }
-    a.button {
+    a.big-button {
       color: $white;
       background-color: $blue;
       font-family: $avenir-bold;
@@ -201,7 +201,7 @@
       p:first-of-type {margin-top: 0;}
       a {
         color: $yellow;
-        &.button {
+        &.big-button {
           color: $white;
           background-color: $yellow;
           &:hover {

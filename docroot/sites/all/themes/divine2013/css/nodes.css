@@ -38,7 +38,7 @@
   color: white;
 }
 /* line 27, ../sass/nodes.scss */
-.node .field-name-body a.button, .node .field-name-field-standfirst a.button {
+.node .field-name-body a.big-button, .node .field-name-field-standfirst a.big-button {
   color: white;
   background-color: #00aeef;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -52,7 +52,7 @@
   display: inline-block;
 }
 /* line 35, ../sass/nodes.scss */
-.node .field-name-body a.button:hover, .node .field-name-field-standfirst a.button:hover {
+.node .field-name-body a.big-button:hover, .node .field-name-field-standfirst a.big-button:hover {
   text-decoration: none;
   background-color: #0089bc;
 }
@@ -356,12 +356,12 @@
   color: #f1ab00;
 }
 /* line 204, ../sass/nodes.scss */
-.section-about-us #content .field-name-body a.button, .standard-page #content .field-name-body a.button, .section-about-us #content .field-name-field-standfirst a.button, .standard-page #content .field-name-field-standfirst a.button {
+.section-about-us #content .field-name-body a.big-button, .standard-page #content .field-name-body a.big-button, .section-about-us #content .field-name-field-standfirst a.big-button, .standard-page #content .field-name-field-standfirst a.big-button {
   color: white;
   background-color: #f1ab00;
 }
 /* line 207, ../sass/nodes.scss */
-.section-about-us #content .field-name-body a.button:hover, .standard-page #content .field-name-body a.button:hover, .section-about-us #content .field-name-field-standfirst a.button:hover, .standard-page #content .field-name-field-standfirst a.button:hover {
+.section-about-us #content .field-name-body a.big-button:hover, .standard-page #content .field-name-body a.big-button:hover, .section-about-us #content .field-name-field-standfirst a.big-button:hover, .standard-page #content .field-name-field-standfirst a.big-button:hover {
   background-color: #be8700;
 }
 /* line 212, ../sass/nodes.scss */
