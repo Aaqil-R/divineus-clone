@@ -17,7 +17,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /*Custom Mixins*/
 /*
  * Field wrappers when the Fences module is enabled.
@@ -65,18 +64,16 @@
 
 /* line 49, ../sass/fields.scss */
 .views-field-field-frontblockimg img:hover {
-  -webkit-box-shadow: 0px 0px 5px #58595b;
-  -moz-box-shadow: 0px 0px 5px #58595b;
-  box-shadow: 0px 0px 5px #58595b;
+  -moz-box-shadow: 0px 5px #58595b;
+  -webkit-box-shadow: 0px 5px #58595b;
+  box-shadow: 0px 5px #58595b;
 }
 
 /* line 53, ../sass/fields.scss */
 #page .addthisevent-drop {
   border: none;
-  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
   font-weight: normal;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -87,10 +84,8 @@
 #page .addthisevent-drop .addthisevent_dropdown {
   border: 1px #a39161 solid;
   margin-top: 0.25em;
-  -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
+  -webkit-border-radius: 6px;
   border-radius: 6px;
 }
 /* line 64, ../sass/fields.scss */

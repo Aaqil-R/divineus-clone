@@ -1,315 +1,57 @@
-/**
- * @file
- * Form Styling
- */
-@font-face {
-  font-family: 'OPTISport-Script';
-  src: url("fonts/optispos.eot");
-  src: url("fonts/optispos.eot?#iefix") format("embedded-opentype"), url("fonts/optispos.woff") format("woff"), url("fonts/optispos.ttf") format("truetype"), url("fonts/optispos.svg#optisport-scriptscript") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-/*Custom Mixins*/
-/* line 8, ../sass/forms.scss */
-form div .form-item:first-child {
-  margin-top: 0;
-}
-
-/* line 10, ../sass/forms.scss */
-.form-item {
-  /* Wrapper for a form element (or group of form elements) and its label */
-  margin: 1.5em 0;
-  max-width: 34.5em;
-}
-/* line 14, ../sass/forms.scss */
-.form-item input, .form-item textarea {
-  max-width: 100%;
-  border: none;
-  background: #e5e0d2;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  padding: 0.5em;
-}
-/* line 17, ../sass/forms.scss */
-.form-item input:focus, .form-item textarea:focus {
-  outline-color: #793f0d;
-}
-/* line 23, ../sass/forms.scss */
-.form-item input.error,
-.form-item textarea.error,
-.form-item select.error {
-  /* Highlight the form elements that caused a form submission error */
-  border: 1px solid #a39161;
-}
-/* line 27, ../sass/forms.scss */
-.form-item label {
-  /* The label for a form element */
-  display: block;
-  text-transform: uppercase;
-  font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-size: 1em;
-  line-height: 1.25em;
-  font-weight: normal;
-}
-/* line 35, ../sass/forms.scss */
-.form-item label.option {
-  /* The label for a radio button or checkbox */
-  display: inline;
-  font-weight: normal;
-}
-/* line 40, ../sass/forms.scss */
-.form-item .form-required {
-  /* The part of the label that indicates a required field */
-  color: #c00;
-}
-/* line 44, ../sass/forms.scss */
-.form-item .description {
-  /* The descriptive help text (separate from the label) */
-  font-size: 0.85em;
-}
-/* line 49, ../sass/forms.scss */
-.form-checkboxes .form-item, .form-radios .form-item {
-  /* Pack groups of checkboxes and radio buttons closer together */
-  margin: 0;
-  /* Drupal core uses "0.4em 0" */
-}
-
-/* line 57, ../sass/forms.scss */
-.form-submit {
-  /* The submit button */
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-  border: none;
-  background-color: #a39161;
-  color: white;
-  padding: 0.5em;
-  font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-transform: uppercase;
-}
-
-/* line 67, ../sass/forms.scss */
-.commerce-line-item-actions .form-submit {
-  margin-left: 1em;
-}
-
-/* line 68, ../sass/forms.scss */
-#edit-checkout {
-  background: #12ad2b;
-}
-
-/* line 71, ../sass/forms.scss */
-.container-inline div,
-.container-inline label {
-  /* Inline labels and form divs */
-  display: inline;
-}
-
-/* line 76, ../sass/forms.scss */
-.tips {
-  /* Tips for Drupal's input formats */
-}
-
-/* line 79, ../sass/forms.scss */
-a.button {
-  /* Buttons used by contrib modules like Media */
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-}
-
 /*
- * Password confirmation
- */
-/* line 88, ../sass/forms.scss */
-.password-parent,
-.confirm-parent {
-  margin: 0;
-}
+Syntax error: Undefined variable: "$legacy-support-for-ie6".
+        on line 228 of C:/Users/admin/Sites/devdesktop/divineus1-dev/docroot/sites/all/themes/divine2013/sass/forms.scss
 
-/*
- * Search (search-block-form.tpl.php)
- */
-/* line 96, ../sass/forms.scss */
-#block-search-form {
-  /* Wrapper for the search form */
-}
-
-/*
- * Drupal's default login form block
- */
-/* line 103, ../sass/forms.scss */
-#user-login-form {
-  text-align: left;
-  /* LTR */
-  /*
-   * OpenID
-   *
-   * The default styling for the OpenID login link seems to assume Garland's
-   * styling of list items.
-   */
-}
-/* line 113, ../sass/forms.scss */
-#user-login-form ul {
-  /* OpenID creates a new ul above the login form's links. */
-  margin-bottom: 0;
-  /* Position OpenID's ul next to the rest of the links. */
-}
-/* line 118, ../sass/forms.scss */
-html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link {
-  /* The "Log in using OpenID" link. */
-  margin-top: 1.5em;
-  margin-left: -20px;
-  /* LTR */
-  /* Un-do some of the padding on the ul list. */
-}
-/* line 123, ../sass/forms.scss */
-#user-login-form li.user-link {
-  /* The "Cancel OpenID login" link. */
-  margin-top: 1.5em;
-}
-
-/* line 128, ../sass/forms.scss */
-#user-login ul {
-  margin: 1.5em 0;
-}
-
-/* line 134, ../sass/forms.scss */
-.views-field-edit-quantity,
-.form-item-quantity {
-  margin: 0 0 1em 0;
-}
-/* line 137, ../sass/forms.scss */
-.views-field-edit-quantity input,
-.form-item-quantity input {
-  width: 2em;
-  font-size: 0.75em;
-  line-height: 1.33333em;
-}
-/* line 138, ../sass/forms.scss */
-.views-field-edit-quantity .form-item, .views-field-edit-quantity input, .views-field-edit-quantity .incrementor-button,
-.form-item-quantity .form-item,
-.form-item-quantity input,
-.form-item-quantity .incrementor-button {
-  display: inline-block;
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  height: 16px;
-}
-/* line 146, ../sass/forms.scss */
-.views-field-edit-quantity .incrementor-button,
-.form-item-quantity .incrementor-button {
-  background-position: left top;
-  width: 16px;
-  background: url("../images/symbols/plus-minus.png") no-repeat;
-  text-indent: -200%;
-  overflow: hidden;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  cursor: hand;
-  cursor: pointer;
-}
-/* line 159, ../sass/forms.scss */
-.views-field-edit-quantity .incrementor-button.dec,
-.form-item-quantity .incrementor-button.dec {
-  background-position: right top;
-  margin-right: 0.25em;
-}
-
-/* line 165, ../sass/forms.scss */
-.commerce-line-item-views-form input.delete-line-item {
-  font-size: 1em;
-  line-height: 1.25em;
-  padding: 0.5em;
-}
-
-/* line 171, ../sass/forms.scss */
-.commerce-add-to-cart .form-text {
-  background: white;
-  text-align: center;
-}
-/* line 172, ../sass/forms.scss */
-.commerce-add-to-cart .commerce-price-savings-formatter-price-row .price-amount {
-  color: #793f0d;
-}
-/* line 175, ../sass/forms.scss */
-.commerce-add-to-cart .buy-now {
-  text-align: center;
-  background-image: url("../images/symbols/shine-top.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-  padding-top: 30px;
-}
-/* line 178, ../sass/forms.scss */
-.commerce-add-to-cart .buy-now .form-submit {
-  background: #12ad2b;
-  font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-transform: capitalize;
-  font-size: 1.65em;
-  line-height: 1.21212em;
-  line-height: 1em;
-  padding: 0.25em 0.75em;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-/* line 185, ../sass/forms.scss */
-.commerce-add-to-cart .buy-now .form-submit.form-button-disabled {
-  background: #8b8c8e;
-}
-
-/* line 194, ../sass/forms.scss */
-.views-exposed-form label {
-  text-transform: uppercase;
-  font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-weight: normal;
-}
-
-/*
- * Drupal admin tables
- *
- * We overrode these styles in normalize.css, but restore them for the admin
- * section of the site.
- */
-/* line 209, ../sass/forms.scss */
-form th {
-  text-align: left;
-  /* LTR */
-  padding-right: 1em;
-  /* LTR */
-  border-bottom: 3px solid #ccc;
-}
-/* line 215, ../sass/forms.scss */
-form tbody {
-  border-top: 1px solid #ccc;
-}
-/* line 219, ../sass/forms.scss */
-form tr.even {
-  background-color: #fff;
-}
-/* line 223, ../sass/forms.scss */
-form table .item-list ul {
-  margin: 0;
-}
-
-/*
- * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
- */
-/* line 242, ../sass/forms.scss */
-td.menu-disabled {
-  background: #ccc;
-}
+Backtrace:
+C:/Users/admin/Sites/devdesktop/divineus1-dev/docroot/sites/all/themes/divine2013/sass/forms.scss:228
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/script/tree/operation.rb:64:in `_perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:270:in `visit_if'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:121:in `with_frame'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:152:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:151:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/sass-3.3.7/lib/sass/engine.rb:274:in `render'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:171:in `block (2 levels) in compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:166:in `block in compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/logger.rb:46:in `red'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:165:in `compile'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:144:in `compile_if_required'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:129:in `block (2 levels) in run'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `each'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `block in run'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:126:in `run'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/commands/update_project.rb:49:in `perform'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/commands/base.rb:18:in `execute'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/commands/project_base.rb:19:in `execute'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/bin/compass:30:in `block in <top (required)>'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/bin/compass:44:in `call'
+C:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-1.0.0.alpha.19/bin/compass:44:in `<top (required)>'
+C:/Ruby200-x64/bin/compass:23:in `load'
+C:/Ruby200-x64/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$legacy-support-for-ie6\".\A         on line 228 of C:/Users/admin/Sites/devdesktop/divineus1-dev/docroot/sites/all/themes/divine2013/sass/forms.scss"; }
