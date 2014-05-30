@@ -812,7 +812,7 @@
   p {margin: 0;}
 }
 //email sign up web-form
-#block-webform-client-block-25 {
+.newsletter-signup {
   margin: 1em 0;
   clear: both;
   font-family: $avenir-bold;
@@ -969,7 +969,7 @@
  *   Firefox fix
  */
 @-moz-document url-prefix() { 
-  #block-webform-client-block-25 {
+  .newsletter-signup {
     .webform-component-email {
       padding-bottom: 8px;
     }
@@ -979,9 +979,7 @@
   }
 }
 .js {
-  #block-webform-client-block-25 
-  .webform-component-email,
-  #block-webform-client-block-532 
+  .newsletter-signup 
   .webform-component-email,
   #block-search-form 
   .form-item-search-block-form
