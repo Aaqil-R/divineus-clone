@@ -134,7 +134,7 @@
 		 */ 
 		 
 		 
-		$("#block-webform-client-block-25 input, #block-webform-client-block-399 input, #block-webform-client-block-532 input").focus(function() {
+		$(".newsletter-signup input, #block-webform-client-block-399 input, #block-webform-client-block-532 input").focus(function() {
 			$(this).parent().children('label').addClass('dim');
 		});
 		
@@ -146,7 +146,7 @@
 		});
 		
 		
-		$("#block-webform-client-block-25 input, #block-webform-client-block-399 input, #block-webform-client-block-532 input, #block-search-form .form-item-search-block-form input").keydown(function() {
+		$(".newsletter-signup input, #block-webform-client-block-399 input, #block-webform-client-block-532 input, #block-search-form .form-item-search-block-form input").keydown(function() {
 			if(!$(this).val()) {
 				$(this).parent().children('label').hide();
 			}
@@ -159,7 +159,7 @@
 			$(this).removeAttr("style");
 		});//end infield
 		
-		$("#block-webform-client-block-25 input, #block-webform-client-block-399 input, #block-webform-client-block-532 input").blur(function() {
+		$(".newsletter-signup input, #block-webform-client-block-399 input, #block-webform-client-block-532 input").blur(function() {
 			$(this).parent().children('label').removeClass('dim');
 			$("#block-search-form").animate({"width": "8em"}, "slow");
 			$("#block-search-form").removeAttr("style");
