@@ -851,7 +851,7 @@
     @include border-radius(6px);
     color: $white;
     padding: 1em;
-    h2, .block-title, .form-actions .form-submit {color: $white;}
+    h2, .block-title, .form-actions .form-submit {color: $white !important;}
     .form-actions {
       @include arrow($white, 0.4em);
     }

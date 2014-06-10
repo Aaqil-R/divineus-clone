@@ -1322,7 +1322,7 @@
 }
 /* line 854, ../sass/blocks.scss */
 .newsletter-signup.color h2, .newsletter-signup.color .block-title, .newsletter-signup.color .form-actions .form-submit {
-  color: white;
+  color: white !important;
 }
 /* line 855, ../sass/blocks.scss */
 .newsletter-signup.color .form-actions {
