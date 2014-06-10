@@ -768,12 +768,17 @@
 
 //apply to all sign up blocks
 .newsletter-signup {
+  margin: 0;
+  clear: both;
+  font-family: $avenir-bold;
+  color: $gold-on-black;
   h2 {
-    color: $white;
     margin: 0;
     text-transform: none;
+    color: $gold-on-black;
     &.block-title {
       font-family: $optisport;
+      margin-top: 0.1em;
       @include adjust-font-size-to( 1.5 * $base-font-size );
       line-height: 1em;
     }
@@ -785,55 +790,13 @@
     }
   }
   
-  //colored blocks
-  &.color
-  {
-    @include border-radius(6px);
-    color: $white;
-    padding: 1em;
-    h2, .block-title, .form-actions .form-submit {color: $white;}
-    .form-actions {
-      @include arrow($white, 0.4em);
-    }
-    
-  }
-  //pink blocks
-  &.pink {
-    background: $pink;
-  }
-  
-  //gold blocks
-  &.gold {
-    background: $gold;
-  }
-  
-  //footer blocks
-  &.footer {//footer text
-    padding-top: 1em;
-    clear: both;
-    color: $white;
-    font-size: 14px;
-    line-height: 17px;
-    p {margin: 0;}
-  }
-}
-
-//email sign up web-form
-.newsletter-signup {
-  margin: 1em 0;
-  clear: both;
-  font-family: $avenir-bold;
-  color: $gold-on-black;
   label.focus { opacity: 0.35; }
   label.has-text { opacity: 0.0; -webkit-transition-duration: 0s; }
 
-  h2 {
-    &.block-title{margin-top: 0.1em;}
-    color: $gold-on-black;
-  }
   .form-item {margin: 0.2em 0em;}
   
   .form-required {display: none;}
+  
   .webform-component-email {
     max-width: 96%;
     @include border-radius(8px);
@@ -857,12 +820,11 @@
   }
  
   .form-actions {
-  
-  display: inline-block;
-  position: relative;
-  margin: 0;
-  top: 6px;
-  @include arrow($gold, 0.4em);
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    top: 6px;
+    @include arrow($gold, 0.4em);
     .form-submit {
       color: $gold-on-black;
       background: transparent;
@@ -882,7 +844,45 @@
     margin: 2em 0;
     @include span-columns(4 omega, 5);
   }
-
+  
+  //colored blocks
+  &.color
+  {
+    @include border-radius(6px);
+    color: $white;
+    padding: 1em;
+    h2, .block-title, .form-actions .form-submit {color: $white;}
+    .form-actions {
+      @include arrow($white, 0.4em);
+    }
+    .webform-component-email {
+      background: $white;
+      label, input.form-email {
+        color: $gold;
+      }
+    }
+    
+  }
+  //pink blocks
+  &.pink {
+    background: $pink;
+  }
+  
+  //gold blocks
+  &.gold {
+    background: $gold;
+  }
+  
+  //footer blocks
+  &.footer {//footer text
+    margin: 1em 0;
+    padding-top: 1em;
+    clear: both;
+    color: $white;
+    font-size: 14px;
+    line-height: 17px;
+    p {margin: 0;}
+  }
 }
 
 

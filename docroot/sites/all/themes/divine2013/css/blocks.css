@@ -1185,20 +1185,28 @@
   opacity: .8;
 }
 
-/* line 771, ../sass/blocks.scss */
-.newsletter-signup h2 {
-  color: white;
+/* line 770, ../sass/blocks.scss */
+.newsletter-signup {
   margin: 0;
-  text-transform: none;
+  clear: both;
+  font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  color: #b39f69;
 }
 /* line 775, ../sass/blocks.scss */
+.newsletter-signup h2 {
+  margin: 0;
+  text-transform: none;
+  color: #b39f69;
+}
+/* line 779, ../sass/blocks.scss */
 .newsletter-signup h2.block-title {
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  margin-top: 0.1em;
   font-size: 1.5em;
   line-height: 1.16667em;
   line-height: 1em;
 }
-/* line 780, ../sass/blocks.scss */
+/* line 785, ../sass/blocks.scss */
 .newsletter-signup h2.line-two {
   font-size: 1.3em;
   line-height: 1.34615em;
@@ -1206,90 +1214,24 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 789, ../sass/blocks.scss */
-.newsletter-signup.color {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  color: white;
-  padding: 1em;
-}
-/* line 794, ../sass/blocks.scss */
-.newsletter-signup.color h2, .newsletter-signup.color .block-title, .newsletter-signup.color .form-actions .form-submit {
-  color: white;
-}
-/* line 795, ../sass/blocks.scss */
-.newsletter-signup.color .form-actions {
-  position: relative;
-}
-/* line 65, ../sass/_custom.scss */
-.newsletter-signup.color .form-actions:after {
-  width: 0;
-  height: 0;
-  border-radius: 2px;
-  border: solid transparent;
-  content: " ";
-  position: absolute;
-  pointer-events: none;
-  border-left-color: white;
-  border-width: 0.4em;
-  margin-left: 0.4em;
-  bottom: 0.65em;
-}
-/* line 801, ../sass/blocks.scss */
-.newsletter-signup.pink {
-  background: #db0c41;
-}
-/* line 806, ../sass/blocks.scss */
-.newsletter-signup.gold {
-  background: #a39161;
-}
-/* line 811, ../sass/blocks.scss */
-.newsletter-signup.footer {
-  padding-top: 1em;
-  clear: both;
-  color: white;
-  font-size: 14px;
-  line-height: 17px;
-}
-/* line 817, ../sass/blocks.scss */
-.newsletter-signup.footer p {
-  margin: 0;
-}
-
-/* line 822, ../sass/blocks.scss */
-.newsletter-signup {
-  margin: 1em 0;
-  clear: both;
-  font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #b39f69;
-}
-/* line 827, ../sass/blocks.scss */
+/* line 793, ../sass/blocks.scss */
 .newsletter-signup label.focus {
   opacity: 0.35;
 }
-/* line 828, ../sass/blocks.scss */
+/* line 794, ../sass/blocks.scss */
 .newsletter-signup label.has-text {
   opacity: 0.0;
   -webkit-transition-duration: 0s;
 }
-/* line 830, ../sass/blocks.scss */
-.newsletter-signup h2 {
-  color: #b39f69;
-}
-/* line 831, ../sass/blocks.scss */
-.newsletter-signup h2.block-title {
-  margin-top: 0.1em;
-}
-/* line 834, ../sass/blocks.scss */
+/* line 796, ../sass/blocks.scss */
 .newsletter-signup .form-item {
   margin: 0.2em 0em;
 }
-/* line 836, ../sass/blocks.scss */
+/* line 798, ../sass/blocks.scss */
 .newsletter-signup .form-required {
   display: none;
 }
-/* line 837, ../sass/blocks.scss */
+/* line 800, ../sass/blocks.scss */
 .newsletter-signup .webform-component-email {
   max-width: 96%;
   -moz-border-radius: 8px;
@@ -1298,7 +1240,7 @@
   border: 1px #b39f69 solid;
   padding: 8px 4px 4px 16px;
 }
-/* line 843, ../sass/blocks.scss */
+/* line 806, ../sass/blocks.scss */
 .newsletter-signup .webform-component-email label {
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: white;
@@ -1307,7 +1249,7 @@
   position: relative;
   z-index: 1;
 }
-/* line 847, ../sass/blocks.scss */
+/* line 810, ../sass/blocks.scss */
 .newsletter-signup .webform-component-email input.form-email {
   background: transparent;
   display: block;
@@ -1318,7 +1260,7 @@
   padding: 0;
   line-height: 1.5em;
 }
-/* line 859, ../sass/blocks.scss */
+/* line 822, ../sass/blocks.scss */
 .newsletter-signup .form-actions {
   display: inline-block;
   position: relative;
@@ -1340,7 +1282,7 @@
   margin-left: 0.4em;
   bottom: 0.65em;
 }
-/* line 866, ../sass/blocks.scss */
+/* line 828, ../sass/blocks.scss */
 .newsletter-signup .form-actions .form-submit {
   color: #b39f69;
   background: transparent;
@@ -1353,14 +1295,14 @@
   line-height: 1em;
 }
 @media (min-width: 32em) {
-  /* line 879, ../sass/blocks.scss */
+  /* line 841, ../sass/blocks.scss */
   .newsletter-signup .webform-component-email {
     display: inline-block;
     max-width: 16em;
   }
 }
 @media (min-width: 60em) {
-  /* line 822, ../sass/blocks.scss */
+  /* line 770, ../sass/blocks.scss */
   .newsletter-signup {
     margin: 2em 0;
     width: 79.16667%;
@@ -1369,6 +1311,65 @@
     *margin-left: -1em;
     display: inline;
   }
+}
+/* line 849, ../sass/blocks.scss */
+.newsletter-signup.color {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  color: white;
+  padding: 1em;
+}
+/* line 854, ../sass/blocks.scss */
+.newsletter-signup.color h2, .newsletter-signup.color .block-title, .newsletter-signup.color .form-actions .form-submit {
+  color: white;
+}
+/* line 855, ../sass/blocks.scss */
+.newsletter-signup.color .form-actions {
+  position: relative;
+}
+/* line 65, ../sass/_custom.scss */
+.newsletter-signup.color .form-actions:after {
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-left-color: white;
+  border-width: 0.4em;
+  margin-left: 0.4em;
+  bottom: 0.65em;
+}
+/* line 858, ../sass/blocks.scss */
+.newsletter-signup.color .webform-component-email {
+  background: white;
+}
+/* line 860, ../sass/blocks.scss */
+.newsletter-signup.color .webform-component-email label, .newsletter-signup.color .webform-component-email input.form-email {
+  color: #a39161;
+}
+/* line 867, ../sass/blocks.scss */
+.newsletter-signup.pink {
+  background: #db0c41;
+}
+/* line 872, ../sass/blocks.scss */
+.newsletter-signup.gold {
+  background: #a39161;
+}
+/* line 877, ../sass/blocks.scss */
+.newsletter-signup.footer {
+  margin: 1em 0;
+  padding-top: 1em;
+  clear: both;
+  color: white;
+  font-size: 14px;
+  line-height: 17px;
+}
+/* line 884, ../sass/blocks.scss */
+.newsletter-signup.footer p {
+  margin: 0;
 }
 
 /**
