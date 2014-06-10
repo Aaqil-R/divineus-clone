@@ -837,13 +837,6 @@
     } 
   }
   
-  @include breakpoint(tablet) {
-    .webform-component-email {display: inline-block;max-width: 16em;}
-  }
-  @include breakpoint(desktop-wide) {
-    margin: 2em 0;
-    @include span-columns(4 omega, 5);
-  }
   
   //colored blocks
   &.color
@@ -882,6 +875,14 @@
     font-size: 14px;
     line-height: 17px;
     p {margin: 0;}
+    
+    @include breakpoint(tablet) {
+      .webform-component-email {display: inline-block;max-width: 16em;}
+    }
+    @include breakpoint(desktop-wide) {
+      margin: 2em 0;
+      @include span-columns(4 omega, 5);
+    }
   }
 }
 
