@@ -791,6 +791,8 @@
     @include border-radius(6px);
     color: $white;
     padding: 1em;
+    h1, h2, .form-actions .form-submit {color: $white;}
+    
   }
   //pink blocks
   &.pink {
