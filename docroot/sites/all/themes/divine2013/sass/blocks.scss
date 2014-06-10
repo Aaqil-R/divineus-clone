@@ -784,33 +784,35 @@
       letter-spacing: 1px;
     }
   }
-}
-//colored blocks
-.node-type-recipe .field-collection-container, #block-webform-client-block-399 
-{
-  @include border-radius(6px);
-  color: $white;
-  padding: 1em;
+  
+  //colored blocks
+  &.color
+  {
+    @include border-radius(6px);
+    color: $white;
+    padding: 1em;
+  }
+  //pink blocks
+  &.pink {
+    background: $pink;
+  }
+  
+  //gold blocks
+  &.gold {
+    background: $gold;
+  }
+  
+  //footer blocks
+  &.footer {//footer text
+    padding-top: 1em;
+    clear: both;
+    color: $white;
+    font-size: 14px;
+    line-height: 17px;
+    p {margin: 0;}
+  }
 }
 
-//pink blocks
-.node-type-recipe .field-collection-container {
-  background: $pink;
-}
-//gold blocks
-#block-webform-client-block-399 {
-  background: $gold;
-}
-
-//footer blocks
-#block-block-1 {//footer text
-  padding-top: 1em;
-  clear: both;
-  color: $white;
-  font-size: 14px;
-  line-height: 17px;
-  p {margin: 0;}
-}
 //email sign up web-form
 .newsletter-signup {
   margin: 1em 0;
