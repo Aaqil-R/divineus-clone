@@ -100,12 +100,11 @@ body {
   }
   @include breakpoint(desktop) {
     #header {
-      background-image: image-url('homepage-banner/Summer_USA_Home-Page.jpg');
+      background-image: image-url('homepage-banner/love-chocolate.jpg');
       background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      min-height: 498px;
-      #logo h1 {height: 118px; background: transparent;}
+      background-position: center 151px;
+      min-height: 459px;
+      //#logo h1 {height: 118px; background: transparent;}
       #block-block-14 {
         display: block;
         width:515px;
@@ -125,7 +124,7 @@ body {
       }
       #swoosh, .region-nav {
         position: relative;
-        top: 316px;
+        top: 298px;
       }
     }
   }
