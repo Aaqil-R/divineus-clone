@@ -47,7 +47,7 @@ body {
  */
 /* line 47, ../sass/pages.scss */
 #swoosh {
-  background: url('../images/wrapper/swoosh-top.png?1400880296') no-repeat;
+  background: url('../images/wrapper/swoosh-top.png?1412164477') no-repeat;
   background-position: -102px;
   height: 35px;
   width: 100%;
@@ -121,10 +121,15 @@ body {
 @media (min-width: 49em) {
   /* line 102, ../sass/pages.scss */
   .front #header {
-    background-image: url('../images/homepage-banner/love-chocolate-usa.jpg?1411164210');
+    background-image: url('../images/homepage-banner/new-love-chocolate.jpg?1412167878');
     background-repeat: no-repeat;
     background-position: center top;
-    min-height: 459px;
+    min-height: 480px;
+  }
+  /* line 107, ../sass/pages.scss */
+  .front #header #logo h1 {
+    height: 118px;
+    background: transparent;
   }
   /* line 108, ../sass/pages.scss */
   .front #header #block-block-14 {

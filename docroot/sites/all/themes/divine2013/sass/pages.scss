@@ -100,11 +100,11 @@ body {
   }
   @include breakpoint(desktop) {
     #header {
-      background-image: image-url('homepage-banner/love-chocolate-usa.jpg');
+      background-image: image-url('homepage-banner/new-love-chocolate.jpg');
       background-repeat: no-repeat;
       background-position: center top;
-      min-height: 459px;
-      //#logo h1 {height: 118px; background: transparent;}
+      min-height: 480px;
+      #logo h1 {height: 118px; background: transparent;}
       #block-block-14 {
         display: block;
         width:515px;
