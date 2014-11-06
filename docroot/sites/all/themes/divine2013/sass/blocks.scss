@@ -768,7 +768,6 @@
 
 //apply to all sign up blocks
 .newsletter-signup {
-  margin: 0;
   clear: both;
   font-family: $avenir-bold;
   color: $gold-on-black;
@@ -864,6 +863,17 @@
   //gold blocks
   &.gold {
     background: $gold;
+  }
+  
+  //gold blocks
+  &.green {
+    background: $green;
+  }
+  
+  
+  //gold blocks
+  &.yellow {
+    background: $yellow;
   }
   
   //footer blocks

@@ -1187,18 +1187,17 @@
 
 /* line 770, ../sass/blocks.scss */
 .newsletter-signup {
-  margin: 0;
   clear: both;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: #b39f69;
 }
-/* line 775, ../sass/blocks.scss */
+/* line 774, ../sass/blocks.scss */
 .newsletter-signup h2 {
   margin: 0;
   text-transform: none;
   color: #b39f69;
 }
-/* line 779, ../sass/blocks.scss */
+/* line 778, ../sass/blocks.scss */
 .newsletter-signup h2.block-title {
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   margin-top: 0.1em;
@@ -1206,7 +1205,7 @@
   line-height: 1.16667em;
   line-height: 1em;
 }
-/* line 785, ../sass/blocks.scss */
+/* line 784, ../sass/blocks.scss */
 .newsletter-signup h2.line-two {
   font-size: 1.3em;
   line-height: 1.34615em;
@@ -1214,24 +1213,24 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 793, ../sass/blocks.scss */
+/* line 792, ../sass/blocks.scss */
 .newsletter-signup label.focus {
   opacity: 0.35;
 }
-/* line 794, ../sass/blocks.scss */
+/* line 793, ../sass/blocks.scss */
 .newsletter-signup label.has-text {
   opacity: 0.0;
   -webkit-transition-duration: 0s;
 }
-/* line 796, ../sass/blocks.scss */
+/* line 795, ../sass/blocks.scss */
 .newsletter-signup .form-item {
   margin: 0.2em 0em;
 }
-/* line 798, ../sass/blocks.scss */
+/* line 797, ../sass/blocks.scss */
 .newsletter-signup .form-required {
   display: none;
 }
-/* line 800, ../sass/blocks.scss */
+/* line 799, ../sass/blocks.scss */
 .newsletter-signup .webform-component-email {
   max-width: 96%;
   -moz-border-radius: 8px;
@@ -1240,7 +1239,7 @@
   border: 1px #b39f69 solid;
   padding: 8px 4px 4px 16px;
 }
-/* line 806, ../sass/blocks.scss */
+/* line 805, ../sass/blocks.scss */
 .newsletter-signup .webform-component-email label {
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   color: white;
@@ -1249,7 +1248,7 @@
   position: relative;
   z-index: 1;
 }
-/* line 810, ../sass/blocks.scss */
+/* line 809, ../sass/blocks.scss */
 .newsletter-signup .webform-component-email input.form-email {
   background: transparent;
   display: block;
@@ -1260,7 +1259,7 @@
   padding: 0;
   line-height: 1.5em;
 }
-/* line 822, ../sass/blocks.scss */
+/* line 821, ../sass/blocks.scss */
 .newsletter-signup .form-actions {
   display: inline-block;
   position: relative;
@@ -1282,7 +1281,7 @@
   margin-left: 0.4em;
   bottom: 0.65em;
 }
-/* line 828, ../sass/blocks.scss */
+/* line 827, ../sass/blocks.scss */
 .newsletter-signup .form-actions .form-submit {
   color: #b39f69;
   background: transparent;
@@ -1294,7 +1293,7 @@
   line-height: 1.25em;
   line-height: 1em;
 }
-/* line 842, ../sass/blocks.scss */
+/* line 841, ../sass/blocks.scss */
 .newsletter-signup.color {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -1302,11 +1301,11 @@
   color: white;
   padding: 1em;
 }
-/* line 847, ../sass/blocks.scss */
+/* line 846, ../sass/blocks.scss */
 .newsletter-signup.color h2, .newsletter-signup.color .block-title, .newsletter-signup.color .form-actions .form-submit {
   color: white !important;
 }
-/* line 848, ../sass/blocks.scss */
+/* line 847, ../sass/blocks.scss */
 .newsletter-signup.color .form-actions {
   position: relative;
 }
@@ -1324,23 +1323,31 @@
   margin-left: 0.4em;
   bottom: 0.65em;
 }
-/* line 851, ../sass/blocks.scss */
+/* line 850, ../sass/blocks.scss */
 .newsletter-signup.color .webform-component-email {
   background: white;
 }
-/* line 853, ../sass/blocks.scss */
+/* line 852, ../sass/blocks.scss */
 .newsletter-signup.color .webform-component-email label, .newsletter-signup.color .webform-component-email input.form-email {
   color: #a39161;
 }
-/* line 860, ../sass/blocks.scss */
+/* line 859, ../sass/blocks.scss */
 .newsletter-signup.pink {
   background: #db0c41;
 }
-/* line 865, ../sass/blocks.scss */
+/* line 864, ../sass/blocks.scss */
 .newsletter-signup.gold {
   background: #a39161;
 }
-/* line 870, ../sass/blocks.scss */
+/* line 869, ../sass/blocks.scss */
+.newsletter-signup.green {
+  background: #12ad2b;
+}
+/* line 875, ../sass/blocks.scss */
+.newsletter-signup.yellow {
+  background: #f1ab00;
+}
+/* line 880, ../sass/blocks.scss */
 .newsletter-signup.footer {
   margin: 1em 0;
   padding-top: 1em;
@@ -1349,19 +1356,19 @@
   font-size: 14px;
   line-height: 17px;
 }
-/* line 877, ../sass/blocks.scss */
+/* line 887, ../sass/blocks.scss */
 .newsletter-signup.footer p {
   margin: 0;
 }
 @media (min-width: 32em) {
-  /* line 880, ../sass/blocks.scss */
+  /* line 890, ../sass/blocks.scss */
   .newsletter-signup.footer .webform-component-email {
     display: inline-block;
     max-width: 16em;
   }
 }
 @media (min-width: 60em) {
-  /* line 870, ../sass/blocks.scss */
+  /* line 880, ../sass/blocks.scss */
   .newsletter-signup.footer {
     margin: 2em 0;
     width: 79.16667%;
@@ -1375,7 +1382,7 @@
 /**
  * Footer Roundall
  */
-/* line 895, ../sass/blocks.scss */
+/* line 905, ../sass/blocks.scss */
 #block-block-32 h2, #block-block-13 h2 {
   background: url("../images/wrapper/owned-by-cocoa-farmers-made-for-chocolate-lovers.gif") no-repeat center top;
   background-size: contain;
@@ -1385,7 +1392,7 @@
   overflow: hidden;
 }
 @media (min-width: 49em) {
-  /* line 894, ../sass/blocks.scss */
+  /* line 904, ../sass/blocks.scss */
   #block-block-32, #block-block-13 {
     width: 18.36735%;
     float: right;
@@ -1398,12 +1405,12 @@
 /**
  * IE<9 warning.
  */
-/* line 916, ../sass/blocks.scss */
+/* line 926, ../sass/blocks.scss */
 #block-webform-client-block-532 {
   display: none;
 }
 
-/* line 919, ../sass/blocks.scss */
+/* line 929, ../sass/blocks.scss */
 .js #block-webform-client-block-532 {
   z-index: 1000;
   display: block;
@@ -1424,7 +1431,7 @@
   -webkit-box-shadow: 0px 5px #58595b;
   box-shadow: 0px 5px #58595b;
 }
-/* line 920, ../sass/blocks.scss */
+/* line 930, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .close {
   text-indent: -1000%;
   background: url("../images/wrapper/close.png") no-repeat;
@@ -1437,42 +1444,42 @@
   top: -0.5em;
   cursor: pointer;
 }
-/* line 943, ../sass/blocks.scss */
+/* line 953, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .top-title {
   clear: both;
   margin-top: -2em;
 }
-/* line 944, ../sass/blocks.scss */
+/* line 954, ../sass/blocks.scss */
 .js #block-webform-client-block-532 h2 {
   display: inline;
 }
-/* line 946, ../sass/blocks.scss */
+/* line 956, ../sass/blocks.scss */
 .js #block-webform-client-block-532 h2.block-title {
   font-size: 1.7em;
   line-height: 1.17647em;
   line-height: 1em;
 }
-/* line 947, ../sass/blocks.scss */
+/* line 957, ../sass/blocks.scss */
 .js #block-webform-client-block-532 h2.line-two {
   padding-left: 0.25em;
 }
-/* line 949, ../sass/blocks.scss */
+/* line 959, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .newsletter {
   margin: 0.75em 0;
 }
-/* line 952, ../sass/blocks.scss */
+/* line 962, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email {
   color: black;
 }
-/* line 954, ../sass/blocks.scss */
+/* line 964, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email label {
   padding: 0.5em;
 }
-/* line 956, ../sass/blocks.scss */
+/* line 966, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email label .form-required {
   display: none;
 }
-/* line 962, ../sass/blocks.scss */
+/* line 972, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .form-actions {
   position: relative;
 }
@@ -1490,7 +1497,7 @@
   margin-left: 0.4em;
   bottom: 0.5em;
 }
-/* line 964, ../sass/blocks.scss */
+/* line 974, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .form-actions .form-submit {
   background: transparent;
   text-transform: none;
@@ -1506,23 +1513,23 @@
  *   Firefox fix
  */
 @-moz-document url-prefix() {
-  /* line 981, ../sass/blocks.scss */
+  /* line 991, ../sass/blocks.scss */
   .newsletter-signup .webform-component-email {
     padding-bottom: 8px;
   }
-  /* line 984, ../sass/blocks.scss */
+  /* line 994, ../sass/blocks.scss */
   .newsletter-signup #edit-actions--2 {
     top: -10px;
   }
 }
-/* line 995, ../sass/blocks.scss */
+/* line 1005, ../sass/blocks.scss */
 .js .newsletter-signup
 .webform-component-email label,
 .js #block-search-form
 .form-item-search-block-form label {
   position: absolute;
 }
-/* line 996, ../sass/blocks.scss */
+/* line 1006, ../sass/blocks.scss */
 .js .newsletter-signup
 .webform-component-email label.dim,
 .js #block-search-form
@@ -1531,7 +1538,7 @@
 }
 
 /* AddThisEvent */
-/* line 1005, ../sass/blocks.scss */
+/* line 1015, ../sass/blocks.scss */
 .addthisevent-drop {
   display: inline-block;
   position: relative;
@@ -1550,7 +1557,7 @@
   -webkit-border-radius: 2px;
 }
 
-/* line 1006, ../sass/blocks.scss */
+/* line 1016, ../sass/blocks.scss */
 .addthisevent-drop:hover {
   border: 1px solid #aab9d4;
   color: #555;
@@ -1559,17 +1566,17 @@
   text-decoration: none;
 }
 
-/* line 1007, ../sass/blocks.scss */
+/* line 1017, ../sass/blocks.scss */
 .addthisevent-drop:active {
   top: 1px;
 }
 
-/* line 1008, ../sass/blocks.scss */
+/* line 1018, ../sass/blocks.scss */
 .addthisevent-selected {
   background-color: #f7f7f7;
 }
 
-/* line 1009, ../sass/blocks.scss */
+/* line 1019, ../sass/blocks.scss */
 .addthisevent_dropdown {
   width: 200px;
   position: absolute;
@@ -1591,7 +1598,7 @@
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* line 1010, ../sass/blocks.scss */
+/* line 1020, ../sass/blocks.scss */
 .addthisevent_dropdown span {
   width: 175px;
   display: block;
@@ -1603,7 +1610,7 @@
   padding: 8px 10px 9px 15px;
 }
 
-/* line 1011, ../sass/blocks.scss */
+/* line 1021, ../sass/blocks.scss */
 .addthisevent_dropdown span:hover {
   background: #f4f4f4;
   color: #6d84b4;
@@ -1611,17 +1618,17 @@
   font-size: 12px;
 }
 
-/* line 1012, ../sass/blocks.scss */
+/* line 1022, ../sass/blocks.scss */
 .addthisevent span {
   display: none !important;
 }
 
-/* line 1013, ../sass/blocks.scss */
+/* line 1023, ../sass/blocks.scss */
 .addthisevent-drop ._url, .addthisevent-drop ._start, .addthisevent-drop ._end, .addthisevent-drop ._summary, .addthisevent-drop ._description, .addthisevent-drop ._location, .addthisevent-drop ._organizer, .addthisevent-drop ._organizer_email, .addthisevent-drop ._facebook_event, .addthisevent-drop ._all_day_event {
   display: none !important;
 }
 
-/* line 1014, ../sass/blocks.scss */
+/* line 1024, ../sass/blocks.scss */
 .addthisevent_dropdown .copyx {
   width: 200px;
   height: 21px;
@@ -1630,7 +1637,7 @@
   cursor: default;
 }
 
-/* line 1015, ../sass/blocks.scss */
+/* line 1025, ../sass/blocks.scss */
 .addthisevent_dropdown .brx {
   width: 180px;
   height: 1px;
@@ -1642,7 +1649,7 @@
   top: 9px;
 }
 
-/* line 1016, ../sass/blocks.scss */
+/* line 1026, ../sass/blocks.scss */
 .addthisevent_dropdown .frs {
   position: absolute;
   top: 5px;
@@ -1660,12 +1667,12 @@
   color: #cacaca;
 }
 
-/* line 1017, ../sass/blocks.scss */
+/* line 1027, ../sass/blocks.scss */
 .addthisevent_dropdown .frs:hover {
   color: #6d84b4;
 }
 
-/* line 1018, ../sass/blocks.scss */
+/* line 1028, ../sass/blocks.scss */
 .addthisevent {
   visibility: hidden;
 }
