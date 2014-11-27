@@ -47,7 +47,7 @@ body {
  */
 /* line 47, ../sass/pages.scss */
 #swoosh {
-  background: url('../images/wrapper/swoosh-top.png?1414374420') no-repeat;
+  background: url('../images/wrapper/swoosh-top.png?1417066400') no-repeat;
   background-position: -102px;
   height: 35px;
   width: 100%;
@@ -107,7 +107,7 @@ body {
   }
   /* line 93, ../sass/pages.scss */
   .front.sidebar-first #content #block-views-frontpage-shop-window-block img {
-    border-bottom: 1px dashed #b39f69;
+    border-bottom: 1px dashed #B39F69;
   }
   /* line 96, ../sass/pages.scss */
   .front.sidebar-first .sidebars {
@@ -121,7 +121,7 @@ body {
 @media (min-width: 49em) {
   /* line 102, ../sass/pages.scss */
   .front #header {
-    background-image: url('../images/homepage-banner/new-love-chocolate.jpg?1414374419');
+    background-image: url('../images/homepage-banner/christmas-14-web-banner.jpg?1417085164');
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 480px;
@@ -173,7 +173,7 @@ body {
 }
 /* line 141, ../sass/pages.scss */
 .region-header .block {
-  background: black;
+  background: #000000;
   height: 1.6em;
   margin: 0.5em 0 0 0.5em;
   clear: both;
@@ -211,7 +211,7 @@ body {
  */
 /* line 173, ../sass/pages.scss */
 #main {
-  background: white;
+  background: #ffffff;
 }
 
 /*
@@ -236,9 +236,9 @@ body {
 
 /* line 199, ../sass/pages.scss */
 .view-recipes a:hover img, .view-sidebar-blocks a:hover img {
-  -moz-box-shadow: 0px 5px #58595b;
-  -webkit-box-shadow: 0px 5px #58595b;
-  box-shadow: 0px 5px #58595b;
+  -moz-box-shadow: 0px 5px #58595B;
+  -webkit-box-shadow: 0px 5px #58595B;
+  box-shadow: 0px 5px #58595B;
 }
 
 /* line 208, ../sass/pages.scss */
@@ -439,7 +439,7 @@ span.field-label {
  */
 /* line 342, ../sass/pages.scss */
 #footer {
-  background: url("../images/wrapper/swoosh-bottom.png") black no-repeat top right;
+  background: url("../images/wrapper/swoosh-bottom.png") #000000 no-repeat top right;
   padding-top: 6em;
 }
 @media (min-width: 32em) {
