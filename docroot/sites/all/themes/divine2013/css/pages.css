@@ -121,10 +121,15 @@ body {
 @media (min-width: 49em) {
   /* line 102, ../sass/pages.scss */
   .front #header {
-    background-image: url('../images/homepage-banner/love-chocolate-newbars.jpg');
+    background-image: url('../images/homepage-banner/new-love-chocolate.jpg?1420638420');
     background-repeat: no-repeat;
-    background-position: center 135px;
+    background-position: center top;
     min-height: 480px;
+  }
+  /* line 107, ../sass/pages.scss */
+  .front #header #logo h1 {
+    height: 118px;
+    background: transparent;
   }
   /* line 108, ../sass/pages.scss */
   .front #header #block-block-14 {
