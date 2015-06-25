@@ -34,12 +34,12 @@
 }
 /* line 25, ../sass/nodes.scss */
 .node .field-name-body .highlight-caption a, .node .field-name-body .highlight a, .node .field-name-field-standfirst .highlight-caption a, .node .field-name-field-standfirst .highlight a {
-  color: white;
+  color: #ffffff;
 }
 /* line 27, ../sass/nodes.scss */
 .node .field-name-body a.big-button, .node .field-name-field-standfirst a.big-button {
-  color: white;
-  background-color: #00aeef;
+  color: #ffffff;
+  background-color: #00AEEF;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   padding: 15px;
   text-transform: uppercase;
@@ -100,8 +100,8 @@
 .node .highlight-caption, .node .highlight {
   font-family: "Georgia W01 Italic", Georgia, "Times New Roman", "DejaVu Serif", serif;
   line-height: 1.25em;
-  background: #f1ab00;
-  color: white;
+  background: #F1AB00;
+  color: #ffffff;
   -moz-border-radius-bottomleft: 6px;
   -webkit-border-bottom-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -119,11 +119,11 @@
 }
 /* line 70, ../sass/nodes.scss */
 .node .highlight-caption h2, .node .highlight h2 {
-  color: white;
+  color: #ffffff;
 }
 /* line 71, ../sass/nodes.scss */
 .node .highlight-caption a, .node .highlight a {
-  color: white;
+  color: #ffffff;
 }
 /* line 74, ../sass/nodes.scss */
 .node .highlight-caption a.highlight-link, .node .highlight a.highlight-link {
@@ -141,7 +141,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: white;
+  border-left-color: #ffffff;
   border-width: 0.4em;
   margin-left: 0.4em;
   bottom: 0.35em;
@@ -223,7 +223,7 @@
 }
 /* line 107, ../sass/nodes.scss */
 .node .highlight h2 {
-  color: white;
+  color: #ffffff;
   margin: 0;
   padding-bottom: 0;
 }
@@ -276,12 +276,12 @@
 /* line 147, ../sass/nodes.scss */
 .section-good-stuff
 .node .highlight-caption {
-  background: #00aeef;
+  background: #00AEEF;
 }
 /* line 150, ../sass/nodes.scss */
 .section-good-stuff
 .node h2 {
-  color: #00aeef;
+  color: #00AEEF;
 }
 
 /* line 153, ../sass/nodes.scss */
@@ -359,12 +359,12 @@
 }
 /* line 202, ../sass/nodes.scss */
 .section-about-us #content .field-name-body a, .standard-page #content .field-name-body a, .section-about-us #content .field-name-field-standfirst a, .standard-page #content .field-name-field-standfirst a {
-  color: #f1ab00;
+  color: #F1AB00;
 }
 /* line 204, ../sass/nodes.scss */
 .section-about-us #content .field-name-body a.big-button, .standard-page #content .field-name-body a.big-button, .section-about-us #content .field-name-field-standfirst a.big-button, .standard-page #content .field-name-field-standfirst a.big-button {
-  color: white;
-  background-color: #f1ab00;
+  color: #ffffff;
+  background-color: #F1AB00;
 }
 /* line 207, ../sass/nodes.scss */
 .section-about-us #content .field-name-body a.big-button:hover, .standard-page #content .field-name-body a.big-button:hover, .section-about-us #content .field-name-field-standfirst a.big-button:hover, .standard-page #content .field-name-field-standfirst a.big-button:hover {
@@ -413,7 +413,7 @@
   }
   /* line 232, ../sass/nodes.scss */
   .section-about-us #content #block-block-34 .flash .flash-container, .standard-page #content #block-block-34 .flash .flash-container, .section-about-us #content #block-block-29 .flash .flash-container, .standard-page #content #block-block-29 .flash .flash-container {
-    border: 1px #a39161 solid;
+    border: 1px #A39161 solid;
     -moz-border-radius-topleft: 6px;
     -webkit-border-top-left-radius: 6px;
     border-top-left-radius: 6px;
@@ -424,11 +424,11 @@
   }
   /* line 237, ../sass/nodes.scss */
   .section-about-us #content #block-block-34 .highlight-caption, .standard-page #content #block-block-34 .highlight-caption, .section-about-us #content #block-block-29 .highlight-caption, .standard-page #content #block-block-29 .highlight-caption {
-    background: #f1ab00;
+    background: #F1AB00;
     font-size: 0.9em;
     line-height: 1.38889em;
     line-height: 1em;
-    color: white;
+    color: #ffffff;
     padding: 0.75em;
     -moz-border-radius-bottomleft: 6px;
     -webkit-border-bottom-left-radius: 6px;
@@ -457,23 +457,23 @@
 }
 /* line 255, ../sass/nodes.scss */
 .section-about-us #content .highlight, .standard-page #content .highlight {
-  background: #f1ab00;
+  background: #F1AB00;
 }
 /* line 257, ../sass/nodes.scss */
 .section-about-us #content .highlight h2, .standard-page #content .highlight h2 {
-  color: white;
+  color: #ffffff;
 }
 /* line 258, ../sass/nodes.scss */
 .section-about-us #content .highlight a, .standard-page #content .highlight a {
-  color: white;
+  color: #ffffff;
 }
 /* line 258, ../sass/nodes.scss */
 .section-about-us #content .highlight a:hover, .standard-page #content .highlight a:hover {
-  color: white;
+  color: #ffffff;
 }
 /* line 260, ../sass/nodes.scss */
 .section-about-us #content h2, .standard-page #content h2 {
-  color: #f1ab00;
+  color: #F1AB00;
 }
 /* line 264, ../sass/nodes.scss */
 .section-about-us #block-block-30, .standard-page #block-block-30 {
@@ -490,7 +490,7 @@
   .page-taxonomy-term h1#page-title,
   .page-views h1#page-title,
   .page-node h1#page-title {
-    color: #a39161;
+    color: #A39161;
     font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
     text-transform: none;
     font-size: 2.5em;
@@ -508,11 +508,11 @@
 /* line 304, ../sass/nodes.scss */
 .section-recipes #page-title,
 .section-recipes .sidebars .block-title {
-  color: #db0c41;
+  color: #DB0C41;
 }
 /* line 309, ../sass/nodes.scss */
 .section-recipes .block-block a {
-  color: #db0c41;
+  color: #DB0C41;
 }
 
 /*
@@ -541,12 +541,12 @@
   font-size: 0.8em;
   line-height: 1.5625em;
   line-height: 1em;
-  color: #db0c41;
+  color: #DB0C41;
 }
 /* line 336, ../sass/nodes.scss */
 .page-node-354 #content .block-block a.highlight-link {
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #db0c41;
+  color: #DB0C41;
   font-size: 1.2em;
   line-height: 1.25em;
   position: relative;
@@ -560,7 +560,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #db0c41;
+  border-left-color: #DB0C41;
   border-width: 0.35em;
   margin-left: 0.35em;
   bottom: 0.35em;
@@ -591,7 +591,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-top: 1px #a39161 dashed;
+    border-top: 1px #A39161 dashed;
     width: 49.56541%;
     padding-top: 1em;
     margin-bottom: 0;
@@ -643,18 +643,18 @@
 }
 /* line 395, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-field-title a, .page-node-348 .views-field-title a, .section-good-stuff.page-views .views-field-title a, .section-people .views-field-title a, .page-taxonomy-term.section-recipes .views-field-view-node a, .page-node-348 .views-field-view-node a, .section-good-stuff.page-views .views-field-view-node a, .section-people .views-field-view-node a {
-  color: #db0c41;
+  color: #DB0C41;
 }
 /* line 396, ../sass/nodes.scss */
 .page-taxonomy-term.section-recipes .views-row, .page-node-348 .views-row, .section-good-stuff.page-views .views-row, .section-people .views-row {
   margin-bottom: 0.75em;
 }
 /* line 398, ../sass/nodes.scss */
-.page-taxonomy-term.section-recipes .views-field-field-recipe-teaser, .page-node-348 .views-field-field-recipe-teaser, .section-good-stuff.page-views .views-field-field-recipe-teaser, .section-people .views-field-field-recipe-teaser, .page-node-348 .views-field-field-teaser, .section-good-stuff.page-views .views-field-field-teaser, .section-people .views-field-field-teaser {
+.page-taxonomy-term.section-recipes .views-field-field-recipe-teaser, .page-node-348 .views-field-field-recipe-teaser, .section-good-stuff.page-views .views-field-field-recipe-teaser, .section-people .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .page-node-348 .views-field-field-teaser, .page-node-348 .page-taxonomy-term.section-recipes .views-field-field-teaser, .page-node-348 .views-field-field-teaser, .section-good-stuff.page-views .views-field-field-teaser, .page-taxonomy-term.section-recipes .section-people .views-field-field-teaser, .section-people .page-taxonomy-term.section-recipes .views-field-field-teaser, .section-people .views-field-field-teaser {
   font-size: 0.75em;
   line-height: 1.33333em;
   line-height: 1.4em;
-  color: #793f0d;
+  color: #793F0D;
   letter-spacing: 0em;
 }
 /* line 404, ../sass/nodes.scss */
@@ -678,26 +678,26 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #db0c41;
+  border-left-color: #DB0C41;
   border-width: 0.25em;
   margin-left: 0.25em;
   bottom: 0.4em;
 }
 /* line 413, ../sass/nodes.scss */
-.page-taxonomy-term.section-recipes .attachment-before, .page-node-348 .attachment-before, .section-good-stuff.page-views .attachment-before, .section-people .attachment-before, .page-node-348 .view-display-id-block_1, .section-good-stuff.page-views .view-display-id-block_1, .section-people .view-display-id-block_1, .page-taxonomy-term.section-recipes .view-display-id-featured_block, .page-node-348 .view-display-id-featured_block, .section-good-stuff.page-views .view-display-id-featured_block, .section-people .view-display-id-featured_block {
+.page-taxonomy-term.section-recipes .attachment-before, .page-node-348 .attachment-before, .section-good-stuff.page-views .attachment-before, .section-people .attachment-before, .page-taxonomy-term.section-recipes .page-node-348 .view-display-id-block_1, .page-node-348 .page-taxonomy-term.section-recipes .view-display-id-block_1, .page-node-348 .view-display-id-block_1, .section-good-stuff.page-views .view-display-id-block_1, .page-taxonomy-term.section-recipes .section-people .view-display-id-block_1, .section-people .page-taxonomy-term.section-recipes .view-display-id-block_1, .section-people .view-display-id-block_1, .page-taxonomy-term.section-recipes .view-display-id-featured_block, .page-node-348 .view-display-id-featured_block, .section-good-stuff.page-views .view-display-id-featured_block, .section-people .view-display-id-featured_block {
   margin-bottom: 0.5em;
   font-size: 1.35em;
   line-height: 1.2963em;
   line-height: 1em;
 }
 /* line 417, ../sass/nodes.scss */
-.page-taxonomy-term.section-recipes .attachment-before .views-field-field-recipe-teaser, .page-node-348 .attachment-before .views-field-field-recipe-teaser, .section-good-stuff.page-views .attachment-before .views-field-field-recipe-teaser, .section-people .attachment-before .views-field-field-recipe-teaser, .page-node-348 .view-display-id-block_1 .views-field-field-recipe-teaser, .section-good-stuff.page-views .view-display-id-block_1 .views-field-field-recipe-teaser, .section-people .view-display-id-block_1 .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .attachment-before .page-node-348 .views-field-field-teaser, .page-node-348 .attachment-before .views-field-field-teaser, .page-node-348 .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .attachment-before .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .attachment-before .views-field-field-teaser, .section-good-stuff.page-views .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .attachment-before .section-people .views-field-field-teaser, .section-people .attachment-before .views-field-field-teaser, .section-people .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-field-recipe-teaser, .page-node-348 .view-display-id-featured_block .views-field-field-recipe-teaser, .section-good-stuff.page-views .view-display-id-featured_block .views-field-field-recipe-teaser, .section-people .view-display-id-featured_block .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .page-node-348 .views-field-field-teaser, .page-node-348 .view-display-id-featured_block .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .view-display-id-featured_block .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .section-people .views-field-field-teaser, .section-people .view-display-id-featured_block .views-field-field-teaser {
+.page-taxonomy-term.section-recipes .attachment-before .views-field-field-recipe-teaser, .page-node-348 .attachment-before .views-field-field-recipe-teaser, .section-good-stuff.page-views .attachment-before .views-field-field-recipe-teaser, .section-people .attachment-before .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .page-node-348 .view-display-id-block_1 .views-field-field-recipe-teaser, .page-node-348 .page-taxonomy-term.section-recipes .view-display-id-block_1 .views-field-field-recipe-teaser, .page-node-348 .view-display-id-block_1 .views-field-field-recipe-teaser, .section-good-stuff.page-views .view-display-id-block_1 .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .section-people .view-display-id-block_1 .views-field-field-recipe-teaser, .section-people .page-taxonomy-term.section-recipes .view-display-id-block_1 .views-field-field-recipe-teaser, .page-node-348 .section-people .view-display-id-block_1 .views-field-field-recipe-teaser, .section-people .page-node-348 .view-display-id-block_1 .views-field-field-recipe-teaser, .section-people .view-display-id-block_1 .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .attachment-before .page-node-348 .views-field-field-teaser, .page-node-348 .page-taxonomy-term.section-recipes .attachment-before .views-field-field-teaser, .page-node-348 .attachment-before .views-field-field-teaser, .section-people .attachment-before .page-node-348 .views-field-field-teaser, .page-node-348 .section-people .attachment-before .views-field-field-teaser, .page-taxonomy-term.section-recipes .page-node-348 .view-display-id-block_1 .views-field-field-teaser, .page-node-348 .page-taxonomy-term.section-recipes .view-display-id-block_1 .views-field-field-teaser, .page-node-348 .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .attachment-before .section-good-stuff.page-views .views-field-field-teaser, .page-node-348 .attachment-before .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .attachment-before .views-field-field-teaser, .section-people .attachment-before .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .attachment-before .section-people .views-field-field-teaser, .section-people .page-taxonomy-term.section-recipes .attachment-before .views-field-field-teaser, .page-node-348 .attachment-before .section-people .views-field-field-teaser, .section-people .page-node-348 .attachment-before .views-field-field-teaser, .section-people .attachment-before .views-field-field-teaser, .page-taxonomy-term.section-recipes .section-people .view-display-id-block_1 .views-field-field-teaser, .section-people .page-taxonomy-term.section-recipes .view-display-id-block_1 .views-field-field-teaser, .section-people .view-display-id-block_1 .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-field-recipe-teaser, .page-node-348 .view-display-id-featured_block .views-field-field-recipe-teaser, .section-good-stuff.page-views .view-display-id-featured_block .views-field-field-recipe-teaser, .section-people .view-display-id-featured_block .views-field-field-recipe-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .page-node-348 .views-field-field-teaser, .page-node-348 .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-field-teaser, .page-node-348 .view-display-id-featured_block .views-field-field-teaser, .section-people .view-display-id-featured_block .page-node-348 .views-field-field-teaser, .page-node-348 .section-people .view-display-id-featured_block .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .section-good-stuff.page-views .views-field-field-teaser, .page-node-348 .view-display-id-featured_block .section-good-stuff.page-views .views-field-field-teaser, .section-good-stuff.page-views .view-display-id-featured_block .views-field-field-teaser, .section-people .view-display-id-featured_block .section-good-stuff.page-views .views-field-field-teaser, .page-taxonomy-term.section-recipes .view-display-id-featured_block .section-people .views-field-field-teaser, .section-people .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-field-teaser, .page-node-348 .view-display-id-featured_block .section-people .views-field-field-teaser, .section-people .page-node-348 .view-display-id-featured_block .views-field-field-teaser, .section-people .view-display-id-featured_block .views-field-field-teaser {
   font-size: 0.65em;
   line-height: 1.53846em;
   line-height: 1em;
 }
 /* line 421, ../sass/nodes.scss */
-.page-taxonomy-term.section-recipes .attachment-before .views-field-view-node, .page-node-348 .attachment-before .views-field-view-node, .section-good-stuff.page-views .attachment-before .views-field-view-node, .section-people .attachment-before .views-field-view-node, .page-node-348 .view-display-id-block_1 .views-field-view-node, .section-good-stuff.page-views .view-display-id-block_1 .views-field-view-node, .section-people .view-display-id-block_1 .views-field-view-node, .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-view-node, .page-node-348 .view-display-id-featured_block .views-field-view-node, .section-good-stuff.page-views .view-display-id-featured_block .views-field-view-node, .section-people .view-display-id-featured_block .views-field-view-node {
+.page-taxonomy-term.section-recipes .attachment-before .views-field-view-node, .page-node-348 .attachment-before .views-field-view-node, .section-good-stuff.page-views .attachment-before .views-field-view-node, .section-people .attachment-before .views-field-view-node, .page-taxonomy-term.section-recipes .page-node-348 .view-display-id-block_1 .views-field-view-node, .page-node-348 .page-taxonomy-term.section-recipes .view-display-id-block_1 .views-field-view-node, .page-node-348 .view-display-id-block_1 .views-field-view-node, .section-good-stuff.page-views .view-display-id-block_1 .views-field-view-node, .page-taxonomy-term.section-recipes .section-people .view-display-id-block_1 .views-field-view-node, .section-people .page-taxonomy-term.section-recipes .view-display-id-block_1 .views-field-view-node, .page-node-348 .section-people .view-display-id-block_1 .views-field-view-node, .section-people .page-node-348 .view-display-id-block_1 .views-field-view-node, .section-people .view-display-id-block_1 .views-field-view-node, .page-taxonomy-term.section-recipes .view-display-id-featured_block .views-field-view-node, .page-node-348 .view-display-id-featured_block .views-field-view-node, .section-good-stuff.page-views .view-display-id-featured_block .views-field-view-node, .section-people .view-display-id-featured_block .views-field-view-node {
   font-size: 1em;
   line-height: 1.25em;
   line-height: 1em;
@@ -718,7 +718,7 @@
     width: 49.56541%;
     padding-right: 1.69492%;
     margin-right: 0;
-    border-right: 1px #a39161 dotted;
+    border-right: 1px #A39161 dotted;
   }
   /* line 439, ../sass/nodes.scss */
   .page-taxonomy-term.section-recipes .list-view > .view-content .views-row.views-row-even, .page-node-348 .list-view > .view-content .views-row.views-row-even, .section-good-stuff.page-views .list-view > .view-content .views-row.views-row-even, .section-people .list-view > .view-content .views-row.views-row-even {
@@ -757,7 +757,7 @@
   font-size: 1.45em;
   line-height: 1.2069em;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 476, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-recipe-image img {
@@ -770,7 +770,7 @@
 .node-type-recipe .field-name-field-standfirst-recipe {
   font-size: 0.95em;
   line-height: 1.31579em;
-  color: #793f0d;
+  color: #793F0D;
   margin: 0.75em 0 1em 0;
 }
 /* line 486, ../sass/nodes.scss */
@@ -814,13 +814,13 @@
 }
 /* line 510, ../sass/nodes.scss */
 .node-type-recipe .field-collection-container .field-collection-view ul li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 /* line 518, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe {
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 520, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items {
@@ -834,11 +834,11 @@
 }
 /* line 525, ../sass/nodes.scss */
 .node-type-recipe .field-name-field-body-recipe .field-items .field-item h3 {
-  color: #db0c41;
+  color: #DB0C41;
   font-size: 1.2em;
   line-height: 1.25em;
   line-height: 1em;
-  border-top: 1px #db0c41 dotted;
+  border-top: 1px #DB0C41 dotted;
   margin-left: -1em;
   text-indent: 1em;
   padding-top: 0.75em;
@@ -889,12 +889,12 @@
 
 /* line 562, ../sass/nodes.scss */
 .js .field-name-field-body-recipe ol {
-  color: #db0c41;
+  color: #DB0C41;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 /* line 565, ../sass/nodes.scss */
 .js .field-name-field-body-recipe ol span {
-  color: #793f0d;
+  color: #793F0D;
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   position: relative;
   left: -0.5em;
@@ -912,7 +912,7 @@
  */
 /* line 590, ../sass/nodes.scss */
 .page-node-348 .views-field-title a, .section-good-stuff.page-views .views-field-title a, .section-people .views-field-title a {
-  color: #00aeef;
+  color: #00AEEF;
 }
 /* line 592, ../sass/nodes.scss */
 .page-node-348 .views-field-title a div, .section-good-stuff.page-views .views-field-title a div, .section-people .views-field-title a div {
@@ -920,7 +920,7 @@
 }
 /* line 594, ../sass/nodes.scss */
 .page-node-348 .views-field-view-node a, .section-good-stuff.page-views .views-field-view-node a, .section-people .views-field-view-node a {
-  color: #00aeef;
+  color: #00AEEF;
   position: relative;
 }
 /* line 65, ../sass/_custom.scss */
@@ -932,7 +932,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #00aeef;
+  border-left-color: #00AEEF;
   border-width: 0.25em;
   margin-left: 0.25em;
   bottom: 0.4em;
@@ -945,8 +945,8 @@
 }
 /* line 607, ../sass/nodes.scss */
 .page-node-348 #block-views-blog-roll-view-block-2 .block-title, .section-good-stuff.page-views #block-views-blog-roll-view-block-2 .block-title, .section-people #block-views-blog-roll-view-block-2 .block-title {
-  background: #00aeef;
-  color: white;
+  background: #00AEEF;
+  color: #ffffff;
   padding: 0.3em 0.5em;
   margin-bottom: 0.5em;
   -moz-border-radius: 4px;
@@ -966,7 +966,7 @@
   padding-left: 1.4em;
   padding-bottom: 2px;
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #58595b;
+  color: #58595B;
   font-size: 0.7em;
   line-height: 1.42857em;
 }
@@ -980,7 +980,7 @@
   font-size: 1.45em;
   line-height: 1.2069em;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 658, ../sass/nodes.scss */
 .node-type-blog-general .field-name-field-blog-featured-image img, .node-type-blog-competition .field-name-field-blog-featured-image img, .node-type-blog-event .field-name-field-blog-featured-image img {
@@ -1000,7 +1000,7 @@
 }
 /* line 667, ../sass/nodes.scss */
 .node-type-blog-general .field-name-body a, .node-type-blog-competition .field-name-body a, .node-type-blog-event .field-name-body a {
-  color: #00aeef;
+  color: #00AEEF;
 }
 @media (min-width: 32em) {
   /* line 670, ../sass/nodes.scss */
@@ -1023,8 +1023,8 @@
 /* line 683, ../sass/nodes.scss */
 .node-type-blog-event .event-highlight {
   padding: 1em;
-  background: #00aeef;
-  color: white;
+  background: #00AEEF;
+  color: #ffffff;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -1072,19 +1072,19 @@
  */
 /* line 719, ../sass/nodes.scss */
 .section-people h2.block-title {
-  color: white !important;
+  color: #ffffff !important;
   text-indent: 0.5em;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
-  background: #a39161 url("../images/wrapper/adinkra-small.png") no-repeat;
+  background: #A39161 url("../images/wrapper/adinkra-small.png") no-repeat;
   background-position: right -157px;
   margin: 0.5em 0;
   padding: 0.2em;
 }
 /* line 729, ../sass/nodes.scss */
 .section-people .Recipe a {
-  color: #db0c41;
+  color: #DB0C41;
 }
 /* line 730, ../sass/nodes.scss */
 .section-people .Recipe.views-field-view-node a {
@@ -1099,7 +1099,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #db0c41;
+  border-left-color: #DB0C41;
   border-width: 0.25em;
   margin-left: 0.25em;
   bottom: 0.4em;
@@ -1134,7 +1134,7 @@
  */
 /* line 753, ../sass/nodes.scss */
 .product-list .views-row, .view-product-catalog .views-row, .node-type-product-display .views-row, .view-shop-items-on-recipe .views-row {
-  border-bottom: 1px dotted #a39161;
+  border-bottom: 1px dotted #A39161;
 }
 /* line 755, ../sass/nodes.scss */
 .product-list .views-row.views-row-last, .view-product-catalog .views-row.views-row-last, .node-type-product-display .views-row.views-row-last, .view-shop-items-on-recipe .views-row.views-row-last {
@@ -1159,7 +1159,7 @@
 }
 /* line 769, ../sass/nodes.scss */
 .product-list .views-field-commerce-unit-price, .view-product-catalog .views-field-commerce-unit-price, .node-type-product-display .views-field-commerce-unit-price, .view-shop-items-on-recipe .views-field-commerce-unit-price {
-  color: #793f0d;
+  color: #793F0D;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   line-height: 1.25em;
 }
@@ -1167,14 +1167,14 @@
 .product-list .views-field-quantity, .view-product-catalog .views-field-quantity, .node-type-product-display .views-field-quantity, .view-shop-items-on-recipe .views-field-quantity {
   font-size: 1em;
   line-height: 1.25em;
-  color: #a39161;
+  color: #A39161;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 /* line 777, ../sass/nodes.scss */
 .product-list .views-field-commerce-total, .view-product-catalog .views-field-commerce-total, .node-type-product-display .views-field-commerce-total, .view-shop-items-on-recipe .views-field-commerce-total {
   font-size: 0.8em;
   line-height: 1.5625em;
-  color: #58595b;
+  color: #58595B;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   margin-bottom: 0.5em;
 }
@@ -1195,11 +1195,11 @@
 }
 /* line 786, ../sass/nodes.scss */
 .product-list .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .product-list .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-product-catalog .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-product-catalog .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount, .node-type-product-display .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .node-type-product-display .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-shop-items-on-recipe .field-type-commerce-price .commerce-price-savings-formatter-price .price-amount, .view-shop-items-on-recipe .views-field-commerce-price .commerce-price-savings-formatter-price .price-amount {
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 791, ../sass/nodes.scss */
 .product-list .field-type-commerce-price .commerce-price-savings-formatter-list, .product-list .views-field-commerce-price .commerce-price-savings-formatter-list, .view-product-catalog .field-type-commerce-price .commerce-price-savings-formatter-list, .view-product-catalog .views-field-commerce-price .commerce-price-savings-formatter-list, .node-type-product-display .field-type-commerce-price .commerce-price-savings-formatter-list, .node-type-product-display .views-field-commerce-price .commerce-price-savings-formatter-list, .view-shop-items-on-recipe .field-type-commerce-price .commerce-price-savings-formatter-list, .view-shop-items-on-recipe .views-field-commerce-price .commerce-price-savings-formatter-list {
-  color: #58595b;
+  color: #58595B;
 }
 /* line 796, ../sass/nodes.scss */
 .product-list .views-field-view-node, .view-product-catalog .views-field-view-node, .node-type-product-display .views-field-view-node, .view-shop-items-on-recipe .views-field-view-node {
@@ -1211,7 +1211,7 @@
   font-size: 1.4em;
   line-height: 1.25em;
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #12ad2b;
+  color: #12AD2B;
   text-decoration: none;
 }
 /* line 65, ../sass/_custom.scss */
@@ -1223,7 +1223,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #12ad2b;
+  border-left-color: #12AD2B;
   border-width: 0.25em;
   margin-left: 0.25em;
   bottom: 0.4em;
@@ -1259,7 +1259,7 @@
   font-weight: normal;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
-  color: #a39161;
+  color: #A39161;
 }
 /* line 832, ../sass/nodes.scss */
 .product-list .field-name-field-additional-information .field-item, .product-list .field-collection-container .field-item, .product-list .field-name-field-ingredients .field-item, .view-product-catalog .field-name-field-additional-information .field-item, .view-product-catalog .field-collection-container .field-item, .view-product-catalog .field-name-field-ingredients .field-item, .node-type-product-display .field-name-field-additional-information .field-item, .node-type-product-display .field-collection-container .field-item, .node-type-product-display .field-name-field-ingredients .field-item, .view-shop-items-on-recipe .field-name-field-additional-information .field-item, .view-shop-items-on-recipe .field-collection-container .field-item, .view-shop-items-on-recipe .field-name-field-ingredients .field-item {
@@ -1294,7 +1294,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #a39161;
+  border-left-color: #A39161;
   border-width: 0.4em;
   margin-left: 0.4em;
   bottom: 0.45em;
@@ -1572,7 +1572,7 @@
   .section-shop .view-product-catalog table.views-view-grid > tbody > tr,
   .section-shop .product-list table.views-view-grid > tbody > tr {
     clear: both;
-    border-bottom: 1px dashed #a39161;
+    border-bottom: 1px dashed #A39161;
   }
   /* line 948, ../sass/nodes.scss */
   .section-checkout .view-product-catalog table.views-view-grid > tbody > tr > td, .section-checkout .product-list table.views-view-grid > tbody > tr > td,
@@ -1580,7 +1580,7 @@
   .section-cart .product-list table.views-view-grid > tbody > tr > td,
   .section-shop .view-product-catalog table.views-view-grid > tbody > tr > td,
   .section-shop .product-list table.views-view-grid > tbody > tr > td {
-    border-left: 1px dashed #a39161;
+    border-left: 1px dashed #A39161;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1637,7 +1637,7 @@
 .node-type-product-display h1#page-title {
   text-transform: uppercase;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #793f0d;
+  color: #793F0D;
   font-size: 1.45em;
   line-height: 1.2069em;
   line-height: 1em;
@@ -1669,10 +1669,10 @@
 }
 /* line 1003, ../sass/nodes.scss */
 .node-type-product-display .field-name-field-product-quote {
-  background: #a39161;
+  background: #A39161;
   padding: 1em;
   margin: 1em 0;
-  color: white;
+  color: #ffffff;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
@@ -1738,7 +1738,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #793f0d;
+  color: #793F0D;
   font-size: 1em;
   line-height: 1.25em;
   line-height: 1.1em;
@@ -1756,7 +1756,7 @@
   font-size: 1.4em;
   line-height: 1.25em;
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #12ad2b;
+  color: #12AD2B;
   text-decoration: none;
 }
 /* line 65, ../sass/_custom.scss */
@@ -1769,7 +1769,7 @@
   content: " ";
   position: absolute;
   pointer-events: none;
-  border-left-color: #12ad2b;
+  border-left-color: #12AD2B;
   border-width: 0.25em;
   margin-left: 0.25em;
   bottom: 0.4em;
@@ -1824,13 +1824,13 @@
 @media (min-width: 49em) {
   /* line 1105, ../sass/nodes.scss */
   .js .front #block-views-94f03c568041a24aa980b8a94d416d69 {
-    border-bottom: 1px #a39161 dashed;
+    border-bottom: 1px #A39161 dashed;
   }
 
   /* line 1108, ../sass/nodes.scss */
   .js .front .view-product-catalog {
     padding-top: 0.8em;
-    min-height: 15em;
+    min-height: 16em;
   }
   /* line 1111, ../sass/nodes.scss */
   .js .front .view-product-catalog .view-content {
@@ -1890,7 +1890,7 @@
  */
 /* line 1166, ../sass/nodes.scss */
 .page-node-423 .field-name-field-standfirst img {
-  border-bottom: 1px dashed #a39161;
+  border-bottom: 1px dashed #A39161;
 }
 @media (min-width: 32em) {
   /* line 1171, ../sass/nodes.scss */
@@ -1925,7 +1925,7 @@
   /* line 1189, ../sass/nodes.scss */
   .cart-summary .views-row {
     clear: both;
-    border-top: 1px dashed #a39161;
+    border-top: 1px dashed #A39161;
     padding-top: 1em;
   }
   /* line 1193, ../sass/nodes.scss */
@@ -1949,7 +1949,7 @@
   /* line 1199, ../sass/nodes.scss */
   .cart-summary .views-row .line-item-detail .delete-line-item {
     background: transparent;
-    color: #793f0d;
+    color: #793F0D;
     text-transform: none;
     font-size: 0.8em;
     line-height: 1.5625em;
@@ -1991,7 +1991,7 @@
   /* line 1221, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr, .cart-summary .view-footer .commerce-price-formatted-components tr {
     border: none;
-    color: #a39161;
+    color: #A39161;
   }
   /* line 1224, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr .component-title, .cart-summary .view-footer .commerce-price-formatted-components tr .component-title {
@@ -2005,7 +2005,7 @@
   }
   /* line 1232, ../sass/nodes.scss */
   .cart-summary .line-item-summary .commerce-price-formatted-components tr.component-type-commerce-price-formatted-amount, .cart-summary .view-footer .commerce-price-formatted-components tr.component-type-commerce-price-formatted-amount {
-    color: #793f0d;
+    color: #793F0D;
   }
 }
 
@@ -2045,16 +2045,16 @@
 }
 /* line 1265, ../sass/nodes.scss */
 .section-checkout .checkout-continue {
-  background: #12ad2b;
+  background: #12AD2B;
   display: block;
 }
 /* line 1269, ../sass/nodes.scss */
 .section-checkout .cart_contents {
-  border-bottom: 1px dashed #a39161;
+  border-bottom: 1px dashed #A39161;
 }
 /* line 1272, ../sass/nodes.scss */
 .section-checkout .checkout-cancel {
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 1274, ../sass/nodes.scss */
 .section-checkout .customer_profile_billing label, .section-checkout .commerce_mailchimp label {
@@ -2105,7 +2105,7 @@
   margin-top: 0.75em;
   font-size: 0.8em;
   line-height: 1.5625em;
-  border-bottom: 1px dashed #a39161;
+  border-bottom: 1px dashed #A39161;
 }
 /* line 1309, ../sass/nodes.scss */
 .searchhead ul, .searchhead li {
@@ -2117,7 +2117,7 @@
 /* line 1310, ../sass/nodes.scss */
 .searchhead ul a, .searchhead li a {
   padding: 0 0.25em;
-  color: #a39161;
+  color: #A39161;
 }
 
 @media (min-width: 32em) {
@@ -2139,7 +2139,7 @@
 }
 /* line 1323, ../sass/nodes.scss */
 .google-search-results .gss-result {
-  border-bottom: 1px dashed #a39161;
+  border-bottom: 1px dashed #A39161;
 }
 /* line 1326, ../sass/nodes.scss */
 .google-search-results h3 {
@@ -2149,11 +2149,11 @@
 }
 /* line 1329, ../sass/nodes.scss */
 .google-search-results h3 a {
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 1331, ../sass/nodes.scss */
 .google-search-results h3 a b {
-  color: #f1ab00;
+  color: #F1AB00;
   font-weight: normal;
 }
 /* line 1334, ../sass/nodes.scss */
@@ -2163,7 +2163,7 @@
 }
 /* line 1337, ../sass/nodes.scss */
 .google-search-results .gss-search-snippet b {
-  color: #f1ab00;
+  color: #F1AB00;
 }
 /* line 1340, ../sass/nodes.scss */
 .google-search-results .gss-search-url {
@@ -2174,7 +2174,7 @@
   font-size: 0.75em;
   line-height: 1.33333em;
   font-family: "Avenir LT W01 65 Medium", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #a39161;
+  color: #A39161;
   font-style: normal;
   font-weight: normal;
 }
@@ -2242,7 +2242,7 @@
 .view-wholesalers .views-exposed-widgets {
   margin-bottom: 1em;
   padding-bottom: 1em;
-  border-bottom: 1px #793f0d dotted;
+  border-bottom: 1px #793F0D dotted;
 }
 /* line 1388, ../sass/nodes.scss */
 .view-wholesalers .views-exposed-widgets label, .view-wholesalers .views-exposed-widgets .views-widget {
@@ -2257,7 +2257,7 @@
 /* line 1391, ../sass/nodes.scss */
 .view-wholesalers .views-row {
   margin: 0 1em;
-  border-bottom: 1px #793f0d dotted;
+  border-bottom: 1px #793F0D dotted;
 }
 /* line 1394, ../sass/nodes.scss */
 .view-wholesalers .views-row .views-field-title {
