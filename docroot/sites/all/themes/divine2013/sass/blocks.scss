@@ -197,7 +197,8 @@ a.contextual-links-trigger {
   .region-nav {
     display: none;
     @include breakpoint(tablet) {
-      display: block;
+      display: block !important;
+      // using important to override the script display none in mobile menu
     }
   }
   //styles used to make responsive menu
