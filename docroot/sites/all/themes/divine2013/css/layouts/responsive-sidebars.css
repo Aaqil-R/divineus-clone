@@ -102,7 +102,7 @@ body.section-good-stuff #page {
   margin-right: auto;
   min-width: 15em;
 }
-/* line 38, ../../../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 #header:after,
 #main:after,
 #footer:after {
@@ -122,7 +122,7 @@ body.section-good-stuff #page {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   #header:after,
   #main:after,
   #footer:after {
@@ -143,7 +143,7 @@ body.section-good-stuff #page {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   #header:after,
   #main:after,
   #footer:after {
@@ -165,7 +165,7 @@ body.section-good-stuff #page {
     margin-right: auto;
     padding: 0em 2.5em;
   }
-  /* line 38, ../../../../../../../../../../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../../../../Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   #header:after,
   #main:after,
   #footer:after {
@@ -210,7 +210,7 @@ body.section-good-stuff #page {
 }
 /* line 144, ../../sass/layouts/responsive-sidebars.scss */
 .lt-ie9 .sidebar-first #content #block-views-frontpage-shop-window-block img {
-  border-bottom: 1px dashed #b39f69;
+  border-bottom: 1px dashed #B39F69;
 }
 /* line 147, ../../sass/layouts/responsive-sidebars.scss */
 .lt-ie9 .sidebar-first .sidebars {
@@ -248,7 +248,7 @@ body.section-good-stuff #page {
 }
 /* line 172, ../../sass/layouts/responsive-sidebars.scss */
 .lt-ie9 #header .region-nav #block-system-main-menu ul li:hover a {
-  color: black;
+  color: #000000;
 }
 /* line 176, ../../sass/layouts/responsive-sidebars.scss */
 .lt-ie9 #header #swoosh {
@@ -276,7 +276,7 @@ body.section-good-stuff #page {
 }
 /* line 195, ../../sass/layouts/responsive-sidebars.scss */
 .lt-ie9 #footer #block-menu-menu-footer ul > li.expanded a {
-  color: #a39161;
+  color: #A39161;
   background: none;
 }
 /* line 199, ../../sass/layouts/responsive-sidebars.scss */

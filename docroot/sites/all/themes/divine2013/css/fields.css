@@ -36,10 +36,10 @@
   position: relative;
   margin-top: -2.5em;
   left: 0.5em;
-  color: #793f0d;
+  color: #793F0D;
   font-size: 0.7em;
   line-height: 1.42857em;
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 1px 1px 1px #ffffff;
   text-align: left;
 }
 /* line 27, ../sass/fields.scss */
@@ -64,9 +64,9 @@
 
 /* line 49, ../sass/fields.scss */
 .views-field-field-frontblockimg img:hover {
-  -moz-box-shadow: 0px 5px #58595b;
-  -webkit-box-shadow: 0px 5px #58595b;
-  box-shadow: 0px 5px #58595b;
+  -moz-box-shadow: 0px 5px #58595B;
+  -webkit-box-shadow: 0px 5px #58595B;
+  box-shadow: 0px 5px #58595B;
 }
 
 /* line 53, ../sass/fields.scss */
@@ -78,11 +78,11 @@
   font-weight: normal;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
-  border: 1px #a39161 solid;
+  border: 1px #A39161 solid;
 }
 /* line 60, ../sass/fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown {
-  border: 1px #a39161 solid;
+  border: 1px #A39161 solid;
   margin-top: 0.25em;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -90,7 +90,7 @@
 }
 /* line 64, ../sass/fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown span {
-  color: #a39161;
+  color: #A39161;
   font-size: 0.8em;
   line-height: 1.5625em;
 }

@@ -47,7 +47,7 @@ body {
  */
 /* line 47, ../sass/pages.scss */
 #swoosh {
-  background: url('../images/wrapper/swoosh-top.png?1420638420') no-repeat;
+  background: url('../images/wrapper/swoosh-top.png?1441779657') no-repeat;
   background-position: -102px;
   height: 35px;
   width: 100%;
@@ -121,7 +121,7 @@ body {
 @media (min-width: 49em) {
   /* line 102, ../sass/pages.scss */
   .front #header {
-    background-image: url('../images/homepage-banner/new-love-chocolate.jpg?1420638420');
+    background-image: url('../images/homepage-banner/new-love-chocolate.jpg?1441779657');
     background-repeat: no-repeat;
     background-position: center top;
     min-height: 480px;

@@ -33,14 +33,14 @@ form div .form-item:first-child {
 }
 /* line 17, ../sass/forms.scss */
 .form-item input:focus, .form-item textarea:focus {
-  outline-color: #793f0d;
+  outline-color: #793F0D;
 }
 /* line 21, ../sass/forms.scss */
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
   /* Highlight the form elements that caused a form submission error */
-  border: 1px solid #a39161;
+  border: 1px solid #A39161;
 }
 /* line 27, ../sass/forms.scss */
 .form-item label {
@@ -82,8 +82,8 @@ form div .form-item:first-child {
   -webkit-border-radius: 6px;
   border-radius: 6px;
   border: none;
-  background-color: #a39161;
-  color: white;
+  background-color: #A39161;
+  color: #ffffff;
   padding: 0.5em;
   font-family: "Avenir LT W01 95 Black", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
@@ -96,7 +96,7 @@ form div .form-item:first-child {
 
 /* line 68, ../sass/forms.scss */
 #edit-checkout {
-  background: #12ad2b;
+  background: #12AD2B;
 }
 
 /* line 70, ../sass/forms.scss */
@@ -231,12 +231,12 @@ html.js #user-login-form li.openid-link,
 
 /* line 171, ../sass/forms.scss */
 .commerce-add-to-cart .form-text {
-  background: white;
+  background: #ffffff;
   text-align: center;
 }
 /* line 172, ../sass/forms.scss */
 .commerce-add-to-cart .commerce-price-savings-formatter-price-row .price-amount {
-  color: #793f0d;
+  color: #793F0D;
 }
 /* line 175, ../sass/forms.scss */
 .commerce-add-to-cart .buy-now {
@@ -248,7 +248,7 @@ html.js #user-login-form li.openid-link,
 }
 /* line 178, ../sass/forms.scss */
 .commerce-add-to-cart .buy-now .form-submit {
-  background: #12ad2b;
+  background: #12AD2B;
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: capitalize;
   font-size: 1.65em;

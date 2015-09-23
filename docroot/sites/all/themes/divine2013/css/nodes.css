@@ -132,7 +132,7 @@
   letter-spacing: 1px;
   position: relative;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .node .highlight-caption a.highlight-link:after, .node .highlight a.highlight-link:after {
   width: 0;
   height: 0;
@@ -551,7 +551,7 @@
   line-height: 1.25em;
   position: relative;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .page-node-354 #content .block-block a.highlight-link:after {
   width: 0;
   height: 0;
@@ -669,7 +669,7 @@
   font-family: "OPTISport-Script", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   letter-spacing: 0em;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .page-taxonomy-term.section-recipes .views-field-view-node a:after, .page-node-348 .views-field-view-node a:after, .section-good-stuff.page-views .views-field-view-node a:after, .section-people .views-field-view-node a:after {
   width: 0;
   height: 0;
@@ -923,7 +923,7 @@
   color: #00AEEF;
   position: relative;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .page-node-348 .views-field-view-node a:after, .section-good-stuff.page-views .views-field-view-node a:after, .section-people .views-field-view-node a:after {
   width: 0;
   height: 0;
@@ -1090,7 +1090,7 @@
 .section-people .Recipe.views-field-view-node a {
   position: relative;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .section-people .Recipe.views-field-view-node a:after {
   width: 0;
   height: 0;
@@ -1214,7 +1214,7 @@
   color: #12AD2B;
   text-decoration: none;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .product-list .views-field-view-node a:after, .view-product-catalog .views-field-view-node a:after, .node-type-product-display .views-field-view-node a:after, .view-shop-items-on-recipe .views-field-view-node a:after {
   width: 0;
   height: 0;
@@ -1285,7 +1285,7 @@
   cursor: pointer;
   cursor: hand;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .product-list .field-collection-container .field-label:after, .product-list .field-name-field-ingredients .field-label:after, .view-product-catalog .field-collection-container .field-label:after, .view-product-catalog .field-name-field-ingredients .field-label:after, .node-type-product-display .field-collection-container .field-label:after, .node-type-product-display .field-name-field-ingredients .field-label:after, .view-shop-items-on-recipe .field-collection-container .field-label:after, .view-shop-items-on-recipe .field-name-field-ingredients .field-label:after {
   width: 0;
   height: 0;
@@ -1759,7 +1759,7 @@
   color: #12AD2B;
   text-decoration: none;
 }
-/* line 65, ../sass/_custom.scss */
+/* line 66, ../sass/_custom.scss */
 .front .view-product-catalog .views-field-field-product-link-1 a:after,
 .front .view-product-catalog .views-field-view-node a:after {
   width: 0;

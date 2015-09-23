@@ -7,7 +7,6 @@
 // curly brackets:
 //   @include mix-in-name;
 
-
 // element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
   position: absolute !important;
@@ -15,8 +14,10 @@
   width: 1px;
   overflow: hidden;
   @include for-legacy-browser("ie", "7", $threshold: $opacity-usage-threshold) {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+    clip: rect(1px 1px 1px 1px);
+    // IE6 and IE7 use the wrong syntax.
   }
+
   clip: rect(1px, 1px, 1px, 1px);
 }
 
@@ -31,7 +32,6 @@
 
 @mixin element-focusable {
   @include element-invisible;
-
   &:active,
   &:focus {
     @include element-invisible-off;
@@ -49,57 +49,54 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  word-wrap: break-word; // A very nice CSS3 property
-
+  word-wrap: break-word;
+  // A very nice CSS3 property
   @include for-legacy-browser("ie", "7", $threshold: $opacity-usage-threshold) {
-    .lt-ie8 &>* {
-      position: relative; // Otherwise these elements will appear below the "Unpublished" text.
+    .lt-ie8 & > * {
+      position: relative;
+      // Otherwise these elements will appear below the "Unpublished" text.
+   
     }
   }
 }
 
 //css arrow
-@mixin arrow($color, $size, $bottom:0.65em) {
-  
+@mixin arrow($color, $size, $bottom: 0.65em) {
   position: relative;
   &:after {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-radius: 2px;
     border: solid transparent;
     content: " ";
     position: absolute;
     pointer-events: none;
-    
     border-left-color: $color;
     border-width: $size;
     margin-left: $size;
     bottom: $bottom;
-    
   }
 }
 
 @mixin button($color) {
-  
   font-family: $avenir-bold;
   text-transform: uppercase;
   color: $white;
   background: $color;
   padding: 0.5em 1.25em;
   @include border-radius;
-
 }
 
-@mixin shine() {
+@mixin shine {
   &.button-wrapper {
-    background-image: url('../images/symbols/shine.png');
+    background-image: url("../images/symbols/shine.png");
     background-repeat: no-repeat;
     background-position: left;
     padding-left: 20px;
     display: inline-block;
   }
   .button-inner-wrapper {
-    background-image: url('../images/symbols/shine.png');
+    background-image: url("../images/symbols/shine.png");
     background-repeat: no-repeat;
     background-position: right;
     padding-right: 20px;
@@ -107,32 +104,44 @@
   }
 }
 
-@mixin shine-top() {
-    background-image: url('../images/symbols/shine-top.png');
-    background-repeat: no-repeat;
-    background-position: center top;
-    padding-top: 30px;
+@mixin shine-top {
+  background-image: url("../images/symbols/shine-top.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-top: 30px;
 }
 
-@mixin bracket() {
+@mixin bracket {
   padding-bottom: 30px;
-  background: url('../images/symbols/bracket-gold.gif') no-repeat bottom center;
+  background: url("../images/symbols/bracket-gold.gif") no-repeat bottom center;
   background-size: contain;
 }
-
 
 //Custom Breakpoints
 @mixin breakpoint($point) {
   @if $point == desktop-wide {
-    @media (min-width: $desktop-wide) { @content; }
+    @media (min-width: $desktop-wide) {
+      @content;
+    }
   }
   @if $point == desktop {
-    @media (min-width: $desktop) { @content; }
+    @media (min-width: $desktop) {
+      @content;
+    }
   }
   @else if $point == tablet {
-    @media (min-width: $tablet) { @content; }
+    @media (min-width: $tablet) {
+      @content;
+    }
   }
   @else if $point == mobile-landscape {
-    @media (min-width: $mobile-landscape)  { @content; }
+    @media (min-width: $mobile-landscape) {
+      @content;
+    }
+  }
+  @else if $point == tablet_max {
+    @media (max-width: $tablet) {
+      @content;
+    }
   }
 }
