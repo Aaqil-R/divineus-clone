@@ -57,11 +57,6 @@ function context_theme() {
     'path' => drupal_get_path('module', 'context') . '/theme',
     'file' => 'context_reaction_block.theme.inc',
   );
-  $items['context_block_edit_wrap'] = array(
-    'render element' => 'element',
-    'path' => drupal_get_path('module', 'context') . '/theme',
-    'file' => 'context_reaction_block.theme.inc',
-  );
   return $items;
 }
 
@@ -110,8 +105,7 @@ function context_ctools_render_alter($info, $page, $data) {
 function context_entity_prepare_view($prepare, $entity_type) {
   if ($entity_type === 'taxonomy_term' && count($prepare) === 1) {
     $term = reset($prepare);
-    $menu = menu_get_object('taxonomy_term', 2);
-    if ($menu && $term->tid == $menu->tid && $plugin = context_get_plugin('condition', 'taxonomy_term')) {
+    if ($term === menu_get_object('taxonomy_term', 2) && $plugin = context_get_plugin('condition', 'taxonomy_term')) {
       $plugin->execute($term, 'view');
     }
   }
@@ -121,9 +115,11 @@ function context_entity_prepare_view($prepare, $entity_type) {
  * Implementation of hook_node_view().
  */
 function context_node_view($node, $view_mode) {
-  $object = menu_get_object();
-  if (isset($object->nid) && $object->nid === $node->nid) {
-    context_node_condition($node, 'view');
+  if ($view_mode === 'full') {
+    $object = menu_get_object();
+    if (isset($object->nid) && $object->nid === $node->nid) {
+      context_node_condition($node, 'view');
+    }
   }
 }
 
@@ -319,13 +315,10 @@ function context_context_page_condition() {
   if ($plugin = context_get_plugin('condition', 'menu')) {
     $plugin->execute();
   }
-  if ($plugin = context_get_plugin('condition', 'default')) {
+  if ($plugin = context_get_plugin('condition', 'sitewide')) {
     $plugin->execute(1);
   }
   if ($plugin = context_get_plugin('condition', 'context')) {
-    $plugin->execute();
-  }
-  if ($plugin = context_get_plugin('condition', 'context_all')) {
     $plugin->execute();
   }
 }
@@ -334,6 +327,9 @@ function context_context_page_condition() {
  * Implementation of hook_context_page_reaction().
  */
 function context_context_page_reaction() {
+  if ($plugin = context_get_plugin('reaction', 'breadcrumb')) {
+    $plugin->execute();
+  }
   if ($plugin = context_get_plugin('reaction', 'css_injector')) {
     $plugin->execute();
   }
@@ -343,13 +339,13 @@ function context_context_page_reaction() {
 }
 
 /**
- * Implementation of hook_preprocess_page().
+ * Implementation of hook_page_alter().
  */
 function context_preprocess_page(&$vars) {
-  if ($plugin = context_get_plugin('reaction', 'theme')) {
+  if ($plugin = context_get_plugin('reaction', 'menu')) {
     $plugin->execute($vars);
   }
-  if ($plugin = context_get_plugin('reaction', 'template_suggestions')) {
+  if ($plugin = context_get_plugin('reaction', 'theme')) {
     $plugin->execute($vars);
   }
   /*
@@ -360,19 +356,6 @@ function context_preprocess_page(&$vars) {
     $vars['context_links'] = '';
   }
   */
-}
-
-/**
-* Implementation of hook_delivery_callback_alter().
-* Based on menu_position's and menu_trail_by_path's implementations.
-*/
-function context_page_delivery_callback_alter() {
-  if ($plugin = context_get_plugin('reaction', 'menu')) {
-    $plugin->execute();
-  }
-  if ($plugin = context_get_plugin('reaction', 'breadcrumb')) {
-    $plugin->execute();
-  }
 }
 
 /**
