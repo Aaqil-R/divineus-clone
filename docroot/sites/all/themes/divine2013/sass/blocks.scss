@@ -201,9 +201,14 @@ a.contextual-links-trigger {
     }
   }
   //styles used to make responsive menu
-  .region.region-nav,
-  #block-block-9 {
-    display: block;
+  // .region.region-nav,
+  // #block-block-9 {
+  //   display: block;
+  // }
+  #block-search-form {
+    @include breakpoint(tablet_max) {
+      display: none !important;
+    }
   }
   #block-block-9 {
     @include breakpoint(tablet_max) {
