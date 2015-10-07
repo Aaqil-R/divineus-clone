@@ -101,6 +101,21 @@
     <script src="<?php print $base_path . $path_to_zen; ?>/js/html5.js"></script>
     <![endif]-->
   <?php endif; ?>
+  
+  <!-- including GA tracking code with cross domain tracking provided by Vincent Casott from WorldPantry -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   
+    ga('create', 'UA-41053817-1', 'auto', {'allowLinker': true});
+    ga('require', 'linker');
+    ga('linker:autoLink', ['shop.divinechocolateusa.com'] );
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');   
+  </script>
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
 	<!-- Qualaroo for divinechocolate.com -->
