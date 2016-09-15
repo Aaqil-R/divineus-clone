@@ -7,10 +7,9 @@ files[] = gss.module
 files[] = gss.theme.inc
 scripts[] = scripts/autocomplete.js
 
-
-; Information added by drupal.org packaging script on 2013-04-19
-version = "7.x-1.9"
+; Information added by Drupal.org packaging script on 2014-01-19
+version = "7.x-1.11"
 core = "7.x"
 project = "gss"
-datestamp = "1366401912"
+datestamp = "1390115906"
 
