@@ -1,0 +1,58 @@
+<?php
+/**
+ * Implements hook_menu
+ */
+function divine_custom_menu() {
+	$items['admin/config/homepage-image'] = array(
+		'title' => 'Change home page image',
+		'page callback' => 'drupal_get_form',
+    'page arguments' => array('_divine_custom_manage_home_image'),
+    'access arguments' => array('access administration pages'),
+		'type' => MENU_NORMAL_ITEM
+	);
+  return $items;
+}
+
+function _divine_custom_manage_home_image($form, $form_state) {
+   // Get fid from variable
+  $divine_mediafile_media = variable_get('header_image', array());
+  // Build one media field
+  $form['header_image'] = array(
+    '#title' => t("Home page main header image"),
+    '#description' => t('Upload an image to set as main image in home page'),
+    '#type' => 'media',
+    '#tree' => TRUE,
+    '#value' => $divine_mediafile_media,
+    '#media_options' => array(
+      'global' => array(
+        'types' => array(
+          'image' => 'image',
+        ),
+        'file_extensions' => 'png gif jpg jpeg',
+      ),
+    ),
+  );
+  
+  $form['image_header_style_name'] = array(
+    '#title' => t('Image style'),
+    '#type' => 'select',
+    '#description' => t('Choose an image style to use when displaying this image.'),
+    
+    // The image_style_options() function returns an array of all available
+    // image styles both the key and the value of the array are the image
+    // style's name. The fucntion takes on paramater, a boolean flag
+    // signifying wether or not the array should include a <none> option.
+    '#options' => image_style_options(TRUE),
+    '#default_value' => variable_get('image_header_style_name', ''),
+  );
+  // Add submit hook function
+  $form['#submit'][] = '_divine_custom_submit';
+  return system_settings_form($form); 
+}
+
+function _divine_custom_submit($form, &$form_state) {
+  // Manually put new fid in input values
+  if (isset($form_state['input']['header_image']['fid'])) {
+    $form_state['values']['header_image']['fid'] = $form_state['input']['header_image']['fid'];
+  }
+} 
