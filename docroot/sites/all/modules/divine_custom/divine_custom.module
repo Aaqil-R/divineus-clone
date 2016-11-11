@@ -24,10 +24,6 @@ function divine_custom_file_insert($file) {
     }  
 }
 
-function divine_custom_init() {
-  drupal_add_js('jQuery(document).ready(function(){ jQuery( document ).ajaxStart( function(){ jQuery("#file-entity-add-upload .messages").remove(); }); });', 'inline');
-}
-
 function _divine_custom_manage_home_image($form, $form_state) {
    // Get fid from variable
   $divine_mediafile_media = variable_get('header_image', array());
