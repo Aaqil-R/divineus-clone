@@ -8,24 +8,31 @@
 .block {
   /* Block wrapper */
   margin-bottom: 0.5em;
+
   &.first {
     /* The first block in the region */
   }
+
   &.last {
     /* The last block in the region */
   }
+
   &.odd {
     /* Zebra striping for each block in the region */
   }
+
   &.even {
     /* Zebra striping for each block in the region */
   }
+
   h2.block-title {
     /* Block title */
     @include adjust-font-size-to(1.1 * $base-font-size);
   }
+
   p {
     @include adjust-font-size-to(0.8 * $base-font-size);
+
     line-height: 1em;
   }
 }
@@ -142,6 +149,7 @@
 #logo {
   /* The name of the website */
   @include span-columns(2, 5);
+
   h1 {
     font-size: 2em;
     line-height: 1.4em;
@@ -150,6 +158,7 @@
     background-size: contain;
     height: 45px;
     margin: 0.25em 0 0 0;
+
     a:link,
     a:visited {
       color: #000;
@@ -157,11 +166,13 @@
       display: block;
       height: 100%;
     }
+
     a:hover,
     a:focus {
       text-decoration: underline;
     }
   }
+
   @include breakpoint(mobile-landscape) {
     h1 {
       height: 50px;
@@ -169,24 +180,27 @@
     }
   }
 
+
   @include breakpoint(tablet) {
     @include span-columns(3, 10);
+
     h1 {
       height: 95px;
       margin-bottom: 1.5em;
     }
   }
 
+
   @include breakpoint(desktop) {
     @include span-columns(4, 10);
-    h1 {
-      margin: 0.5em 0;
-    }
+
+    h1 {}
   }
 }
 
 a.contextual-links-trigger {
   display: none !important;
+
   //important used to override the old styles
 }
 
@@ -196,11 +210,14 @@ a.contextual-links-trigger {
   #block-block-4,
   .region-nav {
     display: none;
+
     @include breakpoint(tablet) {
       display: block !important;
+
       // using important to override the script display none in mobile menu
     }
   }
+
   //styles used to make responsive menu
   // .region.region-nav,
   // #block-block-9 {
@@ -211,12 +228,14 @@ a.contextual-links-trigger {
       display: none !important;
     }
   }
+
   #block-block-9 {
     @include breakpoint(tablet_max) {
       width: 40%;
       float: right;
     }
   }
+
   #block-block-10, #block-block-38 {
     @include breakpoint(tablet) {
       display: none;
@@ -231,12 +250,15 @@ a.contextual-links-trigger {
   float: right;
   margin-bottom: 0.5em;
   border: $gold-on-black 1px solid;
+
   @include border-radius;
+
   p {
     width: 100%;
     height: 100%;
     margin: 0;
   }
+
   a {
     text-indent: -1000%;
     overflow: hidden;
@@ -256,15 +278,19 @@ a.contextual-links-trigger {
 
 #block-search-form {
   @include border-radius(4px);
+
   border: 1px $gold-on-black solid;
   color: $gold-on-black;
   margin-bottom: 0.5em;
+
   form {
     margin-top: 0;
   }
+
   p {
     @include adjust-font-size-to(0.75 * $base-font-size);
   }
+
   label {
     width: 100%;
     text-align: center;
@@ -272,6 +298,7 @@ a.contextual-links-trigger {
     line-height: 1.5em;
     display: block;
   }
+
   input.form-text {
     font-family: $avenir;
     line-height: 1.5em;
@@ -285,25 +312,32 @@ a.contextual-links-trigger {
     display: block;
     padding: 0;
   }
+
   .form-actions {
     display: none;
   }
+
   @include breakpoint(tablet) {
     margin-bottom: 0;
+
     label {
       text-indent: 7px;
       text-align: left;
       max-width: 5.4em;
     }
+
     input.form-text {
       width: 5.4em;
       text-align: left;
     }
+
     .form-type-textfield {
       float: right;
       margin: 0;
+
       label, input {}
     }
+
     .form-actions {
       display: inline-block;
       position: relative;
@@ -311,6 +345,7 @@ a.contextual-links-trigger {
       top: 2px;
       left: 1em;
       background-image: none;
+
       input.form-submit {
         background: transparent;
         border: none;
@@ -325,9 +360,11 @@ a.contextual-links-trigger {
         overflow: hidden;
       }
     }
+
     &:hover {
       border: 1px $white solid;
       color: $white;
+
       .form-actions input.form-submit {
         background-position: center -101px;
       }
@@ -339,37 +376,48 @@ a.contextual-links-trigger {
 //#block-views-6aa51a04a11ebcfeff082e88e32439f2 {
 #block-block-4 {
   @include border-radius(4px);
+
   border: 1px $gold-on-black solid;
   color: $gold-on-black;
   text-align: center;
   cursor: pointer;
+
   &:hover {
     border: 1px $white solid;
+
     p a, p a:hover {
       color: $white;
       text-decoration: none;
     }
   }
+
   .line-item-summary {
     margin: 0;
   }
+
   .line-item-summary .line-item-quantity {
     float: none;
     text-align: center;
   }
+
   .inline {
     text-align: center;
     display: block;
     margin: 0;
   }
+
   p {
     margin: 0;
+
     @include adjust-font-size-to(1 * $base-font-size);
+
     line-height: 1.5em;
+
     a {
       color: $gold-on-black;
     }
   }
+
   @include breakpoint(tablet) {
     & > p {
       background-image: url("../images/wrapper/icons.png");
@@ -377,6 +425,7 @@ a.contextual-links-trigger {
       background-position: 6px 2px;
       text-indent: 21px;
     }
+
     &:hover > p {
       background-position: 6px -74px;
     }
@@ -402,59 +451,80 @@ a.contextual-links-trigger {
   margin-top: 0;
   display: none;
   z-index: 10;
+
   .cart-contents, .cart-empty-block {
     background: url("../images/symbols/arrow-up.png") no-repeat top center;
     padding-top: 2em;
+
     .view-commerce-cart-block {
       color: $black;
       background: $white;
+
       @include box-shadow($grey -2px 2px 2px);
+
       z-index: 9;
+
       @include border-radius;
     }
+
     .views-row {
       border-bottom: 1px dashed $gold;
       padding: 1.5em 0;
       clear: both;
+
       @include span-columns(10 omega, 10);
+
       .views-field-field-image {
         @include span-columns(2, 10);
+
         img {
           padding-left: 1em;
         }
       }
+
       .views-field-line-item-title {
         @include span-columns(8 omega, 10);
+
         text-align: left;
+
         @include adjust-font-size-to(1 * $base-font-size);
+
         div {
           padding-left: 1em;
         }
+
         .cart-title {
           color: $brown;
           padding-right: 1em;
         }
+
         .cart-quantity {
           color: $gold-on-black;
         }
+
         .cart-line-total {
           color: $grey;
           font-family: $avenir;
         }
       }
     }
+
     .view-footer {
       clear: both;
+
       .line-item-summary-checkout a {
         @include button($gold);
+
         margin: 1em;
         display: inline-block;
       }
+
       .line-item-summary {
         margin-bottom: 0;
       }
     }
   }
+
   .cart-empty-block {
     background: $black;
     width: auto;
@@ -469,17 +539,23 @@ a.contextual-links-trigger {
 
 #block-block-8 {
   border: 1px $gold-on-black solid;
+
   @include border-radius;
+
   background: url("../images/wrapper/icons.png") no-repeat 4px -48px;
   padding: 0 0 0 2em;
   width: auto;
   height: auto;
+
   p {
     margin: 0;
+
     @include adjust-font-size-to(1 * $base-font-size);
+
     line-height: 1.6em;
     border-left: 2px $gold-on-black solid;
     padding: 0;
+
     a {
       display: block;
       padding: 0.4em 0.75em;
@@ -494,22 +570,28 @@ a.contextual-links-trigger {
 
 #block-block-33 {
   @include adjust-font-size-to(0.9 * $base-font-size);
+
   ol {
     list-style-position: inside;
     margin: 0;
     padding: 0;
+
     li {
       @include box-sizing(border-box);
+
       width: 25%;
       border-right: 1px $brown solid;
       float: left;
       padding: 0.75em;
       background: darken($white, 10%);
       color: $grey;
+
       &:last-of-type {
         @include border-right-radius;
+
         border-right: none;
       }
+
       &:first-of-type {
         @include border-left-radius;
       }
@@ -535,6 +617,7 @@ a.contextual-links-trigger {
     font-family: $avenir-bold;
     text-transform: uppercase;
   }
+
   .cart {
     background: $gold;
     color: white;
@@ -549,6 +632,7 @@ a.contextual-links-trigger {
     font-family: $avenir-bold;
     text-transform: uppercase;
   }
+
   .cart, .delivery {
     background: $gold;
     color: white;
@@ -589,63 +673,83 @@ a.contextual-links-trigger {
 .view-large-button-queues {
   .views-row {
     @include border-radius(6px);
+
     overflow: hidden;
     margin-bottom: 0.7em;
+
     a {
       display: block;
     }
+
     img {
       width: 100%;
       margin-bottom: -3px;
     }
+
     .views-field-title {
       position: relative;
       top: -1em;
       margin-bottom: -1em;
+
       a {
         color: $white;
         font-family: $avenir;
+
         @include adjust-font-size-to(0.85 * $base-font-size);
+
         line-height: 1em;
         padding: 0.75em 1em 0.8em 2em;
+
         @include arrow($white, 0.4em, 0.9em);
       }
+
       .views-field-title-inner {
         background-color: $yellow;
+
         &.good-stuff {
           background-color: $blue;
         }
+
         &.shop {
           background-color: $blue;
         }
+
         &.recipes {
           background-color: $pink;
         }
       }
     }
+
     &:hover, &:focus {
       @include single-box-shadow;
+
       .views-field-title-inner {
         @include background-image(radial-gradient(0px 0px, elipse cover, lighten($yellow, 10%) 0%, $yellow 150px));
+
         &.good-stuff {
           @include background-image(radial-gradient(0px 0px, elipse cover, lighten($blue, 10%) 0%, $blue 150px));
         }
+
         &.shop {
           @include background-image(radial-gradient(0px 0px, elipse cover, lighten($green, 10%) 0%, $green 150px));
         }
+
         &.recipes {
           @include background-image(radial-gradient(0px 0px, elipse cover, lighten($pink, 10%) 0%, $pink 150px));
         }
+
         a {
           text-decoration: none;
         }
       }
     }
   }
+
   @include breakpoint(tablet) {
     &.spread {
       .views-row {
         @include span-columns(4, 8);
+
         &.views-row-even {
           @include omega;
         }
@@ -658,8 +762,11 @@ a.contextual-links-trigger {
   text-transform: uppercase;
   font-family: $avenir-bold;
   padding: 0.5em 1.5em;
+
   @include adjust-font-size-to(1 * $base-font-size);
+
   @include arrow($white, 0.4em, 0.75em);
+
   letter-spacing: 1px;
 }
 
@@ -670,18 +777,24 @@ a.contextual-links-trigger {
 .view-sidebar-blocks {
   .views-row {
     @include adjust-font-size-to(0.75 * $base-font-size);
+
     margin-bottom: 0.5em;
     line-height: 0;
+
     a {
       display: block;
+
       img {
         width: 100%;
+
         @include border-radius;
       }
     }
   }
+
   &.show-border {
     padding-top: 0.75em;
+
     .views-row img {
       border: 1px lighten($gold, 30%) solid;
     }
@@ -693,40 +806,50 @@ a.contextual-links-trigger {
   .views-field-field-author-image img {
     @include border-radius(5px);
   }
+
   .views-field-title {
     .views-label-title {
       font-family: $georgia;
     }
+
     .field-content {
       text-transform: uppercase;
       letter-spacing: 1px;
     }
+
     font-weight: normal;
     font-family: $avenir;
   }
+
   .views-field-field-quote-text, .views-field-field-biography {
     margin: 0.5em 0;
     color: $brown;
     font-family: $georgia;
+
     @include adjust-font-size-to(0.75 * $base-font-size);
   }
+
   .views-field-field-quote-text {
     .field-content:before {
       content: open-quote;
     }
+
     .field-content:after {
       content: close-quote;
     }
   }
+
   .views-field-field-author-reference {
     font-family: $avenir-bold;
     color: $brown;
+
     @include adjust-font-size-to(0.75 * $base-font-size);
   }
 }
 
 .view-quote-sidebar {
   @extend .view-author-block;
+
   margin-top: 1em;
 }
 
@@ -746,7 +869,9 @@ a.contextual-links-trigger {
   h2 {
     color: $white !important;
     text-indent: 0.5em;
+
     @include border-radius(6px);
+
     background: $pink url("../images/wrapper/adinkra-small.png") no-repeat;
     background-position: right -102px;
     padding: 0.2em;
@@ -755,53 +880,71 @@ a.contextual-links-trigger {
 
 .top-content-list {
   clear: both;
+
   .views-row {
     margin-top: 0.5em;
+
     img {
       @include border-radius(6px);
+
       width: 100%;
     }
+
     .views-field-title {
       margin-top: 0.5em;
     }
+
     a {
       text-decoration: none;
       color: $gold;
+
       &:hover, &:focus {
         color: $pink;
       }
     }
   }
+
   &.view-shop-items-on-recipe .views-row .views-field-title a {
     color: $brown;
   }
+
   @include breakpoint(tablet) {
     .views-row {
       @include span-columns(4, 8);
+
       &.views-row-even {
         @include omega;
       }
+
       a {
         @include adjust-font-size-to(0.8 * $base-font-size);
+
         line-height: 0em;
       }
     }
+
     &.view-shop-items-on-recipe .views-row {
       .views-field-title {
         @include adjust-font-size-to(1 * $base-font-size);
+
         line-height: 1.1em;
         height: 3.3em;
       }
+
       .views-field-commerce-price {
         @include adjust-font-size-to(0.8 * $base-font-size);
+
         display: inline-block;
         vertical-align: bottom;
+
         table, tr, td {
           margin: 0;
           padding: 0;
         }
+
         td {
           padding-bottom: 0.6em;
+
           .price-amount {
             color: lighten($black, 15%);
           }
@@ -810,18 +953,23 @@ a.contextual-links-trigger {
     }
   }
 
+
   @include breakpoint(desktop) {
     .views-row.views-row-even {
       @include remove-omega;
     }
+
     .views-row {
       @include span-columns(2, 8);
+
       &.views-row-even {
         @include span-columns(2, 8);
       }
+
       &.views-row-last {
         @include omega;
       }
+
       a {
         letter-spacing: 0;
       }
@@ -834,6 +982,7 @@ a.contextual-links-trigger {
     background-color: $yellow;
     background-position: right 4px;
   }
+
   .top-content-list .views-row a:hover {
     color: $yellow;
   }
@@ -844,6 +993,7 @@ a.contextual-links-trigger {
     background-color: $blue;
     background-position: right -156px;
   }
+
   .top-content-list .views-row a:hover {
     color: $blue;
   }
@@ -854,8 +1004,10 @@ a.contextual-links-trigger {
     background-color: $green;
     background-position: right -52px;
   }
+
   .top-content-list .views-row {
     border-bottom: none;
+
     a:hover {
       color: $green;
     }
@@ -867,20 +1019,29 @@ a.contextual-links-trigger {
 #block-webform-client-block-399 {
   .form-item {
     margin: 0.5em 0;
+
     input {
       padding: 0.5em 0;
       text-indent: 0.5em;
+
       @include border-radius(4px);
+
       background: $white;
     }
+
     color: $brown;
+
     @include adjust-font-size-to(0.75 * $base-font-size);
   }
+
   .form-actions {
     margin: 0;
+
     @include arrow($white, 0.4em);
+
     .form-submit {
       @include adjust-font-size-to(1.55 * $base-font-size);
+
       padding: 0;
       font-family: $optisport;
       text-transform: none;
@@ -892,19 +1053,24 @@ a.contextual-links-trigger {
 .js #block-webform-client-block-399 {
   .newsletter {
     @include adjust-font-size-to(0.8 * $base-font-size);
+
     line-height: 1em;
     margin: 0.25em 0;
   }
+
   .webform-component-email label {
     position: absolute;
     z-index: 1;
     color: $brown;
     text-transform: lowercase;
     padding: 0.5em;
+
     @include adjust-font-size-to(1.2 * $base-font-size);
+
     .form-required {
       display: none;
     }
+
     &.dim {
       opacity: .8;
     }
@@ -916,41 +1082,55 @@ a.contextual-links-trigger {
   clear: both;
   font-family: $avenir-bold;
   color: $gold-on-black;
+
   h2 {
     margin: 0;
     text-transform: none;
     color: $gold-on-black;
+
     &.block-title {
       font-family: $optisport;
       margin-top: 0.1em;
+
       @include adjust-font-size-to(1.5 * $base-font-size);
+
       line-height: 1em;
     }
+
     &.line-two {
       @include adjust-font-size-to(1.3 * $base-font-size);
+
       line-height: 1em;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
   }
+
   label.focus {
     opacity: 0.35;
   }
+
   label.has-text {
     opacity: 0.0;
     -webkit-transition-duration: 0s;
   }
+
   .form-item {
     margin: 0.2em 0em;
   }
+
   .form-required {
     display: none;
   }
+
   .webform-component-email {
     max-width: 96%;
+
     @include border-radius(8px);
+
     border: 1px $gold-on-black solid;
     padding: 8px 4px 4px 16px;
+
     label {
       font-family: $avenir;
       color: $white;
@@ -959,6 +1139,7 @@ a.contextual-links-trigger {
       position: relative;
       z-index: 1;
     }
+
     input.form-email {
       background: transparent;
       display: block;
@@ -970,12 +1151,15 @@ a.contextual-links-trigger {
       line-height: 1.5em;
     }
   }
+
   .form-actions {
     display: inline-block;
     position: relative;
     margin: 0;
     top: 6px;
+
     @include arrow($gold, 0.4em);
+
     .form-submit {
       color: $gold-on-black;
       background: transparent;
@@ -983,44 +1167,57 @@ a.contextual-links-trigger {
       padding: 0;
       border: none;
       font-family: $optisport;
+
       @include adjust-font-size-to(1.8 * $base-font-size);
+
       line-height: 1em;
     }
   }
+
   //colored blocks
   &.color {
     @include border-radius(6px);
+
     color: $white;
     padding: 1em;
+
     h2, .block-title, .form-actions .form-submit {
       color: $white !important;
     }
+
     .form-actions {
       @include arrow($white, 0.4em);
     }
+
     .webform-component-email {
       background: $white;
+
       label, input.form-email {
         color: $gold;
       }
     }
   }
+
   //pink blocks
   &.pink {
     background: $pink;
   }
+
   //gold blocks
   &.gold {
     background: $gold;
   }
+
   //gold blocks
   &.green {
     background: $green;
   }
+
   //gold blocks
   &.yellow {
     background: $yellow;
   }
+
   //footer blocks
   &.footer {
     //footer text
@@ -1030,9 +1227,11 @@ a.contextual-links-trigger {
     color: $white;
     font-size: 14px;
     line-height: 17px;
+
     p {
       margin: 0;
     }
+
     @include breakpoint(tablet) {
       .webform-component-email {
         display: inline-block;
@@ -1040,8 +1239,10 @@ a.contextual-links-trigger {
       }
     }
 
+
     @include breakpoint(desktop-wide) {
       margin: 2em 0;
+
       @include span-columns(4 omega, 5);
     }
   }
@@ -1060,6 +1261,7 @@ a.contextual-links-trigger {
     text-indent: -500%;
     overflow: hidden;
   }
+
   @include breakpoint(desktop) {
     @include span-columns(2 omega, 10);
   }
@@ -1089,6 +1291,7 @@ a.contextual-links-trigger {
     top: -0.5em;
     cursor: pointer;
   }
+
   z-index: 1000;
   display: block;
   position: fixed;
@@ -1096,45 +1299,61 @@ a.contextual-links-trigger {
   right: 4em;
   background: $gold;
   padding: 1em;
+
   @include border-top-radius;
+
   margin: 0;
   color: $white;
+
   @include single-box-shadow;
+
   .top-title {
     clear: both;
     margin-top: -2em;
   }
+
   h2 {
     display: inline;
+
     &.block-title {
       @include adjust-font-size-to(1.7 * $base-font-size);
+
       line-height: 1em;
     }
+
     &.line-two {
       padding-left: 0.25em;
     }
   }
+
   .newsletter {
     margin: 0.75em 0;
   }
+
   .webform-component-email {
     color: $black;
+
     label {
       padding: 0.5em;
+
       .form-required {
         display: none;
       }
     }
   }
+
   .form-actions {
     @include arrow($white, 0.4em, 0.5em);
+
     .form-submit {
       background: transparent;
       text-transform: none;
       padding: 0;
       border: none;
       font-family: $optisport;
+
       @include adjust-font-size-to(1.8 * $base-font-size);
+
       line-height: 1em;
     }
   }
@@ -1148,12 +1367,12 @@ a.contextual-links-trigger {
     .webform-component-email {
       padding-bottom: 8px;
     }
+
     #edit-actions--2 {
       top: -10px;
     }
   }
 }
-
 
 .js {
   .newsletter-signup
@@ -1163,6 +1382,7 @@ a.contextual-links-trigger {
     label {
       position: absolute;
     }
+
     label.dim {
       opacity: .7;
     }
