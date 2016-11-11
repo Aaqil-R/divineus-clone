@@ -1,0 +1,9 @@
+/*** hide edit media button**/
+#-divine-custom-manage-home-image #edit-header-image-edit {
+  display: none !important;
+}
+
+/*** hide image style**/
+#-divine-custom-manage-home-image .form-item-image-header-style-name {
+  display: none !important;
+}

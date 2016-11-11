@@ -24,9 +24,9 @@ function divine_custom_file_insert($file) {
     }  
 }
 
-//function divine_custom_init() {
-  //drupal_add_js('jQuery(document).ready(function(){ jQuery( document ).ajaxStart( function(){ jQuery("#file-entity-add-upload .messages").remove(); }); });', 'inline');
-//}
+function divine_custom_init() {
+  drupal_add_js('jQuery(document).ready(function(){ jQuery( document ).ajaxStart( function(){ jQuery("#file-entity-add-upload .messages").remove(); }); });', 'inline');
+}
 
 function _divine_custom_manage_home_image($form, $form_state) {
    // Get fid from variable
@@ -50,15 +50,15 @@ function _divine_custom_manage_home_image($form, $form_state) {
   );
   
   $form['image_header_style_name'] = array(
-    //'#title' => t('Image style'),
-    //'#type' => 'select',
-   // '#description' => t('Choose an image style to use when displaying this image.'),
+    '#title' => t('Image style'),
+    '#type' => 'select',
+    '#description' => t('Choose an image style to use when displaying this image.'),
     
     // The image_style_options() function returns an array of all available
     // image styles both the key and the value of the array are the image
     // style's name. The fucntion takes on paramater, a boolean flag
     // signifying wether or not the array should include a <none> option.
-    //'#options' => image_style_options(TRUE),
+    '#options' => image_style_options(TRUE),
     '#default_value' => variable_get('image_header_style_name', 'homepage_banner'),
   );
 
