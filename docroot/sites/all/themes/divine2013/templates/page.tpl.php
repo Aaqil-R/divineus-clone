@@ -72,7 +72,7 @@
 
 <div id="page">
 
-  <header id="header" role="banner">
+  <header id="header" role="banner" style='background-image:url(<?php echo $header_image;  ?>)'>
    <div id="logo"><h1><a href="/us/">Divine Chocolate</a></h1></div>
    
    <?php print render($page['header']); ?>

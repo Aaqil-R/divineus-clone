@@ -13,9 +13,25 @@ function divine_custom_menu() {
   return $items;
 }
 
+function divine_custom_file_insert($file) {
+  //do the image dimensions validation
+    $upfile = file_load($file->fid);
+    $width = $upfile->image_dimensions['width'];
+    $height = $upfile->image_dimensions['height'];
+
+    if(($width < '1072') || ($height < '480')){
+      drupal_set_message("Image is incorrect size, Minimum dimensions should be 1072x480 ",'error');
+    }  
+}
+
+//function divine_custom_init() {
+  //drupal_add_js('jQuery(document).ready(function(){ jQuery( document ).ajaxStart( function(){ jQuery("#file-entity-add-upload .messages").remove(); }); });', 'inline');
+//}
+
 function _divine_custom_manage_home_image($form, $form_state) {
    // Get fid from variable
   $divine_mediafile_media = variable_get('header_image', array());
+  
   // Build one media field
   $form['header_image'] = array(
     '#title' => t("Home page main header image"),
@@ -34,21 +50,24 @@ function _divine_custom_manage_home_image($form, $form_state) {
   );
   
   $form['image_header_style_name'] = array(
-    '#title' => t('Image style'),
-    '#type' => 'select',
-    '#description' => t('Choose an image style to use when displaying this image.'),
+    //'#title' => t('Image style'),
+    //'#type' => 'select',
+   // '#description' => t('Choose an image style to use when displaying this image.'),
     
     // The image_style_options() function returns an array of all available
     // image styles both the key and the value of the array are the image
     // style's name. The fucntion takes on paramater, a boolean flag
     // signifying wether or not the array should include a <none> option.
-    '#options' => image_style_options(TRUE),
-    '#default_value' => variable_get('image_header_style_name', ''),
+    //'#options' => image_style_options(TRUE),
+    '#default_value' => variable_get('image_header_style_name', 'homepage_banner'),
   );
+
+  
   // Add submit hook function
   $form['#submit'][] = '_divine_custom_submit';
   return system_settings_form($form); 
 }
+
 
 function _divine_custom_submit($form, &$form_state) {
   // Manually put new fid in input values
@@ -56,3 +75,5 @@ function _divine_custom_submit($form, &$form_state) {
     $form_state['values']['header_image']['fid'] = $form_state['input']['header_image']['fid'];
   }
 } 
+
+
