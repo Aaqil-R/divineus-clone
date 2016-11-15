@@ -471,3 +471,9 @@ span.field-label {
 /*
  * Page bottom
  */
+@media (max-width: 49em) {
+  /* line 442, ../sass/pages.scss */
+  .front #header {
+    background-image: none !important;
+  }
+}
