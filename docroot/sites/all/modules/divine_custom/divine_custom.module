@@ -13,21 +13,21 @@ function divine_custom_menu() {
   return $items;
 }
 
-function divine_custom_file_insert($file) {
-  //do the image dimensions validation
 
-    $upfile = file_load($file->fid);
-    $img = image_load($upfile->uri);
-    image_resize($img, 1072, 480);
+function divine_custom_file_validate($file) {
 
-    $width = $upfile->image_dimensions['width'];
-    $height = $upfile->image_dimensions['height'];
-    //watchdog("node ob", '<pre>' . print_r($upfile->image_dimensions, true) . '</pre>');
+    $errors = array();
+
+    $upfile = image_load($file->uri);
+    $width = $upfile->info['width'];
+    $height = $upfile->info['height'];
+      
 
     if(($width < '1072') || ($height <'480')){
-      drupal_set_message("Image is incorrect size, Minimum dimensions should be 1072x480 ",'error');
-       
+       $errors[] = t("Image is incorrect size, Minimum dimensions should be 1072x480");
     }
+
+    return $errors;
 }
 
 function _divine_custom_manage_home_image($form, $form_state) {
