@@ -27,9 +27,6 @@ function divine_custom_file_insert($file) {
     if(($width < '1072') || ($height <'480')){
       drupal_set_message("Image is incorrect size, Minimum dimensions should be 1072x480 ",'error');
        
-    }  else {
-      
-   
     }
 }
 
