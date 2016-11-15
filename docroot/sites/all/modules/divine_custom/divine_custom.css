@@ -7,3 +7,8 @@
 #-divine-custom-manage-home-image .form-item-image-header-style-name {
   display: none !important;
 }
+
+/** hide replace button**/
+#media-browser-page-wrapper .form-item-files-replace-upload {
+  display: none !important;
+}

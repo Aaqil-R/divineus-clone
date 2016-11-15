@@ -15,13 +15,22 @@ function divine_custom_menu() {
 
 function divine_custom_file_insert($file) {
   //do the image dimensions validation
+
     $upfile = file_load($file->fid);
+    $img = image_load($upfile->uri);
+    image_resize($img, 1072, 480);
+
     $width = $upfile->image_dimensions['width'];
     $height = $upfile->image_dimensions['height'];
+    //watchdog("node ob", '<pre>' . print_r($upfile->image_dimensions, true) . '</pre>');
 
-    if(($width < '1072') || ($height < '480')){
+    if(($width < '1072') || ($height <'480')){
       drupal_set_message("Image is incorrect size, Minimum dimensions should be 1072x480 ",'error');
-    }  
+       
+    }  else {
+      
+   
+    }
 }
 
 function _divine_custom_manage_home_image($form, $form_state) {
@@ -29,16 +38,21 @@ function _divine_custom_manage_home_image($form, $form_state) {
   $divine_mediafile_media = variable_get('header_image', array());
   
   // Build one media field
-  $form['header_image'] = array(
+    $form['header_image'] = array(
     '#title' => t("Home page main header image"),
     '#description' => t('Upload an image to set as main image in home page'),
     '#type' => 'media',
     '#tree' => TRUE,
+    '#name' => test,
     '#value' => $divine_mediafile_media,
+    '#image_dimensions' => '1072x480',
     '#media_options' => array(
       'global' => array(
         'types' => array(
           'image' => 'image',
+        ),
+        'enabledPlugins' => array(
+            'upload',
         ),
         'file_extensions' => 'png gif jpg jpeg',
       ),
@@ -56,12 +70,14 @@ function _divine_custom_manage_home_image($form, $form_state) {
     // signifying wether or not the array should include a <none> option.
     '#options' => image_style_options(TRUE),
     '#default_value' => variable_get('image_header_style_name', 'homepage_banner'),
+
   );
 
-  
-  // Add submit hook function
+  //watchdog("node obt", '<pre>' . print_r($form, true) . '</pre>');
+// Add submit hook function
   $form['#submit'][] = '_divine_custom_submit';
-  return system_settings_form($form); 
+  return system_settings_form($form);
+ 
 }
 
 
