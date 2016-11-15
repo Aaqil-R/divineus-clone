@@ -37,7 +37,7 @@ function _divine_custom_manage_home_image($form, $form_state) {
   // Build one media field
     $form['header_image'] = array(
     '#title' => t("Home page main header image"),
-    '#description' => t('Upload an image to set as main image in home page'),
+    '#description' => t('Upload an image to set as main image in home page. Minimum dimensions should be 1072x480'),
     '#type' => 'media',
     '#tree' => TRUE,
     '#name' => test,
