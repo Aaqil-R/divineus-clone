@@ -239,19 +239,18 @@ function divine2013_form_alter(&$form, &$form_state, $form_id) {
 
 /* ADDING JS & CSS FOR THE ADDTHISEVENT */
 function divine2013_preprocess_page(&$variables) {
-if (isset($variables['node']) && $variables['node']->type == 'blog_event') {
-drupal_add_js(drupal_get_path('theme', 'divine2013') . '/js/addthisevent/js/atemay.js');
-$variables['scripts'] = drupal_get_js();
-}
+  if (isset($variables['node']) && $variables['node']->type == 'blog_event') {
+    drupal_add_js(drupal_get_path('theme', 'divine2013') . '/js/addthisevent/js/atemay.js');
+    $variables['scripts'] = drupal_get_js();
+  }
 
-
-/**
-* UNSET THE FRONTPAGE DEFAULT TITLE AND MESSAGE 
-*/
-if (drupal_is_front_page()) {
-  $variables['title']="";
-  unset($variables['page']['content']['system_main']['default_message']); 
-}
+  /**
+  * UNSET THE FRONTPAGE DEFAULT TITLE AND MESSAGE 
+  */
+  if (drupal_is_front_page()) {
+    $variables['title']="";
+    unset($variables['page']['content']['system_main']['default_message']); 
+  }
   $variables['header_image'] = '';
   
   if(drupal_is_front_page()) {
@@ -276,6 +275,9 @@ if (drupal_is_front_page()) {
     $variables['header_image'] = file_create_url($imgpath);
   }
 
+  $variables['fid']= $fid;
+  $variables['frontpage']= drupal_is_front_page();
+  $variables['base_url']=$base_url;
 }
 /**
 * Implements hook_form_FORMID_alter() to change the Add to Cart button to an image.

@@ -129,7 +129,11 @@
 
   
   <?php print render($page['footer']); ?>
-
+  <div class="error-debug" style="display: none">
+    <div><?php echo var_dump($fid); ?></div>
+    <div><?php echo $frontpage; ?></div>
+    <div><?php echo $base_url; ?></div>
+  </div>
 </div><!-- /#page -->
 
 <?php print render($page['bottom']); ?>
