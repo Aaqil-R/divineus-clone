@@ -14,21 +14,21 @@ function divine_custom_menu() {
 }
 
 
-function divine_custom_file_validate($file) {
+//function divine_custom_file_validate($file) {
 
-    $errors = array();
+   // $errors = array();
 
-    $upfile = image_load($file->uri);
-    $width = $upfile->info['width'];
-    $height = $upfile->info['height'];
+    //$upfile = image_load($file->uri);
+    //$width = $upfile->info['width'];
+    //$height = $upfile->info['height'];
       
 
-    if(($width < '1072') || ($height <'480')){
-       $errors[] = t("Image is incorrect size, Minimum dimensions should be 1072x480");
-    }
+   // if(($width < '1072') || ($height <'480')){
+      // $errors[] = t("Image is incorrect size, Minimum dimensions should be 1072x480");
+    //}
 
-    return $errors;
-}
+   // return $errors;
+//}
 
 function _divine_custom_manage_home_image($form, $form_state) {
    // Get fid from variable
