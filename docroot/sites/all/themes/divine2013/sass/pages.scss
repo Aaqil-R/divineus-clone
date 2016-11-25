@@ -80,7 +80,7 @@ body {
 }
 
 #header {
-  background: #000000;
+  //background: #000000;
   color: #fff;
   margin-bottom: -1px;
 }
@@ -112,14 +112,33 @@ body {
 
   @include breakpoint(desktop) {
     #header {
-      background-image: image-url("homepage-banner/new-love-chocolate.jpg");
-      background-repeat: no-repeat;
-      background-position: center top;
+      //background-image: image-url("homepage-banner/new-love-chocolate.jpg");
+      // background-repeat: no-repeat;
+      // background-position: center top;
       min-height: 480px;
 
       #logo h1 {
         height: 118px;
         background: transparent;
+      }
+
+      #block-views-front-page-header-banner-block {
+        height: 480px !important;
+        width: 1072px !important;
+        position: absolute;
+        z-index: -999;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+
+        .views-field-field-front-header-image {
+          img {}
+        }
       }
 
       #block-block-14 {
@@ -440,7 +459,9 @@ span.field-label {
 @media (max-width: 49em) {
   .front {
     #header {
-      background-image: none !important;
+      #block-views-front-page-header-banner-block {
+        display: none !important;
+      }
     }
   }
 }

@@ -1,6 +1,0 @@
-name = Divine custom
-desription = Custom module for divine website
-version = 7.x-0.1
-core = 7.x
-
-stylesheets[all][] = divine_custom.css
