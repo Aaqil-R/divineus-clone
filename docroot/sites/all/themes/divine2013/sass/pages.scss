@@ -80,7 +80,7 @@ body {
 }
 
 #header {
-  //background: #000000;
+  background: #000000;
   color: #fff;
   margin-bottom: -1px;
 }
@@ -89,6 +89,10 @@ body {
 .front {
   #block-block-14 {
     display: none;
+  }
+
+  #header {
+    background: transparent !important;
   }
 
   @include breakpoint(tablet) {
