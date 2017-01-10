@@ -14,6 +14,7 @@ ul li.expanded {
     *list-style-image: url(../images/menu-expanded.png);
   }
 
+
   list-style-image: inline-image("menu-expanded.png");
   list-style-type: circle;
 }
@@ -21,10 +22,13 @@ ul li.expanded {
 ul li.collapsed {
   @include for-legacy-browser("ie", "7", $threshold: $opacity-usage-threshold) {
     *list-style-image: url(../images/menu-collapsed.png);
+
     /* LTR */
   }
 
+
   list-style-image: inline-image("menu-collapsed.png");
+
   /* LTR */
   list-style-type: disc;
 }
@@ -33,6 +37,7 @@ ul li.leaf {
   @include for-legacy-browser("ie", "7", $threshold: $opacity-usage-threshold) {
     *list-style-image: url(../images/menu-leaf.png);
   }
+
 
   list-style-image: inline-image("menu-leaf.png");
   list-style-type: square;
@@ -56,22 +61,27 @@ li a.active {
   .block {
     margin-bottom: 0;
   }
+
   .block-menu .block-title,
   .block-menu-block .block-title {
     @include element-invisible;
   }
+
   ul.links,
   ul.menu {
     /* Menu block links */
     margin: 0;
     padding: 0;
     text-align: left;
+
     /* LTR */
     li {
       /* A simple method to get navigation links to appear in one line. */
       float: left;
+
       /* LTR */
       padding: 0 10px 0 0;
+
       /* LTR */
       list-style-type: none;
       list-style-image: none;
@@ -84,18 +94,23 @@ li a.active {
    * Main menu and Secondary menu links
    */
   clear: both;
+
   #block-system-main-menu {
     position: relative;
     clear: both;
     margin-top: 0px;
     margin-bottom: 0px;
     font-weight: 100;
+
     @include adjust-font-size-to(1 * $base-font-size);
+
     letter-spacing: 1px;
     line-height: 1.4em;
+
     ul {
       padding: 0px;
       text-align: center;
+
       li {
         vertical-align: top;
         list-style-type: none;
@@ -103,78 +118,102 @@ li a.active {
         text-transform: uppercase;
         margin-left: 0.2em;
         padding: 0.2em;
+
         &:hover {
           a {
             color: $gold-on-black;
           }
         }
+
         a {
           color: #fff;
           text-decoration: none;
           line-height: 1.2em;
           display: block;
         }
+
         &.first {
           margin-left: 0;
+
           &:hover a {
             color: $yellow;
           }
         }
+
         &:nth-of-type(2) {
           &:hover a {
             color: $blue;
           }
+
           a {
             background-position: right -161px;
           }
         }
+
         &:nth-of-type(3) {
           &:hover a {
             color: $pink;
           }
+
           a {
             background-position: right -107px;
           }
         }
+
         &:nth-of-type(4) {
           &:hover a {
             color: $green;
           }
+
           a {
             background-position: right -55px;
           }
         }
       }
     }
+
     @include breakpoint(mobile-landscape) {
       @include adjust-font-size-to(1 * $base-font-size);
     }
 
+
     @include breakpoint(tablet) {
       @include omega;
+
       @include adjust-font-size-to(0.8 * $base-font-size);
+
       top: -34px;
       margin-bottom: -42px;
+
       ul {
         text-align: right;
+
         li {
           display: inline-block;
+
           @include border-radius(5px);
+
           @include box-shadow(inset 1px 1px 4px rgba(238, 238, 238, 0.5));
+
           background: $gold-on-black;
           padding: 6px 0px 30px 12px;
+
           &:hover {
             @include background-image(radial-gradient(0px 0px, elipse cover, lighten($gold-on-black, 10%) 0%, $gold-on-black 150px));
+
             @include box-shadow(0px 0px 1px rgb(100, 100, 100));
+
             a {
               color: $white;
             }
           }
+
           &.first, &:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
             &:hover a {
               color: $white;
             }
           }
+
           a {
             font-family: $avenir-bold;
             padding-top: 4px;
@@ -190,6 +229,7 @@ li a.active {
       }
     }
 
+
     @include breakpoint(desktop-wide) {
       top: -36px;
     }
@@ -204,11 +244,14 @@ li a.active {
     a {
       color: $yellow;
     }
+
     @include breakpoint(tablet) {
       background: $yellow;
+
       a {
         color: $white;
       }
+
       &:hover, &:focus {
         @include background-image(radial-gradient(0px 0px, elipse cover, lighten($yellow, 10%) 0%, $yellow 150px));
       }
@@ -224,11 +267,14 @@ li a.active {
     a {
       color: $blue;
     }
+
     @include breakpoint(tablet) {
       background: $blue;
+
       a {
         color: $white;
       }
+
       &:hover, &:focus {
         @include background-image(radial-gradient(0px 0px, elipse cover, lighten($blue, 10%) 0%, $blue 150px));
       }
@@ -244,11 +290,14 @@ li a.active {
     a {
       color: $pink;
     }
+
     @include breakpoint(tablet) {
       background: $pink;
+
       a {
         color: $white;
       }
+
       &:hover, &:focus {
         @include background-image(radial-gradient(0px 0px, elipse cover, lighten($pink, 10%) 0%, $pink 150px));
       }
@@ -264,11 +313,14 @@ li a.active {
     a {
       color: $green;
     }
+
     @include breakpoint(tablet) {
       background: $green;
+
       a {
         color: $white;
       }
+
       &:hover, &:focus {
         @include background-image(radial-gradient(0px 0px, elipse cover, lighten($green, 10%) 0%, $green 150px));
       }
@@ -283,41 +335,55 @@ li a.active {
       position: absolute;
       background: $white;
       z-index: 10;
+
       @include border-bottom-radius(6px);
+
       border: 1px $gold solid;
       border-top: none;
     }
+
     @include border-radius;
+
     border: 1px $gold solid;
     font-family: $avenir-bold;
+
     ul {
       padding: 0;
       margin: 0;
+
       li {
         @include adjust-font-size-to(1 * $base-font-size);
+
         text-transform: uppercase;
         border-top: none;
         list-style: none;
+
         a {
           text-decoration: none;
           padding: 0.5em 0.75em 0.3em 0.75em;
           display: block;
           color: $gold;
+
           &:hover {
             background: darken($white, 15%);
           }
         }
+
         ul {
           li {
             @include adjust-font-size-to(0.9 * $base-font-size);
+
             text-transform: uppercase;
             border-top: 1px $gold dashed;
+
             ul li {
               border-top: none;
+
               a {
                 padding: 0.05em 0.75em 0.1em 0.75em;
                 text-indent: 1em;
                 text-transform: none;
+
                 &:before {
                   content: "- ";
                 }
@@ -333,8 +399,10 @@ li a.active {
 .sidebars .block-menu {
   & > ul > li.first > a {
     @include arrow($yellow, 0.4em, 0.6em);
+
     color: $yellow;
   }
+
   ul li li.active-trail > a,
   a:hover,
   a:focus {
@@ -345,8 +413,10 @@ li a.active {
 .section-recipes .sidebars .block-menu {
   & > ul > li.first > a {
     color: $pink;
+
     @include arrow($pink, 0.4em, 0.6em);
   }
+
   ul li li.active-trail > a,
   a:hover,
   a:focus {
@@ -357,8 +427,10 @@ li a.active {
 .section-good-stuff .sidebars .block-menu {
   & > ul > li.first > a {
     color: $blue;
+
     @include arrow($blue, 0.4em, 0.6em);
   }
+
   ul li li.active-trail > a,
   a:hover,
   a:focus {
@@ -369,8 +441,10 @@ li a.active {
 .section-shop .sidebars .block-menu {
   & > ul > li.first > a {
     color: $green;
+
     @include arrow($green, 0.4em, 0.6em);
   }
+
   ul li li.active-trail > a,
   a:hover,
   a:focus {
@@ -380,31 +454,41 @@ li a.active {
 
 #block-menu-menu-footer {
   @include adjust-font-size-to(0.8 * $base-font-size);
+
   line-height: 1em;
   letter-spacing: .05em;
+
   ul {
     padding: 0px;
+
     li {
       @include span-columns(5, 10);
+
       &:nth-child(even) {
         @include omega;
       }
+
       padding-bottom: 1em;
+
       &:nth-of-type(2) a {
         background-position: right -191px;
         color: $blue;
       }
+
       &:nth-of-type(3) a {
         background-position: right -136px;
         color: $pink;
       }
+
       &:nth-of-type(4) a {
         background-position: right -82px;
         color: $green;
       }
+
       list-style-type: none;
       list-style-image: none;
       text-transform: uppercase;
+
       a {
         color: $yellow;
         text-decoration: none;
@@ -416,10 +500,12 @@ li a.active {
         display: inline-block;
         background-position: right -30px;
         border-left: 1px $gold dashed;
+
         &:hover {
           text-decoration: underline;
         }
       }
+
       li.leaf {
         border: none;
         letter-spacing: 0px;
@@ -428,6 +514,7 @@ li a.active {
         text-transform: capitalize;
         padding: 0;
         line-height: 1.5em;
+
         a {
           color: $white;
           background: none;
@@ -437,17 +524,22 @@ li a.active {
       }
     }
   }
+
   @include breakpoint(tablet) {
     ul li {}
+
     margin-bottom: 1em;
   }
 
+
   @include breakpoint(desktop) {
     @include span-columns(8, 10);
+
     ul {
       li,
       li:nth-child(even) {
         @include span-columns(2, 8);
+
         &.last {
           @include omega;
         }
@@ -457,63 +549,80 @@ li a.active {
 }
 
 #block-menu-menu-social-badges-menu {
+  margin-bottom: 4em;
+
   ul.menu {
     margin: 0;
     padding: 0;
     clear: both;
     text-align: center;
+
     li {
       @include span-columns(1, 3);
+
       display: inline-block;
       list-style-type: none;
       list-style-image: none;
       padding: 0;
-      font-size: 10px;
+      font-size: 0px;
       vertical-align: top;
+
       a {
         font-family: $avenir;
         background: url("../images/wrapper/social-badges.png") no-repeat center 0px;
-        background-size: 53px;
+        background-size: 35px;
         display: block;
-        padding-top: 56px;
+        min-height: 35px;
         text-align: center;
         text-decoration: none;
         color: $white;
+
         @include adjust-font-size-to(0.95 * $base-font-size);
+
         line-height: 1.2em;
       }
+
       &:nth-of-type(2) a {
-        background-position: center -78px;
+        background-position: center -50px;
       }
+
       &:nth-of-type(3) {
         @include omega;
+
         a {
           background-position: center -154px;
         }
       }
     }
   }
+
   @include breakpoint(tablet) {
-    @include span-columns(4, 10);
+    @include span-columns(2, 10);
+
+    margin: 4em 2em;
   }
+
 
   @include breakpoint(desktop-wide) {
     @include span-columns(2, 10);
+
     min-width: 182px;
     margin-right: 0.3%;
-    margin: 2em 0;
+    margin: 5.1em 0 0em 0;
   }
 }
 
 .divine-us #block-menu-menu-social-badges-menu ul.menu li:nth-of-type(3) {
   @include omega;
+
   a {
-    background-position: center -233px;
+    background-position: center -103px;
   }
 }
 
 #secondary-menu {
   float: right;
+
   /* LTR */
 }
 
@@ -536,4 +645,32 @@ li a.active {
   margin: 0;
   font-size: 0.85em;
   position: fixed;
+}
+
+.bcop-logo-block {
+  @include breakpoint(tablet) {
+    @include span-columns(2, 10);
+
+    margin: -2em 0px 0px -31px;
+    left: 0px;
+    position: absolute;
+  }
+
+
+  @include breakpoint(desktop-wide) {
+    margin: 11.7em 0 0 -18px;
+    left: 0px;
+    position: absolute;
+  }
+
+
+  .bcop-logo {
+    margin: 2em 0;
+    min-width: 182px;
+    background: url("../images/wrapper/A_BCorp_logo_NEG.jpg") no-repeat center top 0px;
+    font-size: 0em;
+    display: block;
+    min-height: 161px;
+    text-align: center;
+  }
 }

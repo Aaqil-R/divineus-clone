@@ -457,6 +457,7 @@ span.field-label {
 #footer {
   background: url("../images/wrapper/swoosh-bottom.png") #000000 no-repeat top right;
   padding-top: 6em;
+  position: relative;
 }
 @media (min-width: 32em) {
   /* line 436, ../sass/pages.scss */
@@ -468,14 +469,14 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 449, ../sass/pages.scss */
+/* line 450, ../sass/pages.scss */
 .region-content-bottom {
   /* Wrapper for any blocks placed in the content bottom region */
   clear: both;
   padding: 2em 0;
 }
 @media (min-width: 32em) {
-  /* line 449, ../sass/pages.scss */
+  /* line 450, ../sass/pages.scss */
   .region-content-bottom {
     width: 79.59184%;
     float: left;
@@ -488,7 +489,7 @@ span.field-label {
  * Page bottom
  */
 @media (max-width: 49em) {
-  /* line 466, ../sass/pages.scss */
+  /* line 467, ../sass/pages.scss */
   .front #header #block-views-front-page-header-banner-block {
     display: none !important;
   }

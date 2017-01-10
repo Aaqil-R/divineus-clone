@@ -1375,19 +1375,24 @@ a.contextual-links-trigger {
 }
 /* line 1224, ../sass/blocks.scss */
 .newsletter-signup.footer {
-  margin: 1em 0;
+  margin: 1em 0 2em 0;
   padding-top: 1em;
   clear: both;
   color: #ffffff;
   font-size: 14px;
   line-height: 17px;
+  float: left !important;
 }
-/* line 1233, ../sass/blocks.scss */
+/* line 1234, ../sass/blocks.scss */
 .newsletter-signup.footer p {
   margin: 0;
 }
 @media (min-width: 32em) {
-  /* line 1238, ../sass/blocks.scss */
+  /* line 1224, ../sass/blocks.scss */
+  .newsletter-signup.footer {
+    margin: 1em 1em 0 9em;
+  }
+  /* line 1241, ../sass/blocks.scss */
   .newsletter-signup.footer .webform-component-email {
     display: inline-block;
     max-width: 16em;
@@ -1396,8 +1401,9 @@ a.contextual-links-trigger {
 @media (min-width: 60em) {
   /* line 1224, ../sass/blocks.scss */
   .newsletter-signup.footer {
-    margin: 2em 0;
-    width: 79.16667%;
+    margin: 2em 0 2em 9em;
+    margin-left: 15%;
+    width: 37.5%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
@@ -1408,7 +1414,7 @@ a.contextual-links-trigger {
 /**
  * Footer Roundall
  */
-/* line 1258, ../sass/blocks.scss */
+/* line 1262, ../sass/blocks.scss */
 #block-block-32 h2, #block-block-13 h2 {
   background: url("../images/wrapper/owned-by-cocoa-farmers-made-for-chocolate-lovers.gif") no-repeat center top;
   background-size: contain;
@@ -1418,7 +1424,7 @@ a.contextual-links-trigger {
   overflow: hidden;
 }
 @media (min-width: 49em) {
-  /* line 1257, ../sass/blocks.scss */
+  /* line 1261, ../sass/blocks.scss */
   #block-block-32, #block-block-13 {
     width: 18.36735%;
     float: right;
@@ -1431,12 +1437,12 @@ a.contextual-links-trigger {
 /**
  * IE<9 warning.
  */
-/* line 1279, ../sass/blocks.scss */
+/* line 1283, ../sass/blocks.scss */
 #block-webform-client-block-532 {
   display: none;
 }
 
-/* line 1283, ../sass/blocks.scss */
+/* line 1287, ../sass/blocks.scss */
 .js #block-webform-client-block-532 {
   z-index: 1000;
   display: block;
@@ -1457,7 +1463,7 @@ a.contextual-links-trigger {
   -webkit-box-shadow: 0px 5px #58595B;
   box-shadow: 0px 5px #58595B;
 }
-/* line 1284, ../sass/blocks.scss */
+/* line 1288, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .close {
   text-indent: -1000%;
   background: url("../images/wrapper/close.png") no-repeat;
@@ -1470,42 +1476,42 @@ a.contextual-links-trigger {
   top: -0.5em;
   cursor: pointer;
 }
-/* line 1312, ../sass/blocks.scss */
+/* line 1316, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .top-title {
   clear: both;
   margin-top: -2em;
 }
-/* line 1317, ../sass/blocks.scss */
+/* line 1321, ../sass/blocks.scss */
 .js #block-webform-client-block-532 h2 {
   display: inline;
 }
-/* line 1320, ../sass/blocks.scss */
+/* line 1324, ../sass/blocks.scss */
 .js #block-webform-client-block-532 h2.block-title {
   font-size: 1.7em;
   line-height: 1.17647em;
   line-height: 1em;
 }
-/* line 1326, ../sass/blocks.scss */
+/* line 1330, ../sass/blocks.scss */
 .js #block-webform-client-block-532 h2.line-two {
   padding-left: 0.25em;
 }
-/* line 1331, ../sass/blocks.scss */
+/* line 1335, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .newsletter {
   margin: 0.75em 0;
 }
-/* line 1335, ../sass/blocks.scss */
+/* line 1339, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email {
   color: #000000;
 }
-/* line 1338, ../sass/blocks.scss */
+/* line 1342, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email label {
   padding: 0.5em;
 }
-/* line 1341, ../sass/blocks.scss */
+/* line 1345, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email label .form-required {
   display: none;
 }
-/* line 1347, ../sass/blocks.scss */
+/* line 1351, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .form-actions {
   position: relative;
 }
@@ -1523,7 +1529,7 @@ a.contextual-links-trigger {
   margin-left: 0.4em;
   bottom: 0.5em;
 }
-/* line 1350, ../sass/blocks.scss */
+/* line 1354, ../sass/blocks.scss */
 .js #block-webform-client-block-532 .form-actions .form-submit {
   background: transparent;
   text-transform: none;
@@ -1539,23 +1545,23 @@ a.contextual-links-trigger {
  *   Firefox fix
  */
 @-moz-document url-prefix() {
-  /* line 1369, ../sass/blocks.scss */
+  /* line 1373, ../sass/blocks.scss */
   .newsletter-signup .webform-component-email {
     padding-bottom: 8px;
   }
-  /* line 1373, ../sass/blocks.scss */
+  /* line 1377, ../sass/blocks.scss */
   .newsletter-signup #edit-actions--2 {
     top: -10px;
   }
 }
-/* line 1384, ../sass/blocks.scss */
+/* line 1388, ../sass/blocks.scss */
 .js .newsletter-signup
 .webform-component-email label,
 .js #block-search-form
 .form-item-search-block-form label {
   position: absolute;
 }
-/* line 1388, ../sass/blocks.scss */
+/* line 1392, ../sass/blocks.scss */
 .js .newsletter-signup
 .webform-component-email label.dim,
 .js #block-search-form
@@ -1564,7 +1570,7 @@ a.contextual-links-trigger {
 }
 
 /* AddThisEvent */
-/* line 1399, ../sass/blocks.scss */
+/* line 1403, ../sass/blocks.scss */
 .addthisevent-drop {
   display: inline-block;
   position: relative;
@@ -1583,7 +1589,7 @@ a.contextual-links-trigger {
   -webkit-border-radius: 2px;
 }
 
-/* line 1417, ../sass/blocks.scss */
+/* line 1421, ../sass/blocks.scss */
 .addthisevent-drop:hover {
   border: 1px solid #aab9d4;
   color: #555;
@@ -1592,17 +1598,17 @@ a.contextual-links-trigger {
   text-decoration: none;
 }
 
-/* line 1425, ../sass/blocks.scss */
+/* line 1429, ../sass/blocks.scss */
 .addthisevent-drop:active {
   top: 1px;
 }
 
-/* line 1429, ../sass/blocks.scss */
+/* line 1433, ../sass/blocks.scss */
 .addthisevent-selected {
   background-color: #f7f7f7;
 }
 
-/* line 1433, ../sass/blocks.scss */
+/* line 1437, ../sass/blocks.scss */
 .addthisevent_dropdown {
   width: 200px;
   position: absolute;
@@ -1624,7 +1630,7 @@ a.contextual-links-trigger {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* line 1454, ../sass/blocks.scss */
+/* line 1458, ../sass/blocks.scss */
 .addthisevent_dropdown span {
   width: 175px;
   display: block;
@@ -1636,7 +1642,7 @@ a.contextual-links-trigger {
   padding: 8px 10px 9px 15px;
 }
 
-/* line 1465, ../sass/blocks.scss */
+/* line 1469, ../sass/blocks.scss */
 .addthisevent_dropdown span:hover {
   background: #f4f4f4;
   color: #6d84b4;
@@ -1644,17 +1650,17 @@ a.contextual-links-trigger {
   font-size: 12px;
 }
 
-/* line 1472, ../sass/blocks.scss */
+/* line 1476, ../sass/blocks.scss */
 .addthisevent span {
   display: none !important;
 }
 
-/* line 1476, ../sass/blocks.scss */
+/* line 1480, ../sass/blocks.scss */
 .addthisevent-drop ._url, .addthisevent-drop ._start, .addthisevent-drop ._end, .addthisevent-drop ._summary, .addthisevent-drop ._description, .addthisevent-drop ._location, .addthisevent-drop ._organizer, .addthisevent-drop ._organizer_email, .addthisevent-drop ._facebook_event, .addthisevent-drop ._all_day_event {
   display: none !important;
 }
 
-/* line 1480, ../sass/blocks.scss */
+/* line 1484, ../sass/blocks.scss */
 .addthisevent_dropdown .copyx {
   width: 200px;
   height: 21px;
@@ -1663,7 +1669,7 @@ a.contextual-links-trigger {
   cursor: default;
 }
 
-/* line 1488, ../sass/blocks.scss */
+/* line 1492, ../sass/blocks.scss */
 .addthisevent_dropdown .brx {
   width: 180px;
   height: 1px;
@@ -1675,7 +1681,7 @@ a.contextual-links-trigger {
   top: 9px;
 }
 
-/* line 1499, ../sass/blocks.scss */
+/* line 1503, ../sass/blocks.scss */
 .addthisevent_dropdown .frs {
   position: absolute;
   top: 5px;
@@ -1693,12 +1699,12 @@ a.contextual-links-trigger {
   color: #cacaca;
 }
 
-/* line 1516, ../sass/blocks.scss */
+/* line 1520, ../sass/blocks.scss */
 .addthisevent_dropdown .frs:hover {
   color: #6d84b4;
 }
 
-/* line 1520, ../sass/blocks.scss */
+/* line 1524, ../sass/blocks.scss */
 .addthisevent {
   visibility: hidden;
 }

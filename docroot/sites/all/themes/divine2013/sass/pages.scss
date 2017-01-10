@@ -436,6 +436,7 @@ span.field-label {
 #footer {
   background: url("../images/wrapper/swoosh-bottom.png") #000000 no-repeat top right;
   padding-top: 6em;
+  position: relative;
 
   @include breakpoint(tablet) {
     background-position-x: center;

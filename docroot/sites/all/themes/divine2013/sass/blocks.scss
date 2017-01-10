@@ -1223,18 +1223,21 @@ a.contextual-links-trigger {
   //footer blocks
   &.footer {
     //footer text
-    margin: 1em 0;
+    margin: 1em 0 2em 0;
     padding-top: 1em;
     clear: both;
     color: $white;
     font-size: 14px;
     line-height: 17px;
+    float: left !important;
 
     p {
       margin: 0;
     }
 
     @include breakpoint(tablet) {
+      margin: 1em 1em 0 9em;
+
       .webform-component-email {
         display: inline-block;
         max-width: 16em;
@@ -1243,9 +1246,10 @@ a.contextual-links-trigger {
 
 
     @include breakpoint(desktop-wide) {
-      margin: 2em 0;
+      margin: 2em 0 2em 9em;
+      margin-left: 15%;
 
-      @include span-columns(4 omega, 5);
+      @include span-columns(2 omega, 5);
     }
   }
 }
