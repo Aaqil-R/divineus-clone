@@ -777,10 +777,16 @@ ul li:nth-of-type(4) a {
 }
 /* line 618, ../sass/navigation.scss */
 .divine-us #block-menu-menu-social-badges-menu ul.menu li:nth-of-type(3) a {
-  background-position: center -103px;
+  background: url("../images/wrapper/Instagram-logo.png") no-repeat center top 0px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-size: 100%;
+  margin-top: -8px;
+  margin-left: 1px;
 }
 
-/* line 623, ../sass/navigation.scss */
+/* line 630, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
@@ -795,7 +801,7 @@ ul li:nth-of-type(4) a {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
-/* line 644, ../sass/navigation.scss */
+/* line 651, ../sass/navigation.scss */
 #admin-menu {
   margin: 0;
   font-size: 0.85em;
@@ -803,7 +809,7 @@ ul li:nth-of-type(4) a {
 }
 
 @media (min-width: 32em) {
-  /* line 650, ../sass/navigation.scss */
+  /* line 657, ../sass/navigation.scss */
   .bcop-logo-block {
     width: 18.36735%;
     float: left;
@@ -815,14 +821,14 @@ ul li:nth-of-type(4) a {
   }
 }
 @media (min-width: 60em) {
-  /* line 650, ../sass/navigation.scss */
+  /* line 657, ../sass/navigation.scss */
   .bcop-logo-block {
     margin: 11.7em 0 0 -18px;
     left: 0px;
     position: absolute;
   }
 }
-/* line 667, ../sass/navigation.scss */
+/* line 674, ../sass/navigation.scss */
 .bcop-logo-block .bcop-logo {
   margin: 2em 0;
   min-width: 182px;
