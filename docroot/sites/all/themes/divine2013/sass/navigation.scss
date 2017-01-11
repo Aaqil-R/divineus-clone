@@ -664,9 +664,10 @@ li a.active {
 
 
   @include breakpoint(desktop-wide) {
-    margin: 11.7em 0 0 -18px;
+    margin: 0 0 0 -18px;
     left: 0px;
     position: absolute;
+    bottom: 62px;
   }
 
 

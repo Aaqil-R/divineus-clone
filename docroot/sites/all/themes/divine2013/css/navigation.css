@@ -822,12 +822,13 @@ ul li:nth-of-type(4) a {
 @media (min-width: 60em) {
   /* line 656, ../sass/navigation.scss */
   .bcop-logo-block {
-    margin: 11.7em 0 0 -18px;
+    margin: 0 0 0 -18px;
     left: 0px;
     position: absolute;
+    bottom: 62px;
   }
 }
-/* line 673, ../sass/navigation.scss */
+/* line 674, ../sass/navigation.scss */
 .bcop-logo-block .bcop-logo {
   margin: 2em 0;
   min-width: 182px;
