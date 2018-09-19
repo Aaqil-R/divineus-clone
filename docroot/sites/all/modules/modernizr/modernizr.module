@@ -6,7 +6,7 @@
  */
 
 // Regular expression to determine which version of Modernizr is installed.
-define('MODERNIZR_VERSION_REGEX', '/Modernizr [v]?([\d\.]*)/');
+define('MODERNIZR_VERSION_REGEX', '/([23]\.\d\.\d)/');
 
 // Regular expression to detect valid Modernizr filenames.
 define('MODERNIZR_FILENAME_REGEX', '/^modernizr[A-Za-z0-9\.-]*\.js$/');
@@ -16,58 +16,112 @@ define('MODERNIZR_FILENAME_REGEX', '/^modernizr[A-Za-z0-9\.-]*\.js$/');
 define('MODERNIZR_SCRIPT_GROUP', JS_LIBRARY - 10);
 define('MODERNIZR_SCRIPT_WEIGHT', -100);
 
-// Default drupal_add_js() settings. Used in multiple places
-global $_modernizr_js_settings;
-$_modernizr_js_settings = array(
-  'type' => 'file',
-  'scope' => 'header',
-  'group' => MODERNIZR_SCRIPT_GROUP,
-  'weight' => MODERNIZR_SCRIPT_WEIGHT,
-  'every_page' => TRUE,
-  'preprocess' => 0,
-  // This setting is not in Drupal core API. Both Omega 4.x and Aurora 2.x
-  // use this new flag in order to preserve scripts in the header in Drupal 7.
-  // If you maintain a Drupal theme you should follow suit :)
-  'force header' => TRUE,
-);
+// As of 7.x-3.3 we support footer scope, inlining, and defer.
+define('MODERNIZR_TYPE_DEFAULT', 'sync');
+define('MODERNIZR_SCOPE_DEFAULT', 'header');
 
+// Determines the severity of administrative errors.
+// As of 7.x-3.7 we switched the default to TRUE since yepnope is now included
+// automatically, so a custom build is no longer absolutely necessary in order
+// to begin using hook_modernizr_load() functionality.
+define('MODERNIZR_QUIET_DEFAULT', TRUE);
+
+// As of 7.x-3.5 we support Modernizr v3, which cannot include yepnope.js in a
+// custom build. For backward compat purposes, we will enable this flag in an
+// update hook automatically, but the default it to not include it.
+define('MODERNIZR_YEPNOPE_DEFAULT', FALSE);
+
+/**
+ * Default drupal_add_js settings. Used in multiple places.
+ *
+ * @return array An array of settings for drupal_add_js.
+ */
+function _modernizr_js_settings() {
+  return array(
+    'type' => (variable_get('modernizr_type', MODERNIZR_TYPE_DEFAULT) != 'inline') ? 'file' : 'inline',
+    'scope' => variable_get('modernizr_scope', MODERNIZR_SCOPE_DEFAULT),
+    'group' => MODERNIZR_SCRIPT_GROUP,
+    'weight' => MODERNIZR_SCRIPT_WEIGHT,
+    'every_page' => TRUE,
+    'preprocess' => 0,
+    'defer' => (variable_get('modernizr_type', MODERNIZR_TYPE_DEFAULT) == 'defer') ? TRUE : FALSE,
+  );
+}
 
 /**
  * Implements hook_page_build().
  *
- * We used to use hook_init(), but that loads the JA files needlessly
+ * We used to use hook_init(), but that loads the JS files needlessly
  * on AJAX requests, private file requests, etc.
  */
 function modernizr_page_build(&$page) {
-  global $_modernizr_js_settings;
+  global $base_url;
+  $modernizr_js_settings = _modernizr_js_settings();
 
-  // Load Modernizr on the page by invoking our
-  // implementation of hook_libraries_info()
-  if (module_exists('libraries')) {
+  // Load Modernizr on the page by invoking our implementation of
+  // hook_libraries_info().
+  //
+  // We can only use this method when Libraries API 2.0 is installed. Since Libraries 1.0
+  // did not contain a function called libraries_load(), we must explicitly check for a
+  // valid function to avoid fatal errors.
+  //
+  // @see http://drupal.org/node/1919796
+  if (module_exists('libraries') && function_exists('libraries_load')) {
     libraries_load('modernizr');
   }
   else {
-    // No Libraries API? Load the regular way.
+    // First, figure out if we're inlining.
+    if (in_array(variable_get('modernizr_type', MODERNIZR_TYPE_DEFAULT), array('sync', 'defer'))) {
+      // We are loading external script. Load file path.
+      $modernizr_file = modernizr_get_path();
+    }
+    else {
+      // We are inlining. Load contents of file instead of path.
+      $modernizr_file = file_get_contents(modernizr_get_path());
+    }
+
+    // With no Libraries API, load the regular way.
     drupal_add_js(
-      modernizr_get_path(),
-      $_modernizr_js_settings
+      $modernizr_file,
+      $modernizr_js_settings
     );
   }
 
-  // We want Modernizr.load() commands to be issued immediately after the call
+  // We want yepnope() commands to be issued immediately after the call
   // to Modernizr so that they download while the page renders. The overrides
   // to $inline_js_settings will format the output as inline JS.
   if ($output = _modernizr_load_generate()) {
 
-    $inline_js_settings = $_modernizr_js_settings;
-    $inline_js_settings['type'] = 'inline';
-    $inline_js_settings['weight'] = MODERNIZR_SCRIPT_WEIGHT + 1;
+    // Modernizr v3 removed the ability to include yepnope.js directly in the
+    // custom builds. To ensure that previous users of this module can continue
+    // without breaking changes, we need to load a copy of yepnope manually,
+    // which Modernizr detects and aliases to yepnope().
+    if ($output && variable_get('modernizr_cb_load', MODERNIZR_YEPNOPE_DEFAULT)) {
+      $yepnope_settings = $modernizr_js_settings;
+      $yepnope_settings['type'] = 'inline';
+      $yepnope_settings['weight'] = MODERNIZR_SCRIPT_WEIGHT - 1;
 
-    // Load JS
-    drupal_add_js(
-      $output,
-      $inline_js_settings
-    );
+      // yepnope.js
+      drupal_add_js(
+        file_get_contents(drupal_get_path('module', 'modernizr') . '/js/yepnope.js'),
+        $yepnope_settings
+      );
+
+      $inline_js_settings = $modernizr_js_settings;
+      $inline_js_settings['type'] = 'inline';
+      $inline_js_settings['weight'] = MODERNIZR_SCRIPT_WEIGHT + 1;
+
+      // yepnope() statements
+      drupal_add_js(
+        $output,
+        $inline_js_settings
+      );
+    }
+    // If there are yepnope commands being requested, but the module does not
+    // have yepnope enabled, warn the user in the console.
+    else if ($output && !variable_get('modernizr_cb_load', MODERNIZR_YEPNOPE_DEFAULT)) {
+      drupal_add_js('console.warn("The Modernizr module is receiving requests to use yepnope.js but that option is currently disabled. Please enable yepnope.js by loading ' . $base_url . '/admin/config/development/modernizr/settings' . '");', array('type' => 'inline'));
+    }
   }
 }
 
@@ -89,14 +143,37 @@ function modernizr_permission() {
 function modernizr_menu() {
   $items = array();
 
-  $items['admin/config/development/modernizr'] = array(
+  // Rebuild Modernizr
+  $items['admin/config/development/modernizr/rebuild'] = array(
+    'title' => 'Rebuild Modernizr',
+    'description' => 'Queries Drupal for Modernizr dependencies and generates a custom link to the Modernizr builder.',
+    'page callback' => 'modernizr_generate_url',
+    'file' => 'modernizr.admin.inc',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'access arguments' => array('administer modernizr'),
+  );
+
+  // Module settings
+  $items['admin/config/development/modernizr/settings'] = array(
     'title' => 'Modernizr settings',
+    'description' => 'Administrative settings for Modernizr module.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('modernizr_admin'),
+    'file' => 'modernizr.admin.inc',
+    'type' => MENU_LOCAL_TASK,
+    'access arguments' => array('administer modernizr'),
+  );
+
+  // Admin menu item (duplicate of "Rebuild Modernizr")
+  $items['admin/config/development/modernizr'] = array(
+    'title' => 'Modernizr',
     'description' => 'Queries Drupal for Modernizr dependencies and generates a custom link to the Modernizr builder.',
     'page callback' => 'modernizr_generate_url',
     'file' => 'modernizr.admin.inc',
     'type' => MENU_NORMAL_ITEM,
     'access arguments' => array('administer modernizr'),
   );
+
 
   return $items;
 }
@@ -107,7 +184,7 @@ function modernizr_menu() {
  * @return array
  */
 function modernizr_libraries_info() {
-  global $_modernizr_js_settings;
+  $modernizr_js_settings = _modernizr_js_settings();
   $libraries = array();
   $file_name = modernizr_get_filename();
 
@@ -122,7 +199,7 @@ function modernizr_libraries_info() {
     ),
     'files' => array(
       'js' => array(
-        $file_name => $_modernizr_js_settings,
+        $file_name => $modernizr_js_settings,
       ),
     ),
   );
@@ -139,18 +216,8 @@ function modernizr_get_path() {
   $path = &drupal_static(__FUNCTION__);
 
   if ($path === NULL) {
-    $paths = array();
-
-    // Check for directory specified in hook_libraries_info()
-    if (module_exists('libraries')) {
-      $library_path = libraries_get_path('modernizr');
-      if (file_exists($library_path)) {
-        $paths[] = $library_path;
-      }
-    }
-
-    // Check inside the module folder itself
-    $paths[] = drupal_get_path('module', 'modernizr');
+    // Get possible paths for the file.
+    $paths = _modernizr_get_paths();
 
     // Scan directories for files
     $path = _modernizr_scan_for_library($paths);
@@ -162,13 +229,74 @@ function modernizr_get_path() {
 /**
  * Helper function to scan for acceptably named libraries
  */
+function _modernizr_get_paths() {
+  $paths = &drupal_static(__FUNCTION__);
+
+  if ($paths === NULL) {
+    $paths = array();
+    foreach (_modernizr_library_search_paths() as $search_path) {
+      $library_path = $search_path . '/modernizr';
+      if (file_exists($library_path)) {
+        $paths[] = $library_path;
+      }
+    }
+  }
+
+  return $paths;
+}
+
+/**
+ * Get library search paths.
+ *
+ * Original logic was taken from Libraries 7.x-2.3 since it doesn't provide a
+ * way to look up its search paths.
+ *
+ * @see libraries_get_libraries()
+ */
+function _modernizr_library_search_paths() {
+  $searchdir = array();
+  $profile = drupal_get_path('profile', drupal_get_profile());
+  $config = conf_path();
+
+  // Similar to 'modules' and 'themes' directories in the root directory,
+  // certain distributions may want to place libraries into a 'libraries'
+  // directory in Drupal's root directory.
+  $searchdir[] = 'libraries';
+
+  // Always search sites/all/libraries.
+  $searchdir[] = 'sites/all/libraries';
+
+  // $profile should never be empty in a proper Drupal setup. Check to make sure
+  // it exists before adding path.
+  if ($profile) {
+    // Similar to 'modules' and 'themes' directories inside an installation
+    // profile, installation profiles may want to place libraries into a
+    // 'libraries' directory.
+    $searchdir[] = $profile . '/libraries';
+  }
+
+  // $config should never be empty in a proper Drupal setup. Check to make sure
+  // it exists before adding path.
+  if ($config) {
+    // Also search sites/<domain>/*.
+    $searchdir[] = $config . '/libraries';
+  }
+
+  return $searchdir;
+}
+
+/**
+ * Helper function to scan for acceptably named libraries
+ */
 function _modernizr_scan_for_library($paths) {
   $path = '';
 
-  foreach ($paths as $p) {
-    if ($files = file_scan_directory($p, MODERNIZR_FILENAME_REGEX)) {
-      $path = reset($files)->uri;
-      break;
+  if (is_array($paths) && !empty($paths)) {
+    foreach ($paths as $p) {
+      if ($files = file_scan_directory($p, MODERNIZR_FILENAME_REGEX)) {
+        $path = reset($files)->uri;
+        break;
+      }
     }
   }
 
@@ -176,8 +304,7 @@ function _modernizr_scan_for_library($paths) {
 }
 
 /**
- * Helper function to generate the current filename of
- * the active Modernizr library
+ * Helper function to fetch the active Modernizr library.
  */
 function modernizr_get_filename() {
   // Get the full path to the library,
@@ -216,8 +343,8 @@ function modernizr_get_version($reset = FALSE) {
         $matches = array();
         preg_match(MODERNIZR_VERSION_REGEX, $modernizr, $matches);
 
-        if (isset($matches[1])) {
-          $version = $matches[1];
+        if (isset($matches[0])) {
+          $version = $matches[0];
           if ($version) {
             cache_set('modernizr_version', $version);
           }
@@ -231,63 +358,87 @@ function modernizr_get_version($reset = FALSE) {
   return $version;
 }
 
+
 /**
  * Implements MODULE_preprocess_html().
- *
- * Reads async-loaded CSS/JS from theme .info files. Stores info in variable.
- * Prints Modernizr.load() calls into drupal_add_js() as inline settings.
- *
- * @TODO: make use of drupal_static()
  */
 function modernizr_preprocess_html(&$vars, $hook) {
-  global $base_url;
-  $load = array();
-  $num_tests = 0;
+  // This will set up all of our tests for Modernizr.
+  modernizr_load_data();
+}
 
-  // Make a list of base themes and the current theme.
-  $themes = $GLOBALS['base_theme_info'];
-  $themes[] = $GLOBALS['theme_info'];
-  foreach (array_keys($themes) as $key) {
-    $theme_path = dirname($themes[$key]->filename) . '/';
-    if (isset($themes[$key]->info['modernizr'])) {
-      // Loop through Modernizr calls and assemble Load variable.
-      foreach (array_keys($themes[$key]->info['modernizr']) as $test) {
-        $load[$num_tests]['test'] = $test;
-        foreach (array_keys($themes[$key]->info['modernizr'][$test]) as $action) {
-          foreach ($themes[$key]->info['modernizr'][$test][$action] as $asset) {
+/**
+ * A function to generate the load data from the current themes.
+ *
+ * Reads async-loaded CSS/JS from theme .info files. Stores info in variable.
+ * Prints yepnope() calls into drupal_add_js() as inline settings.
+ *
+ * @return array
+ */
+function modernizr_load_data() {
+  $load = &drupal_static(__FUNCTION__);
 
-            // First figure out which property we're reading. callback/complete
-            // need different processing than yep/nope/both/load
-            $functions = array('callback', 'complete');
+  if (!isset($load)) {
+    // This is the first time this is called.
+    global $base_url, $base_theme_info, $theme_info;
+    $load = array();
+    $num_tests = 0;
 
-            // Is this a function or a resource?
-            if (in_array($action, $functions)) {
-              // It's a function
-              $load[$num_tests][$action][] = _modernizr_sanitize_callback($asset);
+    // Make a list of base themes and the current theme.
+    $themes = $base_theme_info;
+    $themes[] = $theme_info;
+
+    foreach (array_keys($themes) as $key) {
+      $theme_path = dirname($themes[$key]->filename) . '/';
+      if (isset($themes[$key]->info['modernizr'])) {
+        // Loop through Modernizr calls and assemble Load variable.
+        foreach (array_keys($themes[$key]->info['modernizr']) as $test_key => $test) {
+          // If no tests are defined, simply add them as resources for loading them unconditionally.
+          if (is_numeric($test)) {
+            $load[] = array(_modernizr_sanitize_resource($themes[$key]->info['modernizr'][$test_key], $theme_path));
+          }
+          // Skip the ['tests'] variable because it is reserved for selecting
+          // specific tests that Modernizr must include.
+          elseif ($test != 'tests') {
+            // All other entries inside a theme's modernizr[] settings should be scanned
+            $load[$num_tests]['test'] = $test;
+            foreach (array_keys($themes[$key]->info['modernizr'][$test]) as $action) {
+              foreach ($themes[$key]->info['modernizr'][$test][$action] as $asset) {
+
+                // First figure out which property we're reading.
+                // callback/complete need different processing than yep/nope/both/load
+                $functions = array('callback', 'complete');
+
+                // Is this a function or a resource?
+                if (in_array($action, $functions)) {
+                  // It's a function
+                  $load[$num_tests][$action][] = _modernizr_sanitize_callback($asset);
+                }
+                else {
+                  // It's a resource
+                  $load[$num_tests][$action][] = _modernizr_sanitize_resource($asset, $theme_path);
+                }
+              }
             }
-            else {
-              // It's a resource
-              $load[$num_tests][$action][] = _modernizr_sanitize_resource($asset, $theme_path);
-            }
+
+            $num_tests++;
           }
         }
-        $num_tests++;
       }
     }
   }
 
-  // store in DB
-  variable_set('modernizr_load', $load);
+  return $load;
 }
 
 /**
- * Helper function to render the Modernizr.load() calls.
+ * Helper function to render the yepnope() calls.
  */
 function _modernizr_load_generate() {
   $output = FALSE;
 
-  // Get Modernizr.load() calls from the active theme.
-  $theme = variable_get('modernizr_load', array());
+  // Get yepnope() calls from the active theme.
+  $theme = modernizr_load_data();
 
   // Collect data from modules that implement hook_modernizr_load().
   $modules = modernizr_load_list();
@@ -297,16 +448,18 @@ function _modernizr_load_generate() {
   // it's probably best to load them first. Modules whose assets
   // truly need to be loaded first have hook_modernizr_load_alter()
   // at their disposal.
-  $testObjects = array_merge($theme, $modules);
+  $test_objects = array_merge($theme, $modules);
 
-  // Build the Modernizr.load() commands.
-  if (count($testObjects)) {
-    $num_tests = 1;
-    $output .= 'Modernizr.load([';
-    foreach ($testObjects as $load) {
-      $output .= ($num_tests > 1) ? ',' : '';
-      $output .= '{' . "\n";
-      $output .= '  test: ' . $load['test'] . ',' . "\n";
+  // Build the yepnope() commands.
+  if (count($test_objects)) {
+    $num_tests = 0;
+    $items = array();
+
+    foreach ($test_objects as $load) {
+      // If test is defined, this entry will be an object.
+      if (isset($load['test'])) {
+        $item = '{' . "\n";
+        $item .= '  test: ' . $load['test'] . ',' . "\n";
 
       // Print each action and its resources
       $actions = array('yep', 'nope', 'both', 'load');
@@ -314,22 +467,22 @@ function _modernizr_load_generate() {
         if (isset($load[$action])) {
 
           // Begin output for this action
-          $output .= '  ' . sprintf('%-4s', $action) . ': ';
+            $item .= '  ' . sprintf('%-4s', $action) . ': ';
 
           // How many resources for this action?
           if (count($load[$action]) == 1) {
             // Single resource
-            $output .= "'" . $load[$action][0] . "',\n";
+              $item .= "'" . $load[$action][0] . "',\n";
           }
           else {
             // Multiple resources
-            $output .= '[';
+              $item .= '[';
             foreach ($load[$action] as $resource) {
-              $output .= "'" . $resource . "',";
+                $item .= "'" . $resource . "',";
             }
             // Truncate last comma
-            $output = substr($output, 0, -1);
-            $output .= "],\n";
+              $item = substr($item, 0, -1);
+              $item .= "],\n";
           }
         }
       }
@@ -340,34 +493,49 @@ function _modernizr_load_generate() {
         if (isset($load[$action])) {
 
           // Begin output for this action
-          $output .= '  ' . sprintf('%-4s', $action) . ': ';
+            $item .= '  ' . sprintf('%-4s', $action) . ': ';
 
           // How many callbacks for this action?
           if (count($load[$action]) == 1) {
             // Single resource
-            $output .= $load[$action][0] . ",\n";
+              $item .= $load[$action][0] . ",\n";
           }
           else {
             // Multiple resources
-            $output .= '[';
+              $item .= '[';
             foreach ($load[$action] as $callback) {
-              $output .= $callback . ",";
+                $item .= $callback . ",";
             }
             // Truncate last comma
-            $output = substr($output, 0, -1);
-            $output .= "],\n";
+              $item = substr($item, 0, -1);
+              $item .= "],\n";
           }
         }
       }
-
-      // Truncate last comma
-      $output = substr($output, 0, -1);
-      $output .= "\n}";
+      // Truncate last comma and newline
+        $item = substr($item, 0, -2);
+        $item .= "\n}";
+        $num_tests++;
+      }
+      // No test is defined, add the resource(s) to the loader unconditionally.
+      else {
+        $resources = array();
+        foreach ($load as $resource) {
+          $resources[] = "'" . $resource . "'";
+        }
+        $item = implode(",\n", $resources);
       $num_tests++;
     }
 
-    // If more than one test was registered, finish the Array notation.
-    // Finally, close the Modernizr.load() function parenthesis.
+      $items[] = $item;
+    }
+
+    $output .= 'yepnope(';
+    // Issue commands as array if there is more than resource to load.
+    $output .= ($num_tests > 1) ? '[' : '';
+    // Add commands.
+    $output .= implode(",\n", $items);
+    // Finally, close the yepnope() function parenthesis.
     $output .= ($num_tests > 1) ? ']' : '';
     $output .= ');';
   }
@@ -383,7 +551,7 @@ function modernizr_preprocess_maintenance_page(&$vars, $hook) {
 }
 
 /**
- * Helper function to sanitize Modernizr.load() callbacks
+ * Helper function to sanitize yepnope() callbacks
  */
 function _modernizr_sanitize_callback($callback) {
   global $base_url;
@@ -398,17 +566,105 @@ function _modernizr_sanitize_callback($callback) {
 }
 
 /**
- * Helper function to sanitize Modernizr.load() assets
+ * Helper function to sanitize yepnope() assets
  */
 function _modernizr_sanitize_resource($resource, $theme_path) {
-  global $base_url;
+  global $base_path, $base_url;
   $output = '';
 
-  // If a path starts with 'sites' we assume they know exactly where they're
-  // going. Otherwise, they seem like relative URLs so append theme path.
-  $output = (strpos($resource, 'sites/') !== FALSE) ? $resource : $base_url . '/' . $theme_path . $resource;
+  // If a path starts with 'sites/' or 'profiles/' we assume they know exactly
+  // where they're going. Otherwise, they seem like relative URLs so append
+  // theme path.
+  $output = (strpos($resource, 'sites/') === 0 || strpos($resource, 'profiles/') === 0) ? $base_path . $resource : $base_url . '/' . $theme_path . $resource;
 
   return $output;
+}
+
+/**
+ * Helper function for hook_modernizr_info().
+ * Returns a Modernizr argument's type.
+ */
+function _modernizr_get_type($arg) {
+  $data = _modernizr_get_arg_info($arg, 'type');
+
+  // Since community-created detects are by far the most likely unknown entry,
+  // we assume that a value not found in modernizr.args.inc is a community detect.
+  // Note: 'tests' does NOT need t() because it is a machine value.
+  return $data ? $data : 'tests';
+}
+
+/**
+ * Helper function for hook_modernizr_info().
+ * Returns a Modernizr argument's description.
+ */
+function _modernizr_get_desc($arg) {
+  $data = _modernizr_get_arg_info($arg, 'desc');
+
+  // If we can't find a description, just admit it.
+  return $data ? $data : '<em>' . t('No description available.') . '</em>';
+}
+
+
+/**
+ * A helper function to get the information stored in modernizr.args.inc.
+ *
+ * @param string $arg
+ *   The test machine name.
+ * @param string $type (default: 'desc')
+ *   The data wanted, currently just 'desc' or 'type'.
+ * @return
+ *   The data in the field, or FALSE if it doesn't exist.
+ */
+function _modernizr_get_arg_info($arg, $type = 'desc') {
+  static $loaded = FALSE;
+
+  if (!$loaded) {
+    $loaded = module_load_include('inc', 'modernizr', 'modernizr.args');
+  }
+
+  $data = _modernizr_args_return($arg);
+
+  // This data doesnt exist.
+  return ($data && isset($data[$type])) ? $data[$type] : FALSE;
+}
+
+
+
+/**
+ * Helper function to pulls all tests from the current modernizr.js
+ */
+function _modernizr_current_build() {
+  $tests = &drupal_static(__FUNCTION__);
+
+  if (!isset($tests)) {
+
+    $path = modernizr_get_path();
+    $path_parts = explode('/', $path);
+    $file = ($path) ? file_get_contents($path) : NULL;
+    $filename = $path_parts[count($path_parts)-1];
+    $tests = array();
+
+    // $matches holds two items:
+    // - [0] the full URL
+    // - [1] a string containing the args captured in the parens  vvvv
+    $build_url = preg_match('/https?:\/\/modernizr.com\/download\/[#?]-(.*) /', $file, $matches);
+
+    // Turn URL args into test entries for Drupal module
+    if (isset($matches[1])) {
+      $args_and_prefix = explode(':', $matches[1]);
+      $build_args = explode('-', $args_and_prefix[0]);
+
+      foreach ($build_args as $arg) {
+        $tests[] = $arg;
+      }
+    }
+    else {
+      // Modernizr must not be downloaded, return null.
+      return NULL;
+    }
+  }
+
+  return $tests;
 }
 
 /**
@@ -416,15 +672,111 @@ function _modernizr_sanitize_resource($resource, $theme_path) {
  *
  * @return array
  */
-function modernizr_api_list($reset = FALSE) {
+function modernizr_api_list() {
   $tests = &drupal_static(__FUNCTION__);
-  if (!isset($tests) || $reset) {
-    $tests = module_invoke_all('modernizr_info');
-    drupal_alter('modernizr_info', $tests);
+
+  if (!isset($tests)) {
+    // Grab all module implementations
+    // Note: this is a slightly augmented version of module_invoke_all(), so
+    // that we can know which module is providing which test.
+    $hook = 'modernizr_info';
+
+    foreach (module_implements($hook) as $module) {
+      $function = $module . '_' . $hook;
+      if (function_exists($function)) {
+        $result = call_user_func($function);
+        if (isset($result) && is_array($result)) {
+          $tests[$module] = $result;
+        }
+      }
+    }
+
+    // Grabbing the information with an hook_alter is not enough for themes
+    // because they will not all be active, nor their code added into the session.
+    $themes = list_themes();
+    $active_themes = array();
+    foreach ($themes as $theme_name => $theme) {
+      if ($theme->status == 1) {
+        $active_themes[$theme_name] = $theme;
+        if (isset($theme->base_themes)) {
+          foreach ($theme->base_themes as $base_theme_name => $base_theme) {
+            $active_themes[$base_theme_name] = $themes[$base_theme_name];
+          }
+        }
+      }
+    }
+
+    // We now go into every active theme and pull from the .info file the tests.
+    foreach ($active_themes as $active_theme) {
+      $data = drupal_parse_info_file($active_theme->filename);
+
+      if (isset($data['modernizr']) && isset($data['modernizr']['tests'])) {
+        // There are modernizr tests within this theme.
+        $theme_name = $data['name'];
+        $tests[$theme_name] = $data['modernizr']['tests'];
+      }
+    }
+
+    // The last thing we do is send it to have its data cleaned and organized.
+    $tests = _modernizr_api_list_clean($tests);
   }
 
-  // See module_implements() for an explanation of this cast.
-  return (array) $tests;
+  return $tests;
+}
+
+
+
+/**
+ * Cleans up the array of tests to be unified.
+ *
+ * @param $raw_tests array
+ *  An array of tests provided by hook_modernizr_info.
+ * @return array
+ */
+function _modernizr_api_list_clean($raw_tests) {
+  $clean_tests = array();
+
+  foreach ($raw_tests as $module => $tests) {
+
+    foreach ($tests as $name => $data) {
+      // First, we check and correct if the tests have been added using indexed
+      // arrays, fixing the name variable.
+      if (is_int($name) && !is_array($data)) {
+        // The test is stored as a simple array, therefore the data is the name.
+        $name = $data;
+        $data = array();
+      }
+      elseif (is_int($name) && is_array($data)) {
+        // Still stored as a indexed array, but the data is an array.
+        $name = $data['name'];
+      }
+
+      // Now, we add these tests to our array of cleaned up data.
+      if (isset($clean_tests[$name])) {
+        // We already have the test, we are just going to add our module name.
+        $clean_tests[$name]['source'][] = $module;
+      }
+      else {
+        // The test has not been marked, we are adding it to the array.
+        $clean_tests[$name] = $data;
+        $clean_tests[$name]['source'] = array($module);
+      }
+    }
+  }
+
+  // Cleaning up the data to ensure all data we need is present.
+  foreach ($clean_tests as $name => $clean_test) {
+    $data = array(
+      'name' => $name,
+      'desc' => _modernizr_get_desc($name),
+      'docs' => '',
+      'camiuse' => '',
+    );
+
+    $clean_tests[$name] = array_merge($data, $clean_test);
+  }
+
+  return $clean_tests;
 }
 
 /**
@@ -434,81 +786,22 @@ function modernizr_api_list($reset = FALSE) {
  * builds downloaded from either the settings screen or drush commands contain
  * the essential components needed to support the module's functionality.
  *
- * cssclasses
- * - Automatically adds cssclasses to download links since most users want this.
- *
  * html5shiv w/ printshiv
- * - Includes some utility JS that allows IE to recognize HTML5 elements
- *
- * load
- * - Includes yepnope.js as Modernizr.load() - allows conditional asynchronous
- *   CSS/JS loading.
+ * - Includes some utility JS that allows IE to recognize HTML5 elements.
  */
 function modernizr_modernizr_info() {
   $items = array();
 
-  $items['cssclasses'] = array(
-    'type'   => 'extras',
-    'module' => 'Modernizr',
-    'desc' => 'Allows Modernizr to inject CSS classes into &lt;html&gt;',
-  );
-  $items['printshiv'] = array(
-    'type'   => 'extras',
-    'module' => 'Modernizr',
-    'desc' => 'Provides html5shiv w/ printshiv (for browsers that do not support HTML5 tags)',
-  );
-  $items['load'] = array(
-    'type'   => 'extras',
-    'module' => 'Modernizr',
-    'desc' => 'Provides yepnope.js, an asynchronous CSS/JS loader that allows use of Modernizr.load()',
-  );
+  // If a site admin has chosen to require printshiv, add it to dependencies.
+  if (variable_get('modernizr_cb_printshiv', FALSE)) {
+    $items[] = 'printshiv';
+  }
 
   return $items;
 }
 
 /**
- * Implements hook_modernizr_info_alter().
- *
- * Instead of baking this code into the module, we use our own
- * alter hook to append all of the tests currently found within
- * the custom build that is currently being used on the site.
- */
-function modernizr_modernizr_info_alter(&$tests) {
-  $path = modernizr_get_path();
-  $file = ($path) ? file_get_contents($path) : NULL;
-
-  // $matches holds two items: (1) the full URL (2) the args captured in the parens
-  $build_url = preg_match('/http:\/\/modernizr.com\/download\/#-(.*)/', $file, $matches);
-
-  // Get the map of Modernizr args. See 'type' below.
-  include_once('modernizr.args.inc');
-
-  // Turn URL args into test entries for Drupal module
-  if (isset($matches[1])) {
-    $args_and_prefix = explode(':', $matches[1]);
-    $build_args = explode('-', $args_and_prefix[0]);
-
-    foreach ($build_args as $arg) {
-      // Always defer to pre-existing tests
-      if (!isset($tests[$arg])) {
-        // If the test isn't found, include under "existing tests"
-        $tests[$arg] = array(
-          'type'   => $_modernizr_args[$arg],
-          'module' => 'Modernizr (existing test)',
-          'desc' => 'This test was found in your current Modernizr file.',
-        );
-      }
-    }
-  }
-  else {
-    drupal_set_message(t("You don't seem to have a custom build of Modernizr installed yet. This page will help generate one for you."), 'warning');
-  }
-
-  return $tests;
-}
-
-/**
- * Asks other Drupal modules for Modernizr.load() commands.
+ * Asks other Drupal modules for yepnope() commands.
  *
  * @return array
  */
@@ -520,4 +813,26 @@ function modernizr_load_list($reset = FALSE) {
   }
 
   return $load;
+}
+
+/**
+ * Private function to look for missing Modernizr tests.
+ */
+function _modernizr_info_missing_tests() {
+  $requested_tests = modernizr_api_list();
+  $current_build = _modernizr_current_build();
+  $missing_tests = array();
+
+  if (is_null($current_build)) {
+    // There is no installed version of Modernizr. Return all tests.
+    return $requested_tests;
+  }
+
+  foreach($requested_tests as $test => $test_info) {
+    if (!in_array($test, $current_build)) {
+      $missing_tests[$test] = $test_info;
+    }
+  }
+
+  return $missing_tests;
 }
