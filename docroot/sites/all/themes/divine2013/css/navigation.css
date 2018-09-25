@@ -811,24 +811,26 @@ ul li:nth-of-type(4) a {
 @media (min-width: 32em) {
   /* line 657, ../sass/navigation.scss */
   .bcop-logo-block {
-    width: 18.36735%;
-    float: left;
-    margin-right: 2.04082%;
-    display: inline;
-    margin: -2em 0px 0px -31px;
-    left: 0px;
+    width: 100%;
+  }
+}
+@media (min-width: 49em) {
+  /* line 657, ../sass/navigation.scss */
+  .bcop-logo-block {
+    margin: 9.7em 0 0 -18px;
+    right: 33px;
     position: absolute;
+    width: 140px;
   }
 }
 @media (min-width: 60em) {
   /* line 657, ../sass/navigation.scss */
   .bcop-logo-block {
     margin: 11.7em 0 0 -18px;
-    left: 0px;
-    position: absolute;
+    right: 40px;
   }
 }
-/* line 674, ../sass/navigation.scss */
+/* line 675, ../sass/navigation.scss */
 .bcop-logo-block .bcop-logo {
   margin: 2em 0;
   min-width: 182px;

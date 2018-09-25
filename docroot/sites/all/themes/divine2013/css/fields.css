@@ -56,20 +56,25 @@
   margin: 0.5em 0em;
 }
 
-/* line 45, ../sass/fields.scss */
+/* line 44, ../sass/fields.scss */
+.media.media-element-container {
+  display: -webkit-inline-box;
+}
+
+/* line 48, ../sass/fields.scss */
 .field-name-field-summary {
   font-size: 1.1em;
   line-height: 1.36364em;
 }
 
-/* line 49, ../sass/fields.scss */
+/* line 52, ../sass/fields.scss */
 .views-field-field-frontblockimg img:hover {
   -moz-box-shadow: 0px 5px #58595B;
   -webkit-box-shadow: 0px 5px #58595B;
   box-shadow: 0px 5px #58595B;
 }
 
-/* line 53, ../sass/fields.scss */
+/* line 56, ../sass/fields.scss */
 #page .addthisevent-drop {
   border: none;
   -moz-border-radius: 6px;
@@ -80,7 +85,7 @@
   text-transform: uppercase;
   border: 1px #A39161 solid;
 }
-/* line 60, ../sass/fields.scss */
+/* line 63, ../sass/fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown {
   border: 1px #A39161 solid;
   margin-top: 0.25em;
@@ -88,24 +93,24 @@
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 64, ../sass/fields.scss */
+/* line 67, ../sass/fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown span {
   color: #A39161;
   font-size: 0.8em;
   line-height: 1.5625em;
 }
-/* line 67, ../sass/fields.scss */
+/* line 70, ../sass/fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown span:hover {
   color: #64583a;
 }
 
-/* line 72, ../sass/fields.scss */
+/* line 75, ../sass/fields.scss */
 .views-field-edit-node {
   position: absolute;
   margin-top: 0.15em;
   margin-left: 0.15em;
 }
-/* line 76, ../sass/fields.scss */
+/* line 79, ../sass/fields.scss */
 .views-field-edit-node a {
   background: url("../images/symbols/pencil.png") no-repeat;
   display: block;
@@ -121,7 +126,7 @@
  * If you don't use the Fences module, that's fine. Really. I think. Just use
  * these selectors instead:
  */
-/* line 93, ../sass/fields.scss */
+/* line 96, ../sass/fields.scss */
 .field {
   /* Wrapper for any field. */
 }
@@ -132,7 +137,7 @@
 /*
  * Field types (Contrib)
  */
-/* line 143, ../sass/fields.scss */
+/* line 146, ../sass/fields.scss */
 .field-type-datetime {
   /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */
 }
@@ -140,7 +145,7 @@
 /*
  * Named fields
  */
-/* line 165, ../sass/fields.scss */
+/* line 168, ../sass/fields.scss */
 .field-name-field-FIELDNAME {
   /* Underscores in field name are replaced with dashes. */
 }

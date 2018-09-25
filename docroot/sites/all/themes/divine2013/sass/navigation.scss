@@ -656,18 +656,19 @@ li a.active {
 
 .bcop-logo-block {
   @include breakpoint(tablet) {
-    @include span-columns(2, 10);
-
-    margin: -2em 0px 0px -31px;
-    left: 0px;
-    position: absolute;
+    width: 100%;
   }
 
+  @include breakpoint(desktop) {
+    margin: 9.7em 0 0 -18px;
+    right: 33px;
+    position: absolute;
+    width: 140px;
+  }
 
   @include breakpoint(desktop-wide) {
     margin: 11.7em 0 0 -18px;
-    left: 0px;
-    position: absolute;
+    right: 40px;
   }
 
 
