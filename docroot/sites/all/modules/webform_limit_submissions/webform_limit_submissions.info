@@ -6,9 +6,9 @@ dependencies[] = "webform"
 dependencies[] = "date_api"
 dependencies[] = "date_popup"
 
-; Information added by drupal.org packaging script on 2013-03-14
+; Information added by drupal.org packaging script on 2013-10-26
 version = "7.x-2.x-dev"
 core = "7.x"
 project = "webform_limit_submissions"
-datestamp = "1363270508"
+datestamp = "1382755839"
 
