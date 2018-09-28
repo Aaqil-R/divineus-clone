@@ -13,6 +13,21 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Avenir LT W01 65 Medium";
+  src: url("../fonts/Avenir-LT-W01-65-Medium.eot?#iefix");
+  src: url("../fonts/Avenir-LT-W01-65-Medium.eot?#iefix") format("eot"), url("../fonts/Avenir-LT-W01-65-Medium.woff2") format("woff2"), url("../fonts/Avenir-LT-W01-65-Medium.woff") format("woff"), url("../fonts/Avenir-LT-W01-65-Medium.ttf") format("truetype"), url("../fonts/Avenir-LT-W01-65-Medium.svg#294099f3-8d00-4676-afc5-5e9d8d43ad69") format("svg");
+}
+@font-face {
+  font-family: "Avenir LT W01 95 Black";
+  src: url("../fonts/Avenir-LT-W01-95-Black.eot?#iefix");
+  src: url("../fonts/Avenir-LT-W01-95-Black.eot?#iefix") format("eot"), url("../fonts/Avenir-LT-W01-95-Black.woff2") format("woff2"), url("../fonts/Avenir-LT-W01-95-Black.woff") format("woff"), url("../fonts/Avenir-LT-W01-95-Black.ttf") format("truetype"), url("../fonts/Avenir-LT-W01-95-Black.svg#7bdad4a5-289b-42f9-b6fa-c5883b9e9f23") format("svg");
+}
+@font-face {
+  font-family: "Georgia W01 Italic";
+  src: url("../fonts/Georgia-W01-Italic.eot?#iefix");
+  src: url("../fonts/Georgia-W01-Italic.eot?#iefix") format("eot"), url("../fonts/Georgia-W01-Italic.woff2") format("woff2"), url("../fonts/Georgia-W01-Italic.woff") format("woff"), url("../fonts/Georgia-W01-Italic.ttf") format("truetype"), url("../fonts/Georgia-W01-Italic.svg#39f8467c-4358-4a4b-a43f-8b26bd049b35") format("svg");
+}
 /*Custom Mixins*/
 /*
  * Body
@@ -47,7 +62,7 @@ body {
  */
 /* line 47, ../sass/pages.scss */
 #swoosh {
-  background: url('../images/wrapper/swoosh-top.png?1537357296') no-repeat;
+  background: url('../images/wrapper/swoosh-top.png?1479187544') no-repeat;
   background-position: -102px;
   height: 35px;
   width: 100%;

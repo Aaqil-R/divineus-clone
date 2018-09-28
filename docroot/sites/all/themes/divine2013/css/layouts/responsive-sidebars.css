@@ -15,6 +15,21 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Avenir LT W01 65 Medium";
+  src: url("../fonts/Avenir-LT-W01-65-Medium.eot?#iefix");
+  src: url("../fonts/Avenir-LT-W01-65-Medium.eot?#iefix") format("eot"), url("../fonts/Avenir-LT-W01-65-Medium.woff2") format("woff2"), url("../fonts/Avenir-LT-W01-65-Medium.woff") format("woff"), url("../fonts/Avenir-LT-W01-65-Medium.ttf") format("truetype"), url("../fonts/Avenir-LT-W01-65-Medium.svg#294099f3-8d00-4676-afc5-5e9d8d43ad69") format("svg");
+}
+@font-face {
+  font-family: "Avenir LT W01 95 Black";
+  src: url("../fonts/Avenir-LT-W01-95-Black.eot?#iefix");
+  src: url("../fonts/Avenir-LT-W01-95-Black.eot?#iefix") format("eot"), url("../fonts/Avenir-LT-W01-95-Black.woff2") format("woff2"), url("../fonts/Avenir-LT-W01-95-Black.woff") format("woff"), url("../fonts/Avenir-LT-W01-95-Black.ttf") format("truetype"), url("../fonts/Avenir-LT-W01-95-Black.svg#7bdad4a5-289b-42f9-b6fa-c5883b9e9f23") format("svg");
+}
+@font-face {
+  font-family: "Georgia W01 Italic";
+  src: url("../fonts/Georgia-W01-Italic.eot?#iefix");
+  src: url("../fonts/Georgia-W01-Italic.eot?#iefix") format("eot"), url("../fonts/Georgia-W01-Italic.woff2") format("woff2"), url("../fonts/Georgia-W01-Italic.woff") format("woff"), url("../fonts/Georgia-W01-Italic.ttf") format("truetype"), url("../fonts/Georgia-W01-Italic.svg#39f8467c-4358-4a4b-a43f-8b26bd049b35") format("svg");
+}
 /*Custom Mixins*/
 /* line 40, ../../sass/layouts/responsive-sidebars.scss */
 body {
@@ -102,7 +117,7 @@ body.section-good-stuff #page {
   margin-right: auto;
   min-width: 15em;
 }
-/* line 38, ../../../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
 #header:after,
 #main:after,
 #footer:after {
@@ -122,7 +137,7 @@ body.section-good-stuff #page {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   #header:after,
   #main:after,
   #footer:after {
@@ -143,7 +158,7 @@ body.section-good-stuff #page {
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 38, ../../../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   #header:after,
   #main:after,
   #footer:after {
@@ -165,7 +180,7 @@ body.section-good-stuff #page {
     margin-right: auto;
     padding: 0em 2.5em;
   }
-  /* line 38, ../../../../../../../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
   #header:after,
   #main:after,
   #footer:after {
