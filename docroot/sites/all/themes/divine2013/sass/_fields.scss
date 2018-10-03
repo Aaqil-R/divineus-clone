@@ -38,6 +38,9 @@
   margin: 0.5em 0em;
 }
 
+.media.media-element-container {
+  display: -webkit-inline-box;
+}
 
 .field-name-field-summary {
   @include adjust-font-size-to(1.1 * $base-font-size);
