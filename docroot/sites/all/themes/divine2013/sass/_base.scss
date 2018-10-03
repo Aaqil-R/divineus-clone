@@ -55,11 +55,11 @@ $h6-font-size: 0.75 * $base-font-size;
 
 @font-face {
     font-family: 'OPTISport-Script';
-    src: url('fonts/optispos.eot');
-    src: url('fonts/optispos.eot?#iefix') format('embedded-opentype'),
-         url('fonts/optispos.woff') format('woff'),
-         url('fonts/optispos.ttf') format('truetype'),
-         url('fonts/optispos.svg#optisport-scriptscript') format('svg');
+    src: url('../fonts/optispos.eot');
+    src: url('../fonts/optispos.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/optispos.woff') format('woff'),
+         url('../fonts/optispos.ttf') format('truetype'),
+         url('../fonts/optispos.svg#optisport-scriptscript') format('svg');
          
     font-weight: normal;
     font-style: normal;
