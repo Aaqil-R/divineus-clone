@@ -4242,24 +4242,26 @@ ul li:nth-of-type(4) a {
 @media (min-width: 32em) {
   /* line 655, ../sass/_navigation.scss */
   .bcop-logo-block {
-    width: 18.84058%;
-    float: left;
-    margin-right: 1.44928%;
-    display: inline;
-    margin: -2em 0px 0px -31px;
-    left: 0px;
+    width: 100%;
+  }
+}
+@media (min-width: 49em) {
+  /* line 655, ../sass/_navigation.scss */
+  .bcop-logo-block {
+    margin: 9.7em 0 0 -18px;
+    right: 33px;
     position: absolute;
+    width: 140px;
   }
 }
 @media (min-width: 60em) {
   /* line 655, ../sass/_navigation.scss */
   .bcop-logo-block {
     margin: 11.7em 0 0 -18px;
-    left: 0px;
-    position: absolute;
+    right: 40px;
   }
 }
-/* line 672, ../sass/_navigation.scss */
+/* line 673, ../sass/_navigation.scss */
 .bcop-logo-block .bcop-logo {
   margin: 2em 0;
   min-width: 182px;
@@ -7066,20 +7068,25 @@ td.menu-disabled {
   margin: 0.5em 0em;
 }
 
-/* line 42, ../sass/_fields.scss */
+/* line 41, ../sass/_fields.scss */
+.media.media-element-container {
+  display: -webkit-inline-box;
+}
+
+/* line 45, ../sass/_fields.scss */
 .field-name-field-summary {
   font-size: 1.1em;
   line-height: 1.36364em;
 }
 
-/* line 46, ../sass/_fields.scss */
+/* line 49, ../sass/_fields.scss */
 .views-field-field-frontblockimg img:hover {
   -moz-box-shadow: 0px 5px #58595B;
   -webkit-box-shadow: 0px 5px #58595B;
   box-shadow: 0px 5px #58595B;
 }
 
-/* line 50, ../sass/_fields.scss */
+/* line 53, ../sass/_fields.scss */
 #page .addthisevent-drop {
   border: none;
   -moz-border-radius: 6px;
@@ -7090,7 +7097,7 @@ td.menu-disabled {
   text-transform: uppercase;
   border: 1px #A39161 solid;
 }
-/* line 57, ../sass/_fields.scss */
+/* line 60, ../sass/_fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown {
   border: 1px #A39161 solid;
   margin-top: 0.25em;
@@ -7098,24 +7105,24 @@ td.menu-disabled {
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
-/* line 61, ../sass/_fields.scss */
+/* line 64, ../sass/_fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown span {
   color: #A39161;
   font-size: 0.8em;
   line-height: 1.5625em;
 }
-/* line 64, ../sass/_fields.scss */
+/* line 67, ../sass/_fields.scss */
 #page .addthisevent-drop .addthisevent_dropdown span:hover {
   color: #64583a;
 }
 
-/* line 69, ../sass/_fields.scss */
+/* line 72, ../sass/_fields.scss */
 .views-field-edit-node {
   position: absolute;
   margin-top: 0.15em;
   margin-left: 0.15em;
 }
-/* line 73, ../sass/_fields.scss */
+/* line 76, ../sass/_fields.scss */
 .views-field-edit-node a {
   background: url("../images/symbols/pencil.png") no-repeat;
   display: block;
@@ -7131,7 +7138,7 @@ td.menu-disabled {
  * If you don't use the Fences module, that's fine. Really. I think. Just use
  * these selectors instead:
  */
-/* line 90, ../sass/_fields.scss */
+/* line 93, ../sass/_fields.scss */
 .field {
   /* Wrapper for any field. */
 }
@@ -7142,7 +7149,7 @@ td.menu-disabled {
 /*
  * Field types (Contrib)
  */
-/* line 140, ../sass/_fields.scss */
+/* line 143, ../sass/_fields.scss */
 .field-type-datetime {
   /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */
 }
@@ -7150,7 +7157,7 @@ td.menu-disabled {
 /*
  * Named fields
  */
-/* line 162, ../sass/_fields.scss */
+/* line 165, ../sass/_fields.scss */
 .field-name-field-FIELDNAME {
   /* Underscores in field name are replaced with dashes. */
 }
