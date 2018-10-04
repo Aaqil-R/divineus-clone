@@ -7007,15 +7007,17 @@ form table .item-list ul {
   /* IE doesn't display borders on table rows */
 }
 
-/* line 234, ../sass/_forms.scss */
-.form-select {
+/* line 235, ../sass/_forms.scss */
+#webform-client-form-2 .form-select,
+#webform-client-form-2 .form-text {
+  box-sizing: border-box;
   width: 100%;
 }
 
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
  */
-/* line 242, ../sass/_forms.scss */
+/* line 246, ../sass/_forms.scss */
 td.menu-disabled {
   background: #ccc;
 }

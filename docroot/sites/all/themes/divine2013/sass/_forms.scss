@@ -231,8 +231,12 @@ form {
     }
   }
 }
-.form-select {
-  width: 100%;
+#webform-client-form-2 {
+  .form-select,
+  .form-text {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 /*
