@@ -6104,7 +6104,7 @@ ul li:nth-of-type(4) a {
     border-bottom: none;
   }
   /* line 1088, ../sass/_nodes.scss */
-  .front .view-product-catalog .views-row .views-row-even {
+  .front .view-product-catalog .views-row.views-row-even {
     float: right;
     margin-right: 0;
     *margin-left: -1em;
