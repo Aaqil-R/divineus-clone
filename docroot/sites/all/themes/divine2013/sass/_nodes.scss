@@ -428,7 +428,7 @@
         clear: both;
         @include box-sizing(border-box);
         float: left;
-        width: columns(4,8) + gutter()/2;
+        width: columns(4,8);
         padding-right: gutter();
         margin-right: 0;
         border-right: 1px $gold dotted;
@@ -436,7 +436,7 @@
       &.views-row-even {
         @include box-sizing(border-box);
         float: right;
-        width: columns(4,8) + gutter()/2;
+        width: columns(4,8);
         margin-right: 0;
         margin-right: 0;
         padding-left: gutter();
