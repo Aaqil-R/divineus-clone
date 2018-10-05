@@ -820,7 +820,7 @@ body {
 @media (min-width: 60em) {
   /* line 40, ../sass/layouts/_responsive-sidebars.scss */
   body {
-    background-image: url("../../images/wrapper/wallpaper-top-gold.png");
+    background-image: url("../images/wrapper/wallpaper-top-gold.png");
     background-repeat: repeat-x;
     background-position: center top;
   }
@@ -828,7 +828,7 @@ body {
 
 /* line 49, ../sass/layouts/_responsive-sidebars.scss */
 body.section-about-us, body.standard-page {
-  background-image: url("../../images/wrapper/wallpaper-top-yellow.png");
+  background-image: url("../images/wrapper/wallpaper-top-yellow.png");
 }
 /* line 51, ../sass/layouts/_responsive-sidebars.scss */
 body.section-about-us #page, body.standard-page #page {
@@ -837,7 +837,7 @@ body.section-about-us #page, body.standard-page #page {
 
 /* line 53, ../sass/layouts/_responsive-sidebars.scss */
 body.section-shop, body.section-checkout {
-  background-image: url("../../images/wrapper/wallpaper-top-green.png");
+  background-image: url("../images/wrapper/wallpaper-top-green.png");
 }
 /* line 55, ../sass/layouts/_responsive-sidebars.scss */
 body.section-shop #page, body.section-checkout #page {
@@ -846,7 +846,7 @@ body.section-shop #page, body.section-checkout #page {
 
 /* line 57, ../sass/layouts/_responsive-sidebars.scss */
 body.section-recipes {
-  background-image: url("../../images/wrapper/wallpaper-top-pink.png");
+  background-image: url("../images/wrapper/wallpaper-top-pink.png");
 }
 /* line 59, ../sass/layouts/_responsive-sidebars.scss */
 body.section-recipes #page {
@@ -855,11 +855,11 @@ body.section-recipes #page {
 
 /* line 61, ../sass/layouts/_responsive-sidebars.scss */
 body.section-good-stuff {
-  background-image: url("../../images/wrapper/wallpaper-top-blue.png");
+  background-image: url("../images/wrapper/wallpaper-top-blue.png");
 }
 /* line 63, ../sass/layouts/_responsive-sidebars.scss */
 body.section-good-stuff #page {
-  background-image: url("../../images/wrapper/wallpaper-bottom-blue.png");
+  background-image: url("../images/wrapper/wallpaper-bottom-blue.png");
 }
 
 /*
@@ -874,7 +874,7 @@ body.section-good-stuff #page {
   /* line 71, ../sass/layouts/_responsive-sidebars.scss */
   #page {
     min-height: 89em;
-    background-image: url("../../images/wrapper/wallpaper-bottom-gold.png");
+    background-image: url("../images/wrapper/wallpaper-bottom-gold.png");
     background-repeat: repeat-x;
     background-position: center bottom;
   }
@@ -5028,7 +5028,7 @@ ul li:nth-of-type(4) a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: left;
-    width: 50.5615%;
+    width: 49.09091%;
     padding-right: 2.94118%;
     margin-right: 0;
     border-right: 1px #A39161 dotted;
@@ -5039,7 +5039,7 @@ ul li:nth-of-type(4) a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    width: 50.5615%;
+    width: 49.09091%;
     margin-right: 0;
     margin-right: 0;
     padding-left: 2.94118%;
