@@ -231,6 +231,13 @@ form {
     }
   }
 }
+#webform-client-form-2 {
+  .form-select,
+  .form-text {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
 
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
