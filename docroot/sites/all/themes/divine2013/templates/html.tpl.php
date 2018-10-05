@@ -88,7 +88,6 @@
   <meta http-equiv="cleartype" content="on">
   <meta http-equiv="content-language" content="en-us">
   <?php print $styles; ?>
-  <link type="text/css" rel="stylesheet" href="http://fast.fonts.com/cssapi/a28cca48-609f-47ea-a854-25f8fe30e28e.css"/>
  
  
   <?php print $scripts; ?>
