@@ -4,7 +4,7 @@ It gets tricky when the drupal page cache is enabled.
 
 In this case the following line needs to be added to the end of settings.php:
 
-include DRUPAL_ROOT . '/sites/all/modules/custom/context_mobile_detect/settings.inc';
+include DRUPAL_ROOT . '/sites/all/modules/contrib/context_mobile_detect/settings.inc';
 
 This will ensure that the page cache is prefixed correctly.
 

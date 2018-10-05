@@ -8,7 +8,9 @@
  */
 
 /**
- * Implementation of hook_form_alter().
+ * Implements hook_form_alter().
+ *
+ * @todo move this to GmapTaxonomyForms class
  */
 function gmap_taxonomy_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'taxonomy_form_vocabulary') {
@@ -26,7 +28,7 @@ function gmap_taxonomy_form_alter(&$form, &$form_state, $form_id) {
   }
   // @@@ Why does this get called up on delete?
   if ($form_id == 'taxonomy_form_term' && empty($form['confirm']['#value'])) {
-    $term = (object)$form['#term'];
+    $term = (object) $form['#term'];
     if (gmap_taxonomy_vocabulary_is_enabled($form['#vocabulary'])) {
       $temp = '';
       if (!empty($term->tid)) {
@@ -46,87 +48,108 @@ function gmap_taxonomy_form_alter(&$form, &$form_state, $form_id) {
 
   // Move the Save and Delete buttons down below our additions.
   /*
-  if ($form_id == 'taxonomy_form_vocabulary' || $form_id == 'taxonomy_form_term') {
-    if (isset($form['submit']['#weight'])) {
-      $form['submit']['#weight']++;
-    }
-    else {
-      $form['submit']['#weight'] = 1;
-    }
-    if (isset($form['delete'])) {
-      if (isset($form['delete']['#weight'])) {
-        $form['delete']['#weight']+=2;
-      }
-      else {
-        $form['delete']['#weight'] = 2;
-      }
-    }
+  if ($form_id == 'taxonomy_form_vocabulary'
+  || $form_id == 'taxonomy_form_term') {
+  if (isset($form['submit']['#weight'])) {
+  $form['submit']['#weight']++;
+  }
+  else {
+  $form['submit']['#weight'] = 1;
+  }
+  if (isset($form['delete'])) {
+  if (isset($form['delete']['#weight'])) {
+  $form['delete']['#weight']+=2;
+  }
+  else {
+  $form['delete']['#weight'] = 2;
+  }
+  }
   }
   */
 }
 
 /**
- * Implement hook_taxonomy_vocabulary_insert().
+ * Implements hook_taxonomy_vocabulary_insert().
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_taxonomy_vocabulary_insert($vocabulary) {
   return gmap_taxonomy_taxonomy_vocabulary_update($vocabulary);
 }
 
 /**
- * Implement hook_taxonomy_vocabulary_update().
+ * Implements hook_taxonomy_vocabulary_update().
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_taxonomy_vocabulary_update($vocabulary) {
   if (isset($vocabulary->gmap_taxonomy_enable)) {
     variable_set('gmap_taxonomy_vocab_' . $vocabulary->machine_name, TRUE);
-  } else {
+  }
+  else {
     variable_del('gmap_taxonomy_vocab_' . $vocabulary->machine_name);
   }
 }
 
 /**
- * Implement hook_taxonomy_vocabulary_delete().
+ * Implements hook_taxonomy_vocabulary_delete().
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_taxonomy_vocabulary_delete($vocabulary) {
   variable_del('gmap_taxonomy_vocab_' . $vocabulary->machine_name);
 }
 
 /**
- * Implement hook_taxonomy_term_insert().
+ * Implements hook_taxonomy_term_insert().
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_taxonomy_term_insert($term) {
   return gmap_taxonomy_taxonomy_term_update($term);
 }
 
 /**
- * Implement hook_taxonomy_term_update().
+ * Implements hook_taxonomy_term_update().
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_taxonomy_term_update($term) {
   if (gmap_taxonomy_vocabulary_is_enabled($term->vid)) {
-    db_delete('gmap_taxonomy_term')
-      ->condition('tid', $term->tid)
-      ->execute();
-    // Do we have an assigned marker?
-    if (!empty($term->gmap_taxonomy_marker)) {
-      db_insert('gmap_taxonomy_term')
-        ->fields(array(
-          'tid' => $term->tid,
-          'marker' => $term->gmap_taxonomy_marker,
-        ))
-        ->execute();
-      // Update name changes in the gmap_taxonomy_node table.
-      db_update('gmap_taxonomy_node')
-        ->fields(array(
-          'marker' => $term->gmap_taxonomy_marker,
-        ))
+    // If Synchronize translations module is enabled,
+    // and the term reference field is set to a i18n_sync field,
+    // when we update a node, will trigger a term
+    // update, and the $term->gmap_taxonomy_marker is not set.
+    // Indicates this is a term edit form submit.
+    if (isset($term->gmap_taxonomy_marker)) {
+      db_delete('gmap_taxonomy_term')
         ->condition('tid', $term->tid)
         ->execute();
+      // Do we have an assigned marker?
+      if (!empty($term->gmap_taxonomy_marker)) {
+        db_insert('gmap_taxonomy_term')
+          ->fields(array(
+            'tid' => $term->tid,
+            'marker' => $term->gmap_taxonomy_marker,
+          ))
+          ->execute();
+        // Update name changes in the gmap_taxonomy_node table.
+        db_update('gmap_taxonomy_node')
+          ->fields(array(
+            'marker' => $term->gmap_taxonomy_marker,
+          ))
+          ->condition('tid', $term->tid)
+          ->execute();
+      }
+      gmap_taxonomy_reassign_marker($term->tid);
     }
-    gmap_taxonomy_reassign_marker($term->tid);
   }
 }
 
 /**
- * Implement hook_taxonomy_term_delete().
+ * Implements hook_taxonomy_term_delete().
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_taxonomy_term_delete($term) {
   db_delete('gmap_taxonomy_term')
@@ -137,43 +160,54 @@ function gmap_taxonomy_taxonomy_term_delete($term) {
 }
 
 /**
- * Implement hook_node_insert().
+ * Implements hook_node_insert().
+ *
+ * @todo move this to GmapNodeCRUDi class
  */
 function gmap_taxonomy_node_insert($node) {
   gmap_taxonomy_node_update($node);
 }
 
 /**
- * Implement hook_node_update().
+ * Implements hook_node_update().
+ *
+ * @todo move this to GmapNodeCRUDi class
  */
 function gmap_taxonomy_node_update($node) {
-  // Remove the marker association if present. We'll readd it later if it's
+  // Remove the marker association if present. We'll read it later if it's
   // still applicable.
   db_delete('gmap_taxonomy_node')
     ->condition('nid', $node->nid)
     ->execute();
 
-  // Get list of taxonomy_term_reference field names
+  // Get list of taxonomy_term_reference field names.
   $gmap_taxonomy_fields = gmap_taxonomy_get_instances();
 
-  // Get the markers
+  // Get the markers.
   $gmap_taxonomy_markers = gmap_taxonomy_get_markers();
 
-  // If this node doesn't use taxonomy_term_reference fields at all, skip the rest.
-  if (!isset($gmap_taxonomy_fields[$node->type])) { return; }
+  // If this node doesn't use taxonomy_term_reference fields at all,
+  // skip the rest.
+  if (!isset($gmap_taxonomy_fields[$node->type])) {
+    return;
+  }
 
-  // Loop through the page's terms and insert markers if applicable
+  // Loop through the page's terms and insert markers if applicable.
   foreach ($gmap_taxonomy_fields[$node->type] as $fieldname) {
-    // Get this node's field values for this field
+    // Get this node's field values for this field.
     $terms = field_get_items('node', $node, $fieldname, $node->language);
 
-    // Skip if term has no value
-    if (!$terms) { continue; }
+    // Skip if term has no value.
+    if (!$terms) {
+      continue;
+    }
 
-    // Otherwise loop through and set marker for term, if term has marker
+    // Otherwise loop through and set marker for term, if term has marker.
     foreach ($terms as $term) {
-      if (!isset($gmap_taxonomy_markers[$term['tid']])) { continue; }
-      // Insert to gmap_taxonomy table
+      if (!isset($gmap_taxonomy_markers[$term['tid']])) {
+        continue;
+      }
+      // Insert to gmap_taxonomy table.
       db_insert('gmap_taxonomy_node')
         ->fields(array(
           'nid' => $node->nid,
@@ -181,12 +215,18 @@ function gmap_taxonomy_node_update($node) {
           'marker' => $gmap_taxonomy_markers[$term['tid']],
         ))
         ->execute();
+        
+       // because only 1 term marker per node is allowed (db schema constraint) break here
+       // @see https://www.drupal.org/node/2043673
+       break;
     }
   }
 }
 
 /**
- * Implement hook_node_delete().
+ * Implements hook_node_delete().
+ *
+ * @todo move this to GmapNodeCRUDi class
  */
 function gmap_taxonomy_node_delete($node) {
   db_delete('gmap_taxonomy_node')
@@ -195,7 +235,9 @@ function gmap_taxonomy_node_delete($node) {
 }
 
 /**
- * Implement hook_node_revision_delete().
+ * Implements hook_node_revision_delete().
+ *
+ * @todo move this to GmapNodeCRUDi class
  */
 /*
 function gmap_taxonomy_node_revision_delete($node) {
@@ -206,10 +248,13 @@ function gmap_taxonomy_node_revision_delete($node) {
 */
 
 /**
- * Check if gmap taxonomy is enabled for the given vocabulary
+ * Check if gmap taxonomy is enabled for the given vocabulary.
  *
- * @param $vocabulary
+ * @todo move this to GmapTaxonomyCRUDi class
+ *
+ * @param object $vocabulary
  *   The vocabulary to check. Entire object and vid are allowed.
+ *
  * @return bool
  *   TRUE if the vocabulary is enabled
  */
@@ -219,17 +264,21 @@ function gmap_taxonomy_vocabulary_is_enabled($vocabulary) {
   }
 
   return $vocabulary
-    && variable_get('gmap_taxonomy_vocab_' . $vocabulary->machine_name, FALSE);
+  && variable_get('gmap_taxonomy_vocab_' . $vocabulary->machine_name, FALSE);
 }
 
 /**
- * Get all gmap taxonomy markers
- * Helper function to return cached version of gmap taxonomy markers from the database
- * @return
+ * Get all gmap taxonomy markers.
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
+ * Helper function to return cached version of
+ * gmap taxonomy markers from the database.
+ *
+ * @return array
  *   Associative array of tid => marker.
  */
 function gmap_taxonomy_get_markers() {
-  $gmap_taxonomy_markers = &drupal_static(__FUNCTION__);
+  $gmap_taxonomy_markers = & drupal_static(__FUNCTION__);
 
   if (!isset($gmap_taxonomy_markers)) {
     if ($cache = cache_get('gmap_taxonomy_markers_data')) {
@@ -244,15 +293,22 @@ function gmap_taxonomy_get_markers() {
 }
 
 /**
- * Get fields that are using taxonomy_term_reference + gmap taxonomy
- * Helper function to return cached version of fields using taxonomy_term_reference
- * @return
- *   Associative array keyed with node type and with values as array of field names.
+ * Get fields that are using taxonomy_term_reference + gmap taxonomy.
+ *
+ * @todo move this to GmapFieldsCRUDi class
+ * Helper function to return cached version of
+ * fields using taxonomy_term_reference.
+ *
+ * @return array
+ *   Associative array keyed with node type
+ *   and with values as array of field names.
  */
 function gmap_taxonomy_get_instances() {
-  $gmap_taxonomy_fields = &drupal_static(__FUNCTION__);
-  // TODO: Could do something with the vid, but probably too much overhead to use it here
-  // as field_info_fields() only gives us machine names and gmap_taxonomy_vocabs only gives us vid
+  $gmap_taxonomy_fields = & drupal_static(__FUNCTION__);
+  // TODO: Could do something with the vid,
+  // but probably too much overhead to use it here.
+  // As field_info_fields() only gives us machine names
+  // and gmap_taxonomy_vocabs only gives us vid.
   // $gmap_taxonomy_vocabs = variable_get('gmap_taxonomy_vocabs', array());
 
   if (!isset($gmap_taxonomy_fields)) {
@@ -261,11 +317,11 @@ function gmap_taxonomy_get_instances() {
     }
     else {
       $gmap_taxonomy_fields = array();
-      // get all field info
+      // Get all field info.
       $fields = field_info_fields();
-      // loop through to get the ones of field type taxonomy_term_reference
+      // Loop through to get the ones of field type taxonomy_term_reference.
       foreach ($fields as $field) {
-        if ($field['type'] == 'taxonomy_term_reference') {
+        if ($field['type'] == 'taxonomy_term_reference' && isset($field['bundles']['node'])) {
           foreach ($field['bundles']['node'] as $node_type) {
             $gmap_taxonomy_fields[$node_type][] = $field['field_name'];
           }
@@ -279,6 +335,8 @@ function gmap_taxonomy_get_instances() {
 
 /**
  * Reassign markers associated with a term that's going away.
+ *
+ * @todo move this to GmapTaxonomyCRUDi class
  */
 function gmap_taxonomy_reassign_marker($tid, $deletion = FALSE) {
   $nids = array();
@@ -313,10 +371,14 @@ function gmap_taxonomy_reassign_marker($tid, $deletion = FALSE) {
         ->execute();
     }
   }
+  // Clear cache to keep data updated.
+  cache_clear_all('gmap_taxonomy_markers_data', 'cache');
 }
 
 /**
- * Implementation of hook_views_api().
+ * Implements hook_views_api().
+ *
+ * @todo move this to GmapTaxonomyViews class
  */
 function gmap_taxonomy_views_api() {
   return array(
