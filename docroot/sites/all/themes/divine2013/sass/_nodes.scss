@@ -1085,7 +1085,7 @@
   @include breakpoint(tablet) {
     .views-row {
       @include span-columns(3,6);
-      & .views-row-even {@include omega;}
+      &.views-row-even {@include omega;}
       border-bottom: none;
     }
   }  
