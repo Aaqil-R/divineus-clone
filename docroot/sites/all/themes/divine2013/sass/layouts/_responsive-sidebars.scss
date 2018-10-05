@@ -40,27 +40,27 @@ $grid-padding:  $gutter-width;
 body {
   background-color: #000000;
   @include breakpoint(desktop-wide) {  
-    background-image: url('../../images/wrapper/wallpaper-top-gold.png');
+    background-image: url('../images/wrapper/wallpaper-top-gold.png');
     background-repeat: repeat-x;
     background-position: center top;
   } 
 }
 
 body.section-about-us {
-  background-image: url('../../images/wrapper/wallpaper-top-yellow.png');
+  background-image: url('../images/wrapper/wallpaper-top-yellow.png');
   #page {background-image: url('../../images/wrapper/wallpaper-bottom-yellow.png');}
 }
 body.section-shop, body.section-checkout {
-  background-image: url('../../images/wrapper/wallpaper-top-green.png');
+  background-image: url('../images/wrapper/wallpaper-top-green.png');
   #page {background-image: url('../../images/wrapper/wallpaper-bottom-green.png');}
 }
 body.section-recipes {
-  background-image: url('../../images/wrapper/wallpaper-top-pink.png');
+  background-image: url('../images/wrapper/wallpaper-top-pink.png');
   #page {background-image: url('../../images/wrapper/wallpaper-bottom-pink.png');}
 }
 body.section-good-stuff {
-  background-image: url('../../images/wrapper/wallpaper-top-blue.png');
-  #page {background-image: url('../../images/wrapper/wallpaper-bottom-blue.png');}
+  background-image: url('../images/wrapper/wallpaper-top-blue.png');
+  #page {background-image: url('../images/wrapper/wallpaper-bottom-blue.png');}
 }
 
 
@@ -77,7 +77,7 @@ body.section-good-stuff {
   //margin: auto;
   @include breakpoint(desktop-wide) {  
     min-height: 89em;
-    background-image: url('../../images/wrapper/wallpaper-bottom-gold.png');
+    background-image: url('../images/wrapper/wallpaper-bottom-gold.png');
     background-repeat: repeat-x;
     background-position: center bottom;
   }
