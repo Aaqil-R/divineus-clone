@@ -832,7 +832,7 @@ body.section-about-us, body.standard-page {
 }
 /* line 51, ../sass/layouts/_responsive-sidebars.scss */
 body.section-about-us #page, body.standard-page #page {
-  background-image: url("../../images/wrapper/wallpaper-bottom-yellow.png");
+  background-image: url("../images/wrapper/wallpaper-bottom-yellow.png");
 }
 
 /* line 53, ../sass/layouts/_responsive-sidebars.scss */
@@ -841,7 +841,7 @@ body.section-shop, body.section-checkout {
 }
 /* line 55, ../sass/layouts/_responsive-sidebars.scss */
 body.section-shop #page, body.section-checkout #page {
-  background-image: url("../../images/wrapper/wallpaper-bottom-green.png");
+  background-image: url("../images/wrapper/wallpaper-bottom-green.png");
 }
 
 /* line 57, ../sass/layouts/_responsive-sidebars.scss */
@@ -850,7 +850,7 @@ body.section-recipes {
 }
 /* line 59, ../sass/layouts/_responsive-sidebars.scss */
 body.section-recipes #page {
-  background-image: url("../../images/wrapper/wallpaper-bottom-pink.png");
+  background-image: url("../images/wrapper/wallpaper-bottom-pink.png");
 }
 
 /* line 61, ../sass/layouts/_responsive-sidebars.scss */
