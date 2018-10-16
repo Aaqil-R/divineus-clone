@@ -48,15 +48,15 @@ body {
 
 body.section-about-us {
   background-image: url('../images/wrapper/wallpaper-top-yellow.png');
-  #page {background-image: url('../../images/wrapper/wallpaper-bottom-yellow.png');}
+  #page {background-image: url('../images/wrapper/wallpaper-bottom-yellow.png');}
 }
 body.section-shop, body.section-checkout {
   background-image: url('../images/wrapper/wallpaper-top-green.png');
-  #page {background-image: url('../../images/wrapper/wallpaper-bottom-green.png');}
+  #page {background-image: url('../images/wrapper/wallpaper-bottom-green.png');}
 }
 body.section-recipes {
   background-image: url('../images/wrapper/wallpaper-top-pink.png');
-  #page {background-image: url('../../images/wrapper/wallpaper-bottom-pink.png');}
+  #page {background-image: url('../images/wrapper/wallpaper-bottom-pink.png');}
 }
 body.section-good-stuff {
   background-image: url('../images/wrapper/wallpaper-top-blue.png');
@@ -75,7 +75,7 @@ body.section-good-stuff {
   //min-width: 15em;
   //max-width: 65em;
   //margin: auto;
-  @include breakpoint(desktop-wide) {  
+  @include breakpoint(desktop-wide) {
     min-height: 89em;
     background-image: url('../images/wrapper/wallpaper-bottom-gold.png');
     background-repeat: repeat-x;
