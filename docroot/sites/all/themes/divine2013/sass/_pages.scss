@@ -126,17 +126,18 @@ body {
 
       #block-views-front-page-header-banner-block {
         height: 480px !important;
-        width: 1072px !important;
+        width: 100%;
+        max-width: 1072px;
         position: absolute;
         z-index: -999;
-        left: 0px;
-        right: 0px;
-        top: 0px;
+        left: 0;
+        right: 0;
+        top: 0;
         margin-left: auto;
         margin-right: auto;
         float: none !important;
-        margin-top: 0px !important;
-        padding-top: 0px !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
 
         .views-field-field-front-header-image {
           img {}
