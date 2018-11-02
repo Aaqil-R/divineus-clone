@@ -598,12 +598,20 @@ li a.active {
     @include span-columns(10, 10);
 
     margin: 4em 0;
+
+    ul.menu {
+      padding: 0 100px;
+    }
   }
 
   @include breakpoint(desktop) {
     @include span-columns(2, 10);
 
     margin: 4em 2em;
+
+    ul.menu {
+      padding: 0;
+    }
   }
 
 

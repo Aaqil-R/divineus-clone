@@ -1227,7 +1227,7 @@ a.contextual-links-trigger {
     color: $white;
     font-size: 14px;
     line-height: 17px;
-    float: left !important;
+    float: left;
     width: 100%;
 
     p {
@@ -1240,10 +1240,20 @@ a.contextual-links-trigger {
     }
 
     @include breakpoint(tablet) {
-      margin: 1em 1em 0 0;
+      float: none;
+      margin: 1em auto 0;
+      max-width: 28em;
+      width: auto;
+
+      .webform-component-email {
+        display: inline-block;
+        max-width: 20em;
+      }
     }
 
     @include breakpoint(desktop) {
+      float: left;
+      max-width: 100%;
       width: auto;
 
       .webform-component-email {
@@ -1253,9 +1263,10 @@ a.contextual-links-trigger {
     }
 
     @include breakpoint(desktop-wide) {
-      margin: 2em 0 2em 0;
-
       @include span-columns(2 omega, 5);
+
+      margin: 2em 0 2em 0;
+      float: left;
     }
   }
 }
