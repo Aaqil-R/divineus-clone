@@ -1228,13 +1228,23 @@ a.contextual-links-trigger {
     font-size: 14px;
     line-height: 17px;
     float: left !important;
+    width: 100%;
 
     p {
       margin: 0;
     }
 
+    .webform-component-email {
+      display: block;
+      max-width: 100%;
+    }
+
     @include breakpoint(tablet) {
-      margin: 1em 1em 0 9em;
+      margin: 1em 1em 0 0;
+    }
+
+    @include breakpoint(desktop) {
+      width: auto;
 
       .webform-component-email {
         display: inline-block;
@@ -1242,10 +1252,8 @@ a.contextual-links-trigger {
       }
     }
 
-
     @include breakpoint(desktop-wide) {
-      margin: 2em 0 2em 9em;
-      margin-left: 13%;
+      margin: 2em 0 2em 0;
 
       @include span-columns(2 omega, 5);
     }
@@ -1255,6 +1263,17 @@ a.contextual-links-trigger {
 /**
  * Footer Roundall
  */
+
+#block-block-13 {
+  display: inline-block;
+  margin-top: 1em;
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    margin-top: 0;
+    width: auto;
+  }
+}
 
 #block-block-32, #block-block-13 {
   h2 {

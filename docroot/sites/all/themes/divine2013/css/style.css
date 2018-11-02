@@ -3101,17 +3101,29 @@ a.contextual-links-trigger {
   font-size: 14px;
   line-height: 17px;
   float: left !important;
+  width: 100%;
 }
-/* line 1232, ../sass/_blocks.scss */
+/* line 1233, ../sass/_blocks.scss */
 .newsletter-signup.footer p {
   margin: 0;
+}
+/* line 1237, ../sass/_blocks.scss */
+.newsletter-signup.footer .webform-component-email {
+  display: block;
+  max-width: 100%;
 }
 @media (min-width: 32em) {
   /* line 1222, ../sass/_blocks.scss */
   .newsletter-signup.footer {
-    margin: 1em 1em 0 9em;
+    margin: 1em 1em 0 0;
   }
-  /* line 1239, ../sass/_blocks.scss */
+}
+@media (min-width: 49em) {
+  /* line 1222, ../sass/_blocks.scss */
+  .newsletter-signup.footer {
+    width: auto;
+  }
+  /* line 1249, ../sass/_blocks.scss */
   .newsletter-signup.footer .webform-component-email {
     display: inline-block;
     max-width: 16em;
@@ -3120,8 +3132,7 @@ a.contextual-links-trigger {
 @media (min-width: 60em) {
   /* line 1222, ../sass/_blocks.scss */
   .newsletter-signup.footer {
-    margin: 2em 0 2em 9em;
-    margin-left: 13%;
+    margin: 2em 0 2em 0;
     width: 38.23529%;
     float: right;
     margin-right: 0;
@@ -3133,7 +3144,21 @@ a.contextual-links-trigger {
 /**
  * Footer Roundall
  */
-/* line 1260, ../sass/_blocks.scss */
+/* line 1267, ../sass/_blocks.scss */
+#block-block-13 {
+  display: inline-block;
+  margin-top: 1em;
+  width: 100%;
+}
+@media (min-width: 49em) {
+  /* line 1267, ../sass/_blocks.scss */
+  #block-block-13 {
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+/* line 1279, ../sass/_blocks.scss */
 #block-block-32 h2, #block-block-13 h2 {
   background: url("../images/wrapper/owned_by_cocoa_farmers_on_dark.png") no-repeat center top;
   background-size: contain;
@@ -3143,7 +3168,7 @@ a.contextual-links-trigger {
   overflow: hidden;
 }
 @media (min-width: 49em) {
-  /* line 1259, ../sass/_blocks.scss */
+  /* line 1278, ../sass/_blocks.scss */
   #block-block-32, #block-block-13 {
     width: 18.84058%;
     float: right;
@@ -3156,12 +3181,12 @@ a.contextual-links-trigger {
 /**
  * IE<9 warning.
  */
-/* line 1281, ../sass/_blocks.scss */
+/* line 1300, ../sass/_blocks.scss */
 #block-webform-client-block-532 {
   display: none;
 }
 
-/* line 1285, ../sass/_blocks.scss */
+/* line 1304, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 {
   z-index: 1000;
   display: block;
@@ -3182,7 +3207,7 @@ a.contextual-links-trigger {
   -webkit-box-shadow: 0px 5px #58595B;
   box-shadow: 0px 5px #58595B;
 }
-/* line 1286, ../sass/_blocks.scss */
+/* line 1305, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .close {
   text-indent: -1000%;
   background: url("../images/wrapper/close.png") no-repeat;
@@ -3195,42 +3220,42 @@ a.contextual-links-trigger {
   top: -0.5em;
   cursor: pointer;
 }
-/* line 1314, ../sass/_blocks.scss */
+/* line 1333, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .top-title {
   clear: both;
   margin-top: -2em;
 }
-/* line 1319, ../sass/_blocks.scss */
+/* line 1338, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 h2 {
   display: inline;
 }
-/* line 1322, ../sass/_blocks.scss */
+/* line 1341, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 h2.block-title {
   font-size: 1.7em;
   line-height: 1.17647em;
   line-height: 1em;
 }
-/* line 1328, ../sass/_blocks.scss */
+/* line 1347, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 h2.line-two {
   padding-left: 0.25em;
 }
-/* line 1333, ../sass/_blocks.scss */
+/* line 1352, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .newsletter {
   margin: 0.75em 0;
 }
-/* line 1337, ../sass/_blocks.scss */
+/* line 1356, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email {
   color: #000000;
 }
-/* line 1340, ../sass/_blocks.scss */
+/* line 1359, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email label {
   padding: 0.5em;
 }
-/* line 1343, ../sass/_blocks.scss */
+/* line 1362, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .webform-component-email label .form-required {
   display: none;
 }
-/* line 1349, ../sass/_blocks.scss */
+/* line 1368, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .form-actions {
   position: relative;
 }
@@ -3248,7 +3273,7 @@ a.contextual-links-trigger {
   margin-left: 0.4em;
   bottom: 0.5em;
 }
-/* line 1352, ../sass/_blocks.scss */
+/* line 1371, ../sass/_blocks.scss */
 .js #block-webform-client-block-532 .form-actions .form-submit {
   background: transparent;
   text-transform: none;
@@ -3264,23 +3289,23 @@ a.contextual-links-trigger {
  *   Firefox fix
  */
 @-moz-document url-prefix() {
-  /* line 1371, ../sass/_blocks.scss */
+  /* line 1390, ../sass/_blocks.scss */
   .newsletter-signup .webform-component-email {
     padding-bottom: 8px;
   }
-  /* line 1375, ../sass/_blocks.scss */
+  /* line 1394, ../sass/_blocks.scss */
   .newsletter-signup #edit-actions--2 {
     top: -10px;
   }
 }
-/* line 1386, ../sass/_blocks.scss */
+/* line 1405, ../sass/_blocks.scss */
 .js .newsletter-signup
 .webform-component-email label,
 .js #block-search-form
 .form-item-search-block-form label {
   position: absolute;
 }
-/* line 1390, ../sass/_blocks.scss */
+/* line 1409, ../sass/_blocks.scss */
 .js .newsletter-signup
 .webform-component-email label.dim,
 .js #block-search-form
@@ -3289,7 +3314,7 @@ a.contextual-links-trigger {
 }
 
 /* AddThisEvent */
-/* line 1401, ../sass/_blocks.scss */
+/* line 1420, ../sass/_blocks.scss */
 .addthisevent-drop {
   display: inline-block;
   position: relative;
@@ -3308,7 +3333,7 @@ a.contextual-links-trigger {
   -webkit-border-radius: 2px;
 }
 
-/* line 1419, ../sass/_blocks.scss */
+/* line 1438, ../sass/_blocks.scss */
 .addthisevent-drop:hover {
   border: 1px solid #aab9d4;
   color: #555;
@@ -3317,17 +3342,17 @@ a.contextual-links-trigger {
   text-decoration: none;
 }
 
-/* line 1427, ../sass/_blocks.scss */
+/* line 1446, ../sass/_blocks.scss */
 .addthisevent-drop:active {
   top: 1px;
 }
 
-/* line 1431, ../sass/_blocks.scss */
+/* line 1450, ../sass/_blocks.scss */
 .addthisevent-selected {
   background-color: #f7f7f7;
 }
 
-/* line 1435, ../sass/_blocks.scss */
+/* line 1454, ../sass/_blocks.scss */
 .addthisevent_dropdown {
   width: 200px;
   position: absolute;
@@ -3349,7 +3374,7 @@ a.contextual-links-trigger {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* line 1456, ../sass/_blocks.scss */
+/* line 1475, ../sass/_blocks.scss */
 .addthisevent_dropdown span {
   width: 175px;
   display: block;
@@ -3361,7 +3386,7 @@ a.contextual-links-trigger {
   padding: 8px 10px 9px 15px;
 }
 
-/* line 1467, ../sass/_blocks.scss */
+/* line 1486, ../sass/_blocks.scss */
 .addthisevent_dropdown span:hover {
   background: #f4f4f4;
   color: #6d84b4;
@@ -3369,17 +3394,17 @@ a.contextual-links-trigger {
   font-size: 12px;
 }
 
-/* line 1474, ../sass/_blocks.scss */
+/* line 1493, ../sass/_blocks.scss */
 .addthisevent span {
   display: none !important;
 }
 
-/* line 1478, ../sass/_blocks.scss */
+/* line 1497, ../sass/_blocks.scss */
 .addthisevent-drop ._url, .addthisevent-drop ._start, .addthisevent-drop ._end, .addthisevent-drop ._summary, .addthisevent-drop ._description, .addthisevent-drop ._location, .addthisevent-drop ._organizer, .addthisevent-drop ._organizer_email, .addthisevent-drop ._facebook_event, .addthisevent-drop ._all_day_event {
   display: none !important;
 }
 
-/* line 1482, ../sass/_blocks.scss */
+/* line 1501, ../sass/_blocks.scss */
 .addthisevent_dropdown .copyx {
   width: 200px;
   height: 21px;
@@ -3388,7 +3413,7 @@ a.contextual-links-trigger {
   cursor: default;
 }
 
-/* line 1490, ../sass/_blocks.scss */
+/* line 1509, ../sass/_blocks.scss */
 .addthisevent_dropdown .brx {
   width: 180px;
   height: 1px;
@@ -3400,7 +3425,7 @@ a.contextual-links-trigger {
   top: 9px;
 }
 
-/* line 1501, ../sass/_blocks.scss */
+/* line 1520, ../sass/_blocks.scss */
 .addthisevent_dropdown .frs {
   position: absolute;
   top: 5px;
@@ -3418,12 +3443,12 @@ a.contextual-links-trigger {
   color: #cacaca;
 }
 
-/* line 1518, ../sass/_blocks.scss */
+/* line 1537, ../sass/_blocks.scss */
 .addthisevent_dropdown .frs:hover {
   color: #6d84b4;
 }
 
-/* line 1522, ../sass/_blocks.scss */
+/* line 1541, ../sass/_blocks.scss */
 .addthisevent {
   visibility: hidden;
 }
@@ -4180,6 +4205,16 @@ ul li:nth-of-type(4) a {
 @media (min-width: 32em) {
   /* line 549, ../sass/_navigation.scss */
   #block-menu-menu-social-badges-menu {
+    width: 100%;
+    float: left;
+    margin-right: 1.44928%;
+    display: inline;
+    margin: 4em 0;
+  }
+}
+@media (min-width: 49em) {
+  /* line 549, ../sass/_navigation.scss */
+  #block-menu-menu-social-badges-menu {
     width: 18.84058%;
     float: left;
     margin-right: 1.44928%;
@@ -4200,14 +4235,14 @@ ul li:nth-of-type(4) a {
   }
 }
 
-/* line 613, ../sass/_navigation.scss */
+/* line 619, ../sass/_navigation.scss */
 .divine-us #block-menu-menu-social-badges-menu ul.menu li:nth-of-type(3) {
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-/* line 616, ../sass/_navigation.scss */
+/* line 622, ../sass/_navigation.scss */
 .divine-us #block-menu-menu-social-badges-menu ul.menu li:nth-of-type(3) a {
   background: url("../images/wrapper/Instagram-logo.png") no-repeat center top 0px;
   display: block;
@@ -4215,7 +4250,7 @@ ul li:nth-of-type(4) a {
   margin-left: 1px;
 }
 
-/* line 628, ../sass/_navigation.scss */
+/* line 634, ../sass/_navigation.scss */
 #secondary-menu {
   float: right;
   /* LTR */
@@ -4230,7 +4265,7 @@ ul li:nth-of-type(4) a {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
-/* line 649, ../sass/_navigation.scss */
+/* line 655, ../sass/_navigation.scss */
 #admin-menu {
   margin: 0;
   font-size: 0.85em;
@@ -4238,13 +4273,13 @@ ul li:nth-of-type(4) a {
 }
 
 @media (min-width: 32em) {
-  /* line 655, ../sass/_navigation.scss */
+  /* line 661, ../sass/_navigation.scss */
   .bcop-logo-block {
     width: 100%;
   }
 }
 @media (min-width: 49em) {
-  /* line 655, ../sass/_navigation.scss */
+  /* line 661, ../sass/_navigation.scss */
   .bcop-logo-block {
     margin: 9.7em 0 0 -18px;
     right: 33px;
@@ -4253,20 +4288,15 @@ ul li:nth-of-type(4) a {
   }
 }
 @media (min-width: 60em) {
-  /* line 655, ../sass/_navigation.scss */
+  /* line 661, ../sass/_navigation.scss */
   .bcop-logo-block {
     margin: 11.7em 0 0 -18px;
     right: 40px;
   }
 }
-/* line 673, ../sass/_navigation.scss */
+/* line 679, ../sass/_navigation.scss */
 .bcop-logo-block .bcop-logo {
-  margin: 2em 0;
-  min-width: 182px;
-  background: url("../images/wrapper/A_BCorp_logo_NEG.jpg") no-repeat center top 0px;
-  font-size: 0em;
-  display: block;
-  min-height: 161px;
+  font-size: 0;
   text-align: center;
 }
 
