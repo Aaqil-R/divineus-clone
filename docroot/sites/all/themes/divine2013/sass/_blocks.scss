@@ -1227,14 +1227,34 @@ a.contextual-links-trigger {
     color: $white;
     font-size: 14px;
     line-height: 17px;
-    float: left !important;
+    float: left;
+    width: 100%;
 
     p {
       margin: 0;
     }
 
+    .webform-component-email {
+      display: block;
+      max-width: 100%;
+    }
+
     @include breakpoint(tablet) {
-      margin: 1em 1em 0 9em;
+      float: none;
+      margin: 1em auto 0;
+      max-width: 28em;
+      width: auto;
+
+      .webform-component-email {
+        display: inline-block;
+        max-width: 20em;
+      }
+    }
+
+    @include breakpoint(desktop) {
+      float: left;
+      max-width: 100%;
+      width: auto;
 
       .webform-component-email {
         display: inline-block;
@@ -1242,12 +1262,11 @@ a.contextual-links-trigger {
       }
     }
 
-
     @include breakpoint(desktop-wide) {
-      margin: 2em 0 2em 9em;
-      margin-left: 13%;
-
       @include span-columns(2 omega, 5);
+
+      margin: 2em 0 2em 0;
+      float: left;
     }
   }
 }
@@ -1255,6 +1274,17 @@ a.contextual-links-trigger {
 /**
  * Footer Roundall
  */
+
+#block-block-13 {
+  display: inline-block;
+  margin-top: 1em;
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    margin-top: 0;
+    width: auto;
+  }
+}
 
 #block-block-32, #block-block-13 {
   h2 {

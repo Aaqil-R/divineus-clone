@@ -595,9 +595,23 @@ li a.active {
   }
 
   @include breakpoint(tablet) {
+    @include span-columns(10, 10);
+
+    margin: 4em 0;
+
+    ul.menu {
+      padding: 0 100px;
+    }
+  }
+
+  @include breakpoint(desktop) {
     @include span-columns(2, 10);
 
     margin: 4em 2em;
+
+    ul.menu {
+      padding: 0;
+    }
   }
 
 
@@ -671,12 +685,7 @@ li a.active {
 
 
   .bcop-logo {
-    margin: 2em 0;
-    min-width: 182px;
-    background: url("../images/wrapper/A_BCorp_logo_NEG.jpg") no-repeat center top 0px;
-    font-size: 0em;
-    display: block;
-    min-height: 161px;
+    font-size: 0;
     text-align: center;
   }
 }
