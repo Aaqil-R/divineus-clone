@@ -575,8 +575,8 @@ if (isset($_SERVER['DEVDESKTOP_DRUPAL_SETTINGS_DIR']) && file_exists($_SERVER['D
  * Memcache configs
  *
  */
-$conf['cache_backends'][] = 'sites/all/modules/contrib/memcache/memcache.inc';
-$conf['lock_inc'] = 'sites/all/modules/contrib/memcache/memcache-lock.inc';
+$conf['cache_backends'][] = 'sites/all/modules/memcache/memcache.inc';
+$conf['lock_inc'] = 'sites/all/modules/memcache/memcache-lock.inc';
 $conf['memcache_stampede_protection'] = TRUE;
 $conf['cache_default_class'] = 'MemCacheDrupal';
 
