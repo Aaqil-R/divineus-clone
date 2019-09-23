@@ -268,10 +268,10 @@ $drupal_hash_salt = 'IBvCuwJJF8flbW9T4EF7mc9wRlDVvejn_pqWfowe63g';
  * for you.
  */
 # $base_url = 'http://proxy.thesmallaxe.com/us';  // NO trailing slash!
-if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'prod') {
-$base_url = 'http://www.divinechocolate.com/us';
-    $_SERVER['REQUEST_URI'] = str_replace("//", "/us/", $_SERVER['REQUEST_URI']);
-}
+// if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'prod') {
+// $base_url = 'http://www.divinechocolate.com/us';
+//     $_SERVER['REQUEST_URI'] = str_replace("//", "/us/", $_SERVER['REQUEST_URI']);
+// }
 /**
  * PHP settings:
  *
@@ -404,10 +404,10 @@ if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'pro
  */
 # $conf['reverse_proxy_addresses'] = array('a.b.c.d', ...);
 
-if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'prod') {
- $conf['reverse_proxy'] = TRUE;
- $conf['reverse_proxy_addresses'] = array('107.20.181.236');
-}
+// if (isset($_ENV['AH_SITE_ENVIRONMENT']) && $_ENV['AH_SITE_ENVIRONMENT'] === 'prod') {
+//  $conf['reverse_proxy'] = TRUE;
+//  $conf['reverse_proxy_addresses'] = array('107.20.181.236');
+// }
 
 /**
  * Set this value if your proxy server sends the client IP in a header
