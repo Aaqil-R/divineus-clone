@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = divineus1@svn-1604.devcloud.hosting.acquia.com:divineus1.git
+	fetch = +refs/*:refs/*
+	mirror = true
